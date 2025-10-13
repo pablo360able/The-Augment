@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theaugment.actions.StunningStrikeAction;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
@@ -20,19 +21,21 @@ public class StunningStrike extends BaseCard {
     );
     private static final int DAMAGE = 3;
     private static final int UPG_DAMAGE = 1;
+    private static final int DEXTERITY = 2;
+    private static final int UPG_DEXTERITY = 1;
 
     public StunningStrike() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(DEXTERITY, UPG_DEXTERITY);
 
         tags.add(CardTags.STRIKE);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new StunningStrikeAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), magicNumber));
     }
 
     @Override
