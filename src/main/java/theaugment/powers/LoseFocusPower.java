@@ -15,7 +15,6 @@ public class LoseFocusPower extends BasePower {
     public static final String POWER_ID = makeID(LoseFocusPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.DEBUFF;
     private static final boolean TURN_BASED = false;
-    private static final PowerStrings powerStrings;
 
     public LoseFocusPower(AbstractCreature owner, int newAmount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, newAmount);
@@ -24,16 +23,12 @@ public class LoseFocusPower extends BasePower {
     }
 
     public void updateDescription() {
-        this.description = powerStrings.DESCRIPTIONS[0] + this.amount + powerStrings.DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     public void atEndOfTurn(boolean isPlayer) {
         this.flash();
         this.addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -this.amount), -this.amount));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
-    }
-
-    static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     }
 }

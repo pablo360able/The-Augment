@@ -27,5 +27,13 @@
     ],
     "DESCRIPTION": "Using the COLOR field, this keyword is colored pink instead of the normal keyword color.",
     "COLOR": "fc83da"
-  }
+  },
+  {
+  "ID": "{ModID}:Magic",
+  "PROPER_NAME": "Magic",
+  "NAMES": [
+    "magic"
+  ],
+  "DESCRIPTION": "Attacks that are *Magic use *Strength instead of *Focus."
+}
 ]

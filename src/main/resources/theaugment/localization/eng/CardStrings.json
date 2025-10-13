@@ -20,5 +20,10 @@
   "${modID}:StunningStrike": {
     "NAME": "Stunning Strike",
     "DESCRIPTION": "Deal !D! damage twice. *Blood: Gain !M! *Dexterity this turn."
+  },
+  "${modID}:MagicWeapon": {
+    "NAME": "Magic Weapon",
+    "DESCRIPTION": "Gain 2 Focus. Your next attack is Magic.",
+    "UPGRADE_DESCRIPTION": "Gain 4 Focus. Your next 2 attacks are Magic."
   }
 }

@@ -4,5 +4,19 @@
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
+  },
+  "${modID}:MagicAttackPower": {
+    "NAME": "Magic Attack",
+    "DESCRIPTIONS": [
+      "Your next #b",
+      " attack(s) is/are #y${ModID}:Magic."
+    ]
+  },
+  "${modID}:LoseFocusPower": {
+    "NAME": "Focus Down",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b",
+      " #yFocus."
+    ]
   }
 }
