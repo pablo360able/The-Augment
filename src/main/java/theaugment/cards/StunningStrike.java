@@ -1,16 +1,12 @@
 package theaugment.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import theaugment.actions.StunningStrikeAction;
 import theaugment.character.Augment;
-import theaugment.powers.MagicAttack;
+import theaugment.powers.MagicAttackPower;
 import theaugment.util.CardStats;
 
 public class StunningStrike extends BaseCard {
@@ -38,7 +34,7 @@ public class StunningStrike extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        p.addPower(new MagicAttack(p, 1));
+        p.addPower(new MagicAttackPower(p, 1));
         for (int i = 0; i < 2; i++) {
             addToBot(new StunningStrikeAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), magicNumber));
         }

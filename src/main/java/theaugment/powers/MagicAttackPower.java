@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static theaugment.TheAugmentMod.makeID;
 
-public class MagicAttack extends BasePower {
-    public static final String POWER_ID = makeID(MagicAttack.class.getSimpleName());
+public class MagicAttackPower extends BasePower {
+    public static final String POWER_ID = makeID(MagicAttackPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
-    public MagicAttack(AbstractCreature owner, int amount) {
+    public MagicAttackPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
@@ -29,12 +29,12 @@ public class MagicAttack extends BasePower {
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.amount--;
             if (this.amount <= 0) {
-                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID(MagicAttack.class.getSimpleName())));
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
             }
         }
     }
 
     public void atStartOfTurn() {
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID(MagicAttack.class.getSimpleName())));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 }
