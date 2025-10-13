@@ -20,7 +20,9 @@ public class MagicAttack extends BasePower {
 
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
         //If NORMAL (attack) damage, modify damage by this power's amount
-        return type == DamageInfo.DamageType.NORMAL ? damage - this.owner.getPower("Strength").amount + this.owner.getPower("Focus").amount : damage;
+        int strength = this.owner.hasPower("Strength") ? this.owner.getPower("Strength").amount : 0;
+        int focus = this.owner.hasPower("Focus") ? this.owner.getPower("Focus").amount : 0;
+        return type == DamageInfo.DamageType.NORMAL ? damage + focus - strength : damage;
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
@@ -34,9 +36,5 @@ public class MagicAttack extends BasePower {
 
     public void atStartOfTurn() {
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, makeID(MagicAttack.class.getSimpleName())));
-    }
-
-    public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + (- this.owner.getPower("Strength").amount + this.owner.getPower("Focus").amount) + DESCRIPTIONS[1];
     }
 }
