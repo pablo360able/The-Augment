@@ -1,0 +1,42 @@
+package theaugment.cards;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theaugment.character.Augment;
+import theaugment.util.CardStats;
+
+public class StunningStrike extends BaseCard {
+    public static final String ID = makeID(StunningStrike.class.getSimpleName());
+    private static final CardStats info = new CardStats(
+            Augment.Meta.CARD_COLOR,
+            CardType.ATTACK,
+            CardRarity.BASIC,
+            CardTarget.ENEMY,
+            1
+    );
+    private static final int DAMAGE = 3;
+    private static final int UPG_DAMAGE = 1;
+
+    public StunningStrike() {
+        super(ID, info);
+
+        setDamage(DAMAGE, UPG_DAMAGE);
+
+        tags.add(CardTags.STRIKE);
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+    }
+
+    @Override
+    public AbstractCard makeCopy() { //Optional
+        return new StunningStrike();
+    }
+}
