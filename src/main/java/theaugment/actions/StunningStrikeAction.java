@@ -33,19 +33,17 @@ public class StunningStrikeAction extends AbstractGameAction {
         } else {
             this.tickDuration();
             if (this.isDone) {
-                for (int i = 0; i <= 1; i++) {
-                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.BLUNT_LIGHT, false));
-                    this.target.damage(this.info);
-                    if (this.target.lastDamageTaken > 0) {
-                        this.addToBot(new ApplyPowerAction(source, source, new DexterityPower(source, magicNumber), magicNumber));
-                        this.addToBot(new ApplyPowerAction(source, source, new LoseDexterityPower(source, magicNumber), magicNumber));
-                    }
+                AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.BLUNT_LIGHT, false));
+                this.target.damage(this.info);
+                if (this.target.lastDamageTaken > 0) {
+                    this.addToTop(new ApplyPowerAction(source, source, new DexterityPower(source, magicNumber), magicNumber));
+                    this.addToTop(new ApplyPowerAction(source, source, new LoseDexterityPower(source, magicNumber), magicNumber));
+                }
 
-                    if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
-                        AbstractDungeon.actionManager.clearPostCombatActions();
-                    } else {
-                        this.addToTop(new WaitAction(0.1F));
-                    }
+                if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+                    AbstractDungeon.actionManager.clearPostCombatActions();
+                } else {
+                    this.addToTop(new WaitAction(0.1F));
                 }
             }
 

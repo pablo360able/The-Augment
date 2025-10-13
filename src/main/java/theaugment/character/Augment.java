@@ -137,10 +137,10 @@ public class Augment extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
-        retVal.add(makeID("Strike"));
-        retVal.add(makeID("Strike"));
-        retVal.add(makeID("Strike"));
-        retVal.add(makeID("Strike"));
+        retVal.add(makeID("StunningStrike"));
+        retVal.add(makeID("StunningStrike"));
+        retVal.add(makeID("StunningStrike"));
+        retVal.add(makeID("StunningStrike"));
         retVal.add(makeID("StunningStrike"));
         retVal.add(makeID("Defend"));
         retVal.add(makeID("Defend"));
