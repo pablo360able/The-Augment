@@ -9,7 +9,7 @@ import theaugment.character.Augment;
 import theaugment.powers.MagicAttackPower;
 import theaugment.util.CardStats;
 
-public class StunningStrike extends BaseCard {
+public class StunningStrike extends MagicAttack {
     public static final String ID = makeID(StunningStrike.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
@@ -34,7 +34,6 @@ public class StunningStrike extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        p.addPower(new MagicAttackPower(p, 1));
         for (int i = 0; i < 2; i++) {
             addToBot(new StunningStrikeAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), magicNumber));
         }
