@@ -14,7 +14,7 @@
     "DESCRIPTION": "Deal !D! damage."
   },
   "${modID}:Defend": {
-    "NAME": "Name",
+    "NAME": "Defend",
     "DESCRIPTION": "Gain !B! block."
   },
   "${modID}:StunningStrike": {
