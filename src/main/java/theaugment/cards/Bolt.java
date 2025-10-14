@@ -20,13 +20,13 @@ public class Bolt extends BaseCard {
     private static final int BLOCK = 9;
     private static final int UPG_BLOCK = 12;
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
     public Bolt() {
         super(ID, info);
 
         setBlock(BLOCK, UPG_BLOCK);
-        setBlock(MAGIC, UPG_MAGIC);
+        setMagic(MAGIC, UPG_MAGIC);
     }
 
     @Override
