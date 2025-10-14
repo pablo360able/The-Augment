@@ -52,6 +52,8 @@ public abstract class BaseCard extends CustomCard {
     protected boolean baseRetain = false;
     protected boolean upgRetain = false;
 
+    private boolean adventured = false;
+
     final protected Map<String, LocalVarInfo> cardVariables = new HashMap<>();
 
     public BaseCard(String ID, CardStats info) {
@@ -512,6 +514,14 @@ public abstract class BaseCard extends CustomCard {
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         if (this.hasTag(CustomTags.SPONTANEOUS) && AbstractDungeon.player.hand.contains(this)) {
             this.moveToDiscardPile();
+        }
+    }
+
+    @Override
+    public void atTurnStartPreDraw() {
+        if (this.hasTag(CustomTags.ADVENTITIOUS) && !adventured) {
+            this.moveToDiscardPile();
+            this.adventured = true;
         }
     }
 
