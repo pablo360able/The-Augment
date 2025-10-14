@@ -16,6 +16,7 @@ public class MagicAttackPower extends BasePower {
 
     public MagicAttackPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        this.updateDescription();
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
@@ -36,5 +37,9 @@ public class MagicAttackPower extends BasePower {
 
     public void atStartOfTurn() {
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+    }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }
