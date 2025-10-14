@@ -22,12 +22,6 @@ public class LoseFocusPower extends BasePower {
         this.loadRegion("flex");
     }
 
-    public LoseFocusPower(AbstractCreature owner, int newAmount, boolean loadImage) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, null, newAmount, true, loadImage);
-        this.updateDescription();
-        this.loadRegion("flex");
-    }
-
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
