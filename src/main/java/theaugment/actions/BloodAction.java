@@ -25,6 +25,22 @@ public class BloodAction extends AbstractGameAction {
         this.duration = this.startDuration;
     }
 
+    public BloodAction(AbstractCreature target, AbstractCreature source, AbstractGameAction ifBlood) {
+        this.setValues(target, source);
+        this.ifBlood = new AbstractGameAction[]{ifBlood};
+        this.byDamage = false;
+        this.startDuration = Settings.ACTION_DUR_FAST;
+        this.duration = this.startDuration;
+    }
+
+    public BloodAction(AbstractCreature target, AbstractCreature source, AbstractGameAction ifBlood, boolean byDamage) {
+        this.setValues(target, source);
+        this.ifBlood = new AbstractGameAction[]{ifBlood};
+        this.byDamage = byDamage;
+        this.startDuration = Settings.ACTION_DUR_FAST;
+        this.duration = this.startDuration;
+    }
+
     @Override
     public void update() {
         if (this.shouldCancelAction()) {
