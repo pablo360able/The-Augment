@@ -132,4 +132,10 @@ public class TextureLoader {
         String textureString = powerPath("large/" + powerName + ".png");
         return getTextureNull(textureString);
     }
+
+    public static Texture getOrbTexture(final String orbName)
+    {
+        String textureString = powerPath(orbName + ".png");
+        return getTexture(textureString);
+    }
 }

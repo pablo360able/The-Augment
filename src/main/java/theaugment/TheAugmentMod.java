@@ -226,6 +226,9 @@ public class TheAugmentMod implements
     public static String relicPath(String file) {
         return resourcesFolder + "/images/relics/" + file;
     }
+    public static String orbPath(String file) {
+        return resourcesFolder + "/images/orbs/" + file;
+    }
 
     /**
      * Checks the expected resources path based on the package name.
