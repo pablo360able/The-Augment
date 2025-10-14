@@ -1,29 +1,24 @@
 package theaugment.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theaugment.actions.BloodAction;
 import theaugment.character.Augment;
 import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
 
-public class Illuminate extends BaseCard {
-    public static final String ID = makeID(Illuminate.class.getSimpleName());
+public class Aetherflow extends BaseCard {
+    public static final String ID = makeID(Aetherflow.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.SKILL,
             CardRarity.COMMON,
-            CardTarget.SELF,
+            CardTarget.ENEMY,
             1
     );
 
-    public Illuminate() {
+    public Aetherflow() {
         super(ID, info);
 
         tags.add(CustomTags.SPONTANEOUS);
@@ -41,6 +36,6 @@ public class Illuminate extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Illuminate();
+        return new Aetherflow();
     }
 }
