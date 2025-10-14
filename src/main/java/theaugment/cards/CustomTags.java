@@ -7,4 +7,7 @@ public class CustomTags
 {
     @SpireEnum
     public static AbstractCard.CardTags MAGIC;
+
+    @SpireEnum
+    public static AbstractCard.CardTags SPONTANEOUS;
 }

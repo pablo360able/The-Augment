@@ -508,6 +508,13 @@ public abstract class BaseCard extends CustomCard {
         }
     }
 
+    @Override
+    public void triggerOnOtherCardPlayed(AbstractCard c) {
+        if (this.hasTag(CustomTags.SPONTANEOUS) && AbstractDungeon.player.hand.contains(this)) {
+            this.moveToDiscardPile();
+        }
+    }
+
     protected void upgradeCustomVar(String key) {
         LocalVarInfo var = cardVariables.get(key);
         if (var == null) {
