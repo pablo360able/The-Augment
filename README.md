@@ -4,13 +4,19 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 # TODO
 
+## Next up
+
+* Attacks: Siphoning Claw, Future Strike, Steelwind Strike, Opportunity Attack, Starstorm
+* Skills: Illuminate, Bolt, Aetherflow, Power Up
+* Powers: Knowledge is Power, Eidolon Form
+
 ## Implement
 
--All art
--Most cards
--All relics
--Spontaneous, Adventitious, and Concentration keywords
+* All art
+* Most cards
+* All relics
+* Spontaneous, Adventitious, and Concentration keywords
 
 ## Bugs
 
--Magic Attacks do not correctly show damage unless targeting an enemy
+* Magic Attacks do not correctly show damage unless targeting an enemy
