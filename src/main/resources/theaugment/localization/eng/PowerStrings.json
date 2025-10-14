@@ -9,7 +9,7 @@
     "NAME": "Magic Attack",
     "DESCRIPTIONS": [
       "Your next #b",
-      " attack(s) is/are #y${ModID}:Magic."
+      " attack(s) is/are #y${modID}:Magic."
     ]
   },
   "${modID}:LoseFocusPower": {

@@ -29,11 +29,19 @@
     "COLOR": "fc83da"
   },
   {
-  "ID": "${ModID}:Magic",
+  "ID": "${modID}:Magic",
   "PROPER_NAME": "Magic",
   "NAMES": [
     "magic"
   ],
-  "DESCRIPTION": "Attacks that are *Magic use *Strength instead of *Focus."
-}
+  "DESCRIPTION": "Attacks that are Magic use Strength instead of Focus."
+  },
+  {
+    "ID": "${modID}:Blood",
+    "PROPER_NAME": "Blood",
+    "NAMES": [
+      "blood"
+    ],
+    "DESCRIPTION": "Trigger the following effect upon dealing unblocked Attack damage."
+  }
 ]

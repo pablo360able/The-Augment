@@ -19,7 +19,7 @@
   },
   "${modID}:StunningStrike": {
     "NAME": "Stunning Strike",
-    "DESCRIPTION": "Deal !D! damage twice. *Blood: Gain !M! *Dexterity this turn."
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage twice. NL ${modID}:Blood: Gain !M! Dexterity this turn."
   },
   "${modID}:MagicWeapon": {
     "NAME": "Magic Weapon",
