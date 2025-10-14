@@ -34,7 +34,7 @@
   "NAMES": [
     "magic"
   ],
-  "DESCRIPTION": "Attacks that are Magic use Strength instead of Focus."
+  "DESCRIPTION": "Attacks that are Magic use Focus instead of Strength."
   },
   {
     "ID": "${modID}:Blood",

@@ -23,7 +23,7 @@
   },
   "${modID}:MagicWeapon": {
     "NAME": "Magic Weapon",
-    "DESCRIPTION": "Gain 2 Focus. Your next attack is Magic.",
+    "DESCRIPTION": "Gain 2 Focus. Your next Attack is ${modID}:Magic.",
     "UPGRADE_DESCRIPTION": "Gain 4 Focus. Your next 2 attacks are Magic."
   }
 }
