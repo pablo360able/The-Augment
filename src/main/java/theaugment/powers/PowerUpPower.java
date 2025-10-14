@@ -20,11 +20,6 @@ public class PowerUpPower extends BasePower {
     }
 
     @Override
-    public void updateDescription() {
-        this.description = DESCRIPTIONS[1];
-    }
-
-    @Override
     public void onCardDraw(AbstractCard card) {
         if (card.type == AbstractCard.CardType.POWER) {
             card.setCostForTurn(-9);

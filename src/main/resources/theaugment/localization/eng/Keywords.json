@@ -43,5 +43,21 @@
       "blood"
     ],
     "DESCRIPTION": "Trigger the following effect upon dealing unblocked Attack damage."
+  },
+  {
+    "ID": "${modID}:Spontaneous",
+    "PROPER_NAME": "Spontaneous",
+    "NAMES": [
+      "spontaneous"
+    ],
+    "DESCRIPTION": "Discard this card if you play another one while this is in your hand."
+  },
+  {
+    "ID": "${modID}:Adventitious",
+    "PROPER_NAME": "Adventitious",
+    "NAMES": [
+      "adventitious"
+    ],
+    "DESCRIPTION": "Start each combat with this card in your discard pile."
   }
 ]

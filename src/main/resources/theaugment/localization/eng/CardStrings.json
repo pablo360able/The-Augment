@@ -23,7 +23,57 @@
   },
   "${modID}:MagicWeapon": {
     "NAME": "Magic Weapon",
-    "DESCRIPTION": "Gain 2 Focus. Your next Attack is ${modID}:Magic.",
-    "UPGRADE_DESCRIPTION": "Gain 4 Focus. Your next 2 attacks are Magic."
+    "DESCRIPTION": "Gain 2 Focus. NL Your next Attack is ${modID}:Magic.",
+    "UPGRADE_DESCRIPTION": "Gain 4 Focus. NL Your next 2 attacks are Magic."
+  },
+  "${modID}:SiphoningClaw": {
+    "NAME": "Siphoning Claw",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Gain 1 Focus."
+  },
+  "${modID}:FutureStrike": {
+    "NAME": "Future Strike",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Scry equal to unblocked damage."
+  },
+  "${modID}:OpportunityAttack": {
+    "NAME": "Opportunity Attack",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Deal !D! damage. NL ${modID}:Blood. Draw 1 card."
+  },
+  "${modID}:MagicMissile": {
+    "NAME": "Magic Missile",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. Twice as effective against Block."
+  },
+  "${modID}:Bolt": {
+    "NAME": "Bolt",
+    "DESCRIPTION": "Gain !B! block. NL Add !M! *Magic *Missiles."
+  },
+  "${modID}:PowerUp": {
+    "NAME": "Power Up",
+    "DESCRIPTION": "Powers are free this turn. NL You can't gain block from cards for 2 turns."
+  },
+  "${modID}:KnowledgeIsPower": {
+    "NAME": "Knowledge is Power",
+    "DESCRIPTION": "${modID}:Adventitious. NL Whenever you draw cards, gain !M! Focus."
+  },
+  "${modID}:Illuminate": {
+    "NAME": "Illuminate",
+    "DESCRIPTION": "${modID}: Spontaneous. Channel 1 ${modID}:Aether.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${modID}: Aether."
+  },
+  "${modID}:Aetherflow": {
+    "NAME": "Aetherflow",
+    "DESCRIPTION": "Gain !B! block. NL Draw 1 card for each Aether channeled this combat (currently !M!)."
+  },
+  "${modID}:SteelwindStrike": {
+    "NAME": "Steelwind Strike",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "${modID}:Starstorm": {
+    "NAME": "Starstorm",
+    "DESCRIPTION": "${modID}:Magic. NL Channel 3 Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times."
+  },
+  "${modID}:EidolonForm": {
+    "NAME": "EidolonForm",
+    "DESCRIPTION": "Adventitious. NL At the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous.",
+    "UPGRADE_DESCRIPTION": "Adventitious. NL Now and at the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous."
   }
 }

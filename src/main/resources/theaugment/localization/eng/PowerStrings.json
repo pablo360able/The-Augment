@@ -18,5 +18,33 @@
       "At the end of your turn, lose #b",
       " #yFocus."
     ]
+  },
+  "${modID}:PowerUpPower": {
+    "NAME": "Powered Up",
+    "DESCRIPTIONS": [
+      "This turn, powers are free."
+    ]
+  },
+  "${modID}:KnowledgeIsPowerPower": {
+    "NAME": "Knowledge is Power",
+    "DESCRIPTIONS": [
+      "Whenever you draw cards, gain #b",
+      " #yFocus."
+    ]
+  },
+  "${modID}:StarstormPower": {
+    "NAME": "Starstorm",
+    "DESCRIPTIONS": [
+      "At the start of your turn, deal #b",
+      " #y${modID}:Magic damage to a random enemy #b",
+      " times."
+    ]
+  },
+  "${modID}:EidolonFormPower": {
+    "NAME": "Eidolon Form",
+    "DESCRIPTIONS": [
+      "At the start of each turn, put #b",
+      " card(s) from your draw pile into your hand and make them #y${modID}:Spontaneous."
+    ]
   }
 }
