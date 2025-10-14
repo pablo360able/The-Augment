@@ -35,10 +35,11 @@ public class StunningStrikeAction extends AbstractGameAction {
             if (this.isDone) {
                 AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.BLUNT_LIGHT, false));
                 this.target.damage(this.info);
-                if (this.target.lastDamageTaken > 0) {
-                    this.addToTop(new ApplyPowerAction(source, source, new DexterityPower(source, magicNumber), magicNumber));
-                    this.addToTop(new ApplyPowerAction(source, source, new LoseDexterityPower(source, magicNumber), magicNumber));
-                }
+                AbstractGameAction[] tempDex = {
+                        new ApplyPowerAction(source, source, new DexterityPower(source, magicNumber), magicNumber),
+                        new ApplyPowerAction(source, source, new LoseDexterityPower(source, magicNumber), magicNumber)
+                };
+                this.addToTop(new BloodAction(this.target, this.source, tempDex));
 
                 if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.clearPostCombatActions();
