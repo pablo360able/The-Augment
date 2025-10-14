@@ -15,7 +15,7 @@ public class SteelwindStrike extends BaseCard {
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.BASIC,
+            CardRarity.UNCOMMON,
             CardTarget.ENEMY,
             1
     );
