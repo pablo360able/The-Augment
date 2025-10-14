@@ -1,9 +1,14 @@
 package theaugment.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.defect.NewThunderStrikeAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.Lightning;
 import theaugment.character.Augment;
 import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
@@ -13,25 +18,36 @@ public class Aetherflow extends BaseCard {
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.COMMON,
-            CardTarget.ENEMY,
+            CardRarity.UNCOMMON,
+            CardTarget.SELF,
             1
     );
+    private static final int BLOCK = 10;
+    private static final int UPG_BLOCK = 3;
+    private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 0;
 
     public Aetherflow() {
         super(ID, info);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        setBlock(BLOCK, UPG_BLOCK);
+        setMagic(MAGIC, UPG_MAGIC);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ChannelAction(new Aether()));
-    }
+        this.baseMagicNumber = 0;
 
-    @Override
-    public void upgrade() {
-        tags.remove(CustomTags.SPONTANEOUS);
+        for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
+            if (o instanceof Aether) {
+                ++this.baseMagicNumber;
+            }
+        }
+
+        this.magicNumber = this.baseMagicNumber;
+
+        this.addToBot(new DrawCardAction(this.magicNumber));
+
     }
 
     @Override
