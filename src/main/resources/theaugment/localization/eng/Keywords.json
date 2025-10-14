@@ -29,7 +29,7 @@
     "COLOR": "fc83da"
   },
   {
-  "ID": "{ModID}:Magic",
+  "ID": "${ModID}:Magic",
   "PROPER_NAME": "Magic",
   "NAMES": [
     "magic"
