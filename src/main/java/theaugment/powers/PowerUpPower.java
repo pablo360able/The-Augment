@@ -19,10 +19,12 @@ public class PowerUpPower extends BasePower {
         this.description = DESCRIPTIONS[0];
     }
 
+    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[1];
     }
 
+    @Override
     public void onCardDraw(AbstractCard card) {
         if (card.type == AbstractCard.CardType.POWER) {
             card.setCostForTurn(-9);
@@ -30,6 +32,7 @@ public class PowerUpPower extends BasePower {
 
     }
 
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.SKILL) {
             this.flash();
@@ -38,6 +41,7 @@ public class PowerUpPower extends BasePower {
 
     }
 
+    @Override
     public void atStartOfTurn() {
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
