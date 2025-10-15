@@ -32,7 +32,7 @@ public class MagicMissile extends MagicAttack {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        new MagicMissileAction(m, new DamageInfo(m, damage, DamageInfo.DamageType.NORMAL));
+        addToBot(new MagicMissileAction(m, new DamageInfo(m, damage, DamageInfo.DamageType.NORMAL)));
 
     }
 

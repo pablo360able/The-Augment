@@ -40,6 +40,7 @@ public class MagicMissileAction extends AbstractGameAction {
         } else {
             this.tickDuration();
             if (this.isDone) {
+                AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect, false));
                 this.info.output += min(this.info.output, this.target.currentBlock);
                 this.target.damage(this.info);
                 if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
