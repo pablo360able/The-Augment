@@ -46,5 +46,12 @@
       "At the start of each turn, put #b",
       " card(s) from your draw pile into your hand and make them #ySpontaneous."
     ]
+  },
+  "${modID}:MartialAdeptPower": {
+    "NAME": "Martial Adept",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, draw #b",
+      " card(s)."
+    ]
   }
 }
