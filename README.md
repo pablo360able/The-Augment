@@ -18,5 +18,3 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Rework Magic to work like Spontaneous and Adventitious
 
 ## Bugs
-
-* Defective Prosthetic breaks on reload
