@@ -15,11 +15,11 @@ public class AdventitiousAction extends AbstractGameAction {
     @Override
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hand.contains(c)) {
-            p.hand.moveToDiscardPile(c);
-        } else if (p.drawPile.contains(c)) {
+        // Due to timing, the card will always be in the draw pile when this triggers
+        if (p.drawPile.contains(c)) {
             p.drawPile.moveToDiscardPile(c);
         }
         c.setAdventured(true);
+        this.isDone = true;
     }
 }
