@@ -3,6 +3,7 @@ package theaugment.cards;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import theaugment.TheAugmentMod;
 import theaugment.util.CardStats;
 import theaugment.util.TriFunction;
@@ -513,14 +514,14 @@ public abstract class BaseCard extends CustomCard {
     @Override
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         if (this.hasTag(CustomTags.SPONTANEOUS) && AbstractDungeon.player.hand.contains(this)) {
-            this.moveToDiscardPile();
+            addToBot(new DiscardSpecificCardAction(this));
         }
     }
 
     @Override
     public void atTurnStartPreDraw() {
         if (this.hasTag(CustomTags.ADVENTITIOUS) && !adventured) {
-            this.moveToDiscardPile();
+            addToBot(new DiscardSpecificCardAction(this));
             this.adventured = true;
         }
     }
