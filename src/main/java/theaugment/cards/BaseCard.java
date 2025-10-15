@@ -5,6 +5,7 @@ import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import theaugment.TheAugmentMod;
+import theaugment.actions.AdventitiousAction;
 import theaugment.util.CardStats;
 import theaugment.util.TriFunction;
 import com.badlogic.gdx.graphics.Color;
@@ -521,9 +522,12 @@ public abstract class BaseCard extends CustomCard {
     @Override
     public void atTurnStart() {
         if (this.hasTag(CustomTags.ADVENTITIOUS) && !adventured) {
-            addToTop(new DiscardSpecificCardAction(this));
-            this.adventured = true;
+            addToTop(new AdventitiousAction(this));
         }
+    }
+
+    public void setAdventured(boolean value) {
+        this.adventured = value;
     }
 
     protected void upgradeCustomVar(String key) {
@@ -613,6 +617,7 @@ public abstract class BaseCard extends CustomCard {
         for (LocalVarInfo var : cardVariables.values()) {
             var.value = var.base;
         }
+        adventured = false;
     }
 
     private static class QuickDynamicVariable extends DynamicVariable {
