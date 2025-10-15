@@ -20,5 +20,4 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 ## Bugs
 
 * Magic Attacks do not correctly show damage unless targeting an enemy
-* Adventitious keyword does not work
 * Blood fails to trigger if the enemy dies
