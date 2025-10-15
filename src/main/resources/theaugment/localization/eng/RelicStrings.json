@@ -5,5 +5,12 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. [E] is an energy icon."
     ]
+  },
+  "${modID}:SoureCode": {
+    "NAME": "Source Code",
+    "FLAVOR": "The decompiled instructions for a computer to run some sort of primitive video game from a bygone era.",
+    "DESCRIPTIONS": [
+      "Card rewards from normal combats have one additional card."
+    ]
   }
 }
