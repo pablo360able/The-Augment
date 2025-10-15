@@ -43,4 +43,9 @@ public class SourceCode extends BaseRelic {
             return numberOfCards;
         }
     }
+
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
 }
