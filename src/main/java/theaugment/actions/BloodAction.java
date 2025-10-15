@@ -43,16 +43,12 @@ public class BloodAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (this.shouldCancelAction()) {
-            this.isDone = true;
-        } else {
-            this.tickDuration();
-            if (this.isDone) {
-                if(target.lastDamageTaken > 0) {
-                    for (AbstractGameAction consequence : ifBlood) {
-                        if (byDamage) {consequence.amount = target.lastDamageTaken;}
-                        this.addToBot(consequence);
-                    }
+        this.tickDuration();
+        if (this.isDone) {
+            if(target.lastDamageTaken > 0) {
+                for (AbstractGameAction consequence : ifBlood) {
+                    if (byDamage) {consequence.amount = target.lastDamageTaken;}
+                    this.addToBot(consequence);
                 }
             }
         }

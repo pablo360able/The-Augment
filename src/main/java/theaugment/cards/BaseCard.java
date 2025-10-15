@@ -619,7 +619,6 @@ public abstract class BaseCard extends CustomCard {
         for (LocalVarInfo var : cardVariables.values()) {
             var.value = var.base;
         }
-        adventured = false;
     }
 
     private static class QuickDynamicVariable extends DynamicVariable {
