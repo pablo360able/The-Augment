@@ -34,6 +34,10 @@ public class StarstormPower extends BasePower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.attack.damage + DESCRIPTIONS[1] + this.attack.magicNumber + DESCRIPTIONS[2];
+        if(this.attack == null) {
+            this.description = DESCRIPTIONS[0] + 5 + DESCRIPTIONS[1] + 5 + DESCRIPTIONS[2];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.attack.damage + DESCRIPTIONS[1] + this.attack.magicNumber + DESCRIPTIONS[2];
+        }
     }
 }

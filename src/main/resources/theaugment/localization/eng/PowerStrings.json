@@ -9,7 +9,7 @@
     "NAME": "Magic Attack",
     "DESCRIPTIONS": [
       "Your next #b",
-      " attack(s) is/are #y${modID}:Magic."
+      " attack(s) is/are #yMagic."
     ]
   },
   "${modID}:LoseFocusPower": {
@@ -44,7 +44,7 @@
     "NAME": "Eidolon Form",
     "DESCRIPTIONS": [
       "At the start of each turn, put #b",
-      " card(s) from your draw pile into your hand and make them #y${modID}:Spontaneous."
+      " card(s) from your draw pile into your hand and make them #ySpontaneous."
     ]
   }
 }
