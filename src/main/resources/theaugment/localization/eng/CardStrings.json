@@ -75,5 +75,9 @@
     "NAME": "Eidolon Form",
     "DESCRIPTION": "Adventitious. NL At the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous.",
     "UPGRADE_DESCRIPTION": "Adventitious. NL Now and at the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous."
+  },
+  "${modID}:MartialAdept": {
+    "NAME": "Martial Adept",
+    "DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw !M! card(s)"
   }
 }

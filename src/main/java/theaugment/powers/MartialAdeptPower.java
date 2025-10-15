@@ -30,7 +30,7 @@ public class MartialAdeptPower extends BasePower {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
-            addToBot(new BloodAction(target, owner, new DrawCardAction(amount)));
+            addToTop(new BloodAction(target, owner, new DrawCardAction(amount)));
         }
     }
 
