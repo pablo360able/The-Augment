@@ -18,7 +18,7 @@ public class EidolonForm extends BaseCard {
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.SELF,
-            2
+            3
     );
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
@@ -36,7 +36,9 @@ public class EidolonForm extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         EidolonFormPower eidol = p.hasPower(makeID("EidolonFormPower")) ? (EidolonFormPower)p.getPower(makeID("EidolonFormPower")) : new EidolonFormPower(p);
         addToBot(new ApplyPowerAction(p, p, eidol));
-        addToBot(new EidolonAction(eidol, eidol.amount));
+        if (upgraded) {
+            addToBot(new EidolonAction(eidol, eidol.amount));
+        }
     }
 
     @Override
