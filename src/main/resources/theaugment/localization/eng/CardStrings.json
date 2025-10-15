@@ -56,8 +56,8 @@
   },
   "${modID}:Illuminate": {
     "NAME": "Illuminate",
-    "DESCRIPTION": "${modID}: Spontaneous. Channel 1 ${modID}:Aether.",
-    "UPGRADE_DESCRIPTION": "Channel 1 ${modID}: Aether."
+    "DESCRIPTION": "${modID}:Spontaneous. Channel 1 ${modID}:Aether.",
+    "UPGRADE_DESCRIPTION": "Channel 1 ${modID}:Aether."
   },
   "${modID}:Aetherflow": {
     "NAME": "Aetherflow",

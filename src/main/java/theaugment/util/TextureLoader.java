@@ -135,7 +135,7 @@ public class TextureLoader {
 
     public static Texture getOrbTexture(final String orbName)
     {
-        String textureString = powerPath(orbName + ".png");
+        String textureString = orbPath(orbName + ".png");
         return getTexture(textureString);
     }
 }
