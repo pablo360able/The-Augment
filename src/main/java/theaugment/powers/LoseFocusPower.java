@@ -1,5 +1,7 @@
 package theaugment.powers;
 
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -8,6 +10,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
+import theaugment.util.GeneralUtils;
+import theaugment.util.TextureLoader;
 
 import static theaugment.TheAugmentMod.makeID;
 
@@ -18,8 +22,10 @@ public class LoseFocusPower extends BasePower {
 
     public LoseFocusPower(AbstractCreature owner, int newAmount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, newAmount);
+        String unPrefixed = GeneralUtils.removePrefix(POWER_ID);
         this.updateDescription();
         this.loadRegion("flex");
+        this.img = region48.getTexture();
     }
 
     public void updateDescription() {
