@@ -514,14 +514,14 @@ public abstract class BaseCard extends CustomCard {
     @Override
     public void triggerOnOtherCardPlayed(AbstractCard c) {
         if (this.hasTag(CustomTags.SPONTANEOUS) && AbstractDungeon.player.hand.contains(this)) {
-            addToBot(new DiscardSpecificCardAction(this));
+            addToTop(new DiscardSpecificCardAction(this));
         }
     }
 
     @Override
-    public void atTurnStartPreDraw() {
+    public void atTurnStart() {
         if (this.hasTag(CustomTags.ADVENTITIOUS) && !adventured) {
-            addToBot(new DiscardSpecificCardAction(this));
+            addToTop(new DiscardSpecificCardAction(this));
             this.adventured = true;
         }
     }
