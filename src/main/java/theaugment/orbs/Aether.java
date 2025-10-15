@@ -7,13 +7,17 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import theaugment.powers.LoseFocusPower;
+import theaugment.util.TextureLoader;
+
+import static theaugment.TheAugmentMod.makeID;
 
 public class Aether extends AbstractOrb {
-    public static final String ORB_ID = "Aether";
+    public static final String ORB_ID = makeID(Aether.class.getSimpleName());
     private static final OrbStrings orbString;
     public static final String[] DESC;
     private float vfxTimer = 1.0F;
@@ -21,6 +25,19 @@ public class Aether extends AbstractOrb {
     private float vfxIntervalMax = 0.4F;
     private static final float ORB_WAVY_DIST = 0.04F;
     private static final float PI_4 = 12.566371F;
+
+    public Aether() {
+        this.ID = ORB_ID;
+        this.img = TextureLoader.getOrbTexture(Aether.class.getSimpleName());
+        this.name = orbString.NAME;
+        this.baseEvokeAmount = 1;
+        this.evokeAmount = this.baseEvokeAmount;
+        this.basePassiveAmount = 1;
+        this.passiveAmount = this.basePassiveAmount;
+        this.updateDescription();
+        this.angle = MathUtils.random(360.0F);
+        this.channelAnimTimer = 0.5F;
+    }
 
     @Override
     public void updateDescription() {
