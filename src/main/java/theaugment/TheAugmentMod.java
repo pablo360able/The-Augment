@@ -3,8 +3,10 @@ package theaugment;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
+import theaugment.relics.BaseRelic;
 import theaugment.util.GeneralUtils;
 import theaugment.util.KeywordInfo;
 import theaugment.util.Sounds;
@@ -34,6 +36,7 @@ import java.util.*;
 @SpireInitializer
 public class TheAugmentMod implements
         EditCardsSubscriber, //up at the top
+        EditRelicsSubscriber,
         EditCharactersSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
@@ -290,5 +293,22 @@ public class TheAugmentMod implements
                 .packageFilter(BaseCard.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
+    }
+
+    @Override
+    public void receiveEditRelics() {
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(BaseRelic.class) //In the same package as this class
+                .any(BaseRelic.class, (info, relic) -> { //Run this code for any classes that extend this class
+                    if (relic.pool != null)
+                        BaseMod.addRelicToCustomPool(relic, relic.pool); //Register a custom character specific relic
+                    else
+                        BaseMod.addRelic(relic, relic.relicType); //Register a shared or base game character specific relic
+
+                    //If the class is annotated with @AutoAdd.Seen, it will be marked as seen, making it visible in the relic library.
+                    //If you want all your relics to be visible by default, just remove this if statement.
+                    if (info.seen)
+                        UnlockTracker.markRelicAsSeen(relic.relicId);
+                });
     }
 }
