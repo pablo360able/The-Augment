@@ -6,14 +6,14 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* At least one more Rare card
 * Switch Adventitious, Spontaneous, and Magic to use @SpirePatch
+* Draw up alpha art
 
 ## Implement
 
 * All art
 * Most cards
-* All relics
+* Most relics
 * Concentration keyword
 * Rework Magic to work like Spontaneous and Adventitious
 
