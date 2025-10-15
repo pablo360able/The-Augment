@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
+import static java.lang.Math.min;
+
 public class MagicMissileAction extends AbstractGameAction {
     private final DamageInfo info;
     private static final float DURATION = 0.1F;
@@ -38,7 +40,7 @@ public class MagicMissileAction extends AbstractGameAction {
         } else {
             this.tickDuration();
             if (this.isDone) {
-                this.info.output += this.target.currentBlock;
+                this.info.output += min(this.info.output, this.target.currentBlock);
                 this.target.damage(this.info);
                 if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.clearPostCombatActions();
