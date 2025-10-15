@@ -6,7 +6,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Starting and shop relics
 * At least one more Rare card
 
 ## Implement
@@ -18,3 +17,5 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Rework Magic to work like Spontaneous and Adventitious
 
 ## Bugs
+
+* Defective Prosthetic breaks on reload
