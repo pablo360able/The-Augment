@@ -7,6 +7,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 ## Next up
 
 * At least one more Rare card
+* Switch Adventitious, Spontaneous, and Magic to use @SpirePatch
 
 ## Implement
 

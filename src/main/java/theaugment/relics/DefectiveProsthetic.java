@@ -38,7 +38,6 @@ public class DefectiveProsthetic extends BaseRelic {
         AbstractPlayer p = AbstractDungeon.player;
 
         ArrayList<AbstractCard> tmpPool = new ArrayList<>();
-        p.getCardPool(tmpPool);
         CardLibrary.addBlueCards(tmpPool);
 
         for(AbstractCard c : tmpPool) {
