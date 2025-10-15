@@ -56,12 +56,12 @@
   },
   "${modID}:Illuminate": {
     "NAME": "Illuminate",
-    "DESCRIPTION": "${modID}:Spontaneous. Channel 1 ${modID}:Aether.",
-    "UPGRADE_DESCRIPTION": "Channel 1 ${modID}:Aether."
+    "DESCRIPTION": "${modID}:Spontaneous. Channel 1 *Aether.",
+    "UPGRADE_DESCRIPTION": "Channel 1 *Aether."
   },
   "${modID}:Aetherflow": {
     "NAME": "Aetherflow",
-    "DESCRIPTION": "Gain !B! block. NL Draw 1 card for each Aether channeled this combat (currently !M!)."
+    "DESCRIPTION": "Gain !B! block. NL Draw 1 card for each *Aether channeled this combat (currently !M!)."
   },
   "${modID}:SteelwindStrike": {
     "NAME": "Steelwind Strike",
@@ -72,7 +72,7 @@
     "DESCRIPTION": "${modID}:Magic. NL Channel 3 Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times."
   },
   "${modID}:EidolonForm": {
-    "NAME": "EidolonForm",
+    "NAME": "Eidolon Form",
     "DESCRIPTION": "Adventitious. NL At the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous.",
     "UPGRADE_DESCRIPTION": "Adventitious. NL Now and at the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous."
   }
