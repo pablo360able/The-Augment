@@ -12,5 +12,12 @@
     "DESCRIPTIONS": [
       "Card rewards from normal combats have one additional card."
     ]
+  },
+  "${modID}:DefectiveProsthetic": {
+    "NAME": "Defective Prosthetic",
+    "FLAVOR": "A faulty prosthetic arm adapted from the technology of a mechanical technocracy. It almost seems alive...",
+    "DESCRIPTIONS": [
+      "Permanently gain 1 additional Orb slot.  Blue cards can now appear anywhere Fuchsia cards do."
+    ]
   }
 }
