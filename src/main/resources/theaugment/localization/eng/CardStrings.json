@@ -44,7 +44,7 @@
   },
   "${modID}:Bolt": {
     "NAME": "Bolt",
-    "DESCRIPTION": "Gain !B! block. NL Add !M! *Magic *Missiles."
+    "DESCRIPTION": "Gain !B! block. NL Add !M! ${modID}:MagicMissile."
   },
   "${modID}:PowerUp": {
     "NAME": "Power Up",
