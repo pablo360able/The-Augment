@@ -22,10 +22,20 @@ public class DefectiveProsthetic extends BaseRelic {
         super(ID, NAME, Augment.Meta.CARD_COLOR, RARITY, SOUND);
     }
 
+    @Override
     public void onEquip() {
-        AbstractPlayer p = AbstractDungeon.player;
+        AbstractDungeon.player.masterMaxOrbs++;
+        this.blueCards();
+    }
 
-        p.masterMaxOrbs++;
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+    private void blueCards() {
+
+        AbstractPlayer p = AbstractDungeon.player;
 
         ArrayList<AbstractCard> tmpPool = new ArrayList<>();
         p.getCardPool(tmpPool);
@@ -68,10 +78,5 @@ public class DefectiveProsthetic extends BaseRelic {
         for(AbstractCard c : AbstractDungeon.commonCardPool.group) {
             AbstractDungeon.srcCommonCardPool.addToBottom(c);
         }
-    }
-
-    @Override
-    public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
     }
 }
