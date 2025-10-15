@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import theaugment.powers.LoseFocusPower;
+import theaugment.util.GeneralUtils;
 import theaugment.util.TextureLoader;
 
 import static theaugment.TheAugmentMod.makeID;
@@ -28,7 +29,7 @@ public class Aether extends AbstractOrb {
 
     public Aether() {
         this.ID = ORB_ID;
-        this.img = TextureLoader.getOrbTexture(Aether.class.getSimpleName());
+        this.img = TextureLoader.getOrbTexture(GeneralUtils.removePrefix(ORB_ID));
         this.name = orbString.NAME;
         this.baseEvokeAmount = 1;
         this.evokeAmount = this.baseEvokeAmount;
@@ -86,7 +87,7 @@ public class Aether extends AbstractOrb {
     }
 
     static {
-        orbString = CardCrawlGame.languagePack.getOrbString("Aether");
+        orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
         DESC = orbString.DESCRIPTION;
     }
 }
