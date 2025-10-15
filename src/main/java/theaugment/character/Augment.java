@@ -148,6 +148,9 @@ public class Augment extends CustomPlayer {
         retVal.add(makeID("Defend"));
         retVal.add(makeID("MagicWeapon"));
 
+        //Testing
+        retVal.add(makeID("KnowledgeIsPower"));
+
         return retVal;
     }
 
