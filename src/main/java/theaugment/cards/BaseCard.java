@@ -514,6 +514,7 @@ public abstract class BaseCard extends CustomCard {
 
     @Override
     public void triggerOnOtherCardPlayed(AbstractCard c) {
+        super.triggerOnOtherCardPlayed(c);
         if (this.hasTag(CustomTags.SPONTANEOUS) && AbstractDungeon.player.hand.contains(this)) {
             addToTop(new DiscardSpecificCardAction(this));
         }
@@ -521,6 +522,7 @@ public abstract class BaseCard extends CustomCard {
 
     @Override
     public void atTurnStart() {
+        super.atTurnStart();
         if (this.hasTag(CustomTags.ADVENTITIOUS) && !adventured) {
             addToTop(new AdventitiousAction(this));
         }
