@@ -33,7 +33,7 @@ public class DefectiveProsthetic extends BaseRelic {
         return DESCRIPTIONS[0];
     }
 
-    private void blueCards() {
+    public void blueCards() {
 
         AbstractPlayer p = AbstractDungeon.player;
 
@@ -41,42 +41,29 @@ public class DefectiveProsthetic extends BaseRelic {
         p.getCardPool(tmpPool);
         CardLibrary.addBlueCards(tmpPool);
 
-        AbstractDungeon.commonCardPool.clear();
-        AbstractDungeon.uncommonCardPool.clear();
-        AbstractDungeon.rareCardPool.clear();
-
         for(AbstractCard c : tmpPool) {
             switch (c.rarity) {
                 case COMMON:
+                    AbstractDungeon.commonCardPool.removeCard(c);
+                    AbstractDungeon.srcCommonCardPool.removeCard(c);
                     AbstractDungeon.commonCardPool.addToTop(c);
+                    AbstractDungeon.srcCommonCardPool.addToBottom(c);
                     break;
                 case UNCOMMON:
+                    AbstractDungeon.uncommonCardPool.removeCard(c);
+                    AbstractDungeon.srcUncommonCardPool.removeCard(c);
                     AbstractDungeon.uncommonCardPool.addToTop(c);
+                    AbstractDungeon.srcUncommonCardPool.addToBottom(c);
                     break;
                 case RARE:
+                    AbstractDungeon.rareCardPool.removeCard(c);
+                    AbstractDungeon.srcRareCardPool.removeCard(c);
                     AbstractDungeon.rareCardPool.addToTop(c);
+                    AbstractDungeon.srcRareCardPool.addToBottom(c);
                     break;
                 default:
                     continue;
             }
-        }
-
-        AbstractDungeon.srcRareCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        AbstractDungeon.srcUncommonCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        AbstractDungeon.srcCommonCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-
-
-
-        for(AbstractCard c : AbstractDungeon.rareCardPool.group) {
-            AbstractDungeon.srcRareCardPool.addToBottom(c);
-        }
-
-        for(AbstractCard c : AbstractDungeon.uncommonCardPool.group) {
-            AbstractDungeon.srcUncommonCardPool.addToBottom(c);
-        }
-
-        for(AbstractCard c : AbstractDungeon.commonCardPool.group) {
-            AbstractDungeon.srcCommonCardPool.addToBottom(c);
         }
     }
 }
