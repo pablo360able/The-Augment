@@ -46,9 +46,8 @@ public class AugmentPatches {
 
     @SpirePatch(
             clz = CardGroup.class,
-            method = "initialize",
+            method = "initializeDeck",
             paramtypez = {
-                    CardGroup.class,
                     CardGroup.class
             }
     )
@@ -57,7 +56,7 @@ public class AugmentPatches {
                 rloc = 4,
                 localvars={"copy"}
         )
-        public void Insert (CardGroup __instance, CardGroup __deck, CardGroup copy) {
+        public static void Insert (CardGroup __instance, CardGroup __deck, CardGroup copy) {
             for (AbstractCard c : copy.group) {
                 if (c.hasTag(CustomTags.ADVENTITIOUS)) {
                     c.teleportToDiscardPile();
