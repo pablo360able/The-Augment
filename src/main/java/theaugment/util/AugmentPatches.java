@@ -94,9 +94,28 @@ public class AugmentPatches {
                     AbstractMonster.class
             }
     )
+    public static class MagicDamageOnCalculationMulti {
+        @SpireInsertPatch (
+                rloc = 58,
+                localvars={"tmp", "i"}
+        )
+        public static void Insert (AbstractCard instance, AbstractMonster m, float[] tmp, int i) {
+            if (instance.hasTag(CustomTags.MAGIC)) {
+                tmp[i] = Helpers.EnchantDamage(tmp[i], instance.damageTypeForTurn);
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = "calculateCardDamage",
+            paramtypez = {
+                    AbstractMonster.class
+            }
+    )
     public static class MagicDamageOnCalculation {
         @SpireInsertPatch (
-                rlocs = {12, 58},
+                rloc = 12,
                 localvars={"tmp"}
         )
         public static void Insert (AbstractCard instance, AbstractMonster m, float tmp) {
@@ -108,17 +127,30 @@ public class AugmentPatches {
 
     @SpirePatch(
             clz = AbstractCard.class,
-            method = "applyPowers",
-            paramtypez = {
-                    AbstractMonster.class
+            method = "applyPowers"
+    )
+    public static class MagicDamageOnApplyPowersMulti {
+        @SpireInsertPatch (
+                rloc = 50,
+                localvars={"tmp", "i"}
+        )
+        public static void Insert (AbstractCard instance, float[] tmp, int i) {
+            if (instance.hasTag(CustomTags.MAGIC)) {
+                tmp[i] = Helpers.EnchantDamage(tmp[i], instance.damageTypeForTurn);
             }
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = "applyPowers"
     )
     public static class MagicDamageOnApplyPowers {
         @SpireInsertPatch (
-                rlocs = {12, 42},
+                rloc = 12,
                 localvars={"tmp"}
         )
-        public static void Insert (AbstractCard instance, AbstractMonster m, float tmp) {
+        public static void Insert (AbstractCard instance, float tmp) {
             if (instance.hasTag(CustomTags.MAGIC)) {
                 tmp = Helpers.EnchantDamage(tmp, instance.damageTypeForTurn);
             }
