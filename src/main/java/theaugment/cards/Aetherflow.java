@@ -1,6 +1,7 @@
 package theaugment.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.defect.NewThunderStrikeAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,6 +37,8 @@ public class Aetherflow extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new GainBlockAction(p, p, block));
+        
         this.baseMagicNumber = 0;
 
         for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
