@@ -25,7 +25,7 @@ public class LoseFocusPower extends BasePower {
         String unPrefixed = GeneralUtils.removePrefix(POWER_ID);
         this.updateDescription();
         this.loadRegion("flex");
-        this.img = region48.getTexture();
+        this.img = null;
     }
 
     public void updateDescription() {
