@@ -31,3 +31,5 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider changing timing of passive effect of Aether orbs
 
 ## Bugs
+
+* Aetherflow and Spellstrike may not correctly display the number of orbs channeled this combat

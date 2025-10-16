@@ -99,5 +99,9 @@
   "${modID}:ShockingGrasp": {
     "NAME": "Shocking Grasp",
     "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Enemy loses !M! *Strength this turn."
+  },
+  "${modID}:Spellstrike": {
+    "NAME": "Spellstrike",
+    "DESCRIPTION": "${modID}:Magic. Deal !D! damage for each Aether channeled this combat (currently !M!)."
   }
 }
