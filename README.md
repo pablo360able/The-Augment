@@ -25,3 +25,4 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider changing timing of passive effect of Aether orbs
 
 ## Bugs
+* Magic attacks are adding Magic way too many times
