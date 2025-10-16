@@ -6,7 +6,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Switch Adventitious, Spontaneous, and Magic to use @SpirePatch
 * Draw up alpha art
 
 ## Implement
@@ -15,7 +14,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Most cards
 * Most relics
 * Concentration keyword
-* Rework Magic to work like Spontaneous and Adventitious
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)
@@ -25,4 +23,3 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider changing timing of passive effect of Aether orbs
 
 ## Bugs
-* Magic attacks are adding Magic way too many times

@@ -14,7 +14,13 @@ import static theaugment.TheAugmentMod.makeID;
 public class MagicAttack extends AbstractDamageModifier {
     public static final String ID = makeID(MagicAttack.class.getSimpleName());
 
-    public MagicAttack() {}
+    public MagicAttack() {
+        this(true);
+    }
+
+    public MagicAttack(boolean autoBind) {
+        this.automaticBindingForCards = autoBind;
+    }
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCreature target, AbstractCard card) {
@@ -23,6 +29,11 @@ public class MagicAttack extends AbstractDamageModifier {
 
     @Override
     public AbstractDamageModifier makeCopy() {
-        return new MagicAttack();
+        return new MagicAttack(this.automaticBindingForCards);
+    }
+
+    @Override
+    public boolean isInherent() {
+        return true;
     }
 }

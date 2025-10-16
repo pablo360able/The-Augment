@@ -1,11 +1,14 @@
 package theaugment.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import modifiers.MagicAttack;
 import theaugment.cards.CustomTags;
 import theaugment.util.Helpers;
 
@@ -22,8 +25,13 @@ public class MagicWeaponPower extends BasePower {
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        //If NORMAL (attack) damage, modify damage by this power's amount
-        return !card.hasTag(CustomTags.MAGIC) ? Helpers.EnchantDamage(damage, type) : damage;
+        //If NORMAL (attack) damage that isn't already magic, apply magic damage
+        for (AbstractDamageModifier mod : DamageModifierManager.modifiers(card)) {
+            if (mod instanceof MagicAttack) {
+                return damage;
+            }
+        }
+        return Helpers.EnchantDamage(damage, type);
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
