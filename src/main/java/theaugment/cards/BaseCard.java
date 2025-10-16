@@ -3,9 +3,7 @@ package theaugment.cards;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import theaugment.TheAugmentMod;
-import theaugment.actions.AdventitiousAction;
 import theaugment.util.CardStats;
 import theaugment.util.TriFunction;
 import com.badlogic.gdx.graphics.Color;
@@ -53,8 +51,6 @@ public abstract class BaseCard extends CustomCard {
     protected boolean upgInnate = false;
     protected boolean baseRetain = false;
     protected boolean upgRetain = false;
-
-    private boolean adventured = false;
 
     final protected Map<String, LocalVarInfo> cardVariables = new HashMap<>();
 
@@ -510,18 +506,6 @@ public abstract class BaseCard extends CustomCard {
 
             this.initializeDescription();
         }
-    }
-
-    @Override
-    public void atTurnStart() {
-        super.atTurnStart();
-        if (this.hasTag(CustomTags.ADVENTITIOUS) && !adventured) {
-            addToTop(new AdventitiousAction(this));
-        }
-    }
-
-    public void setAdventured(boolean value) {
-        this.adventured = value;
     }
 
     protected void upgradeCustomVar(String key) {

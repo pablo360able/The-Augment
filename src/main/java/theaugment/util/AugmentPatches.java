@@ -1,12 +1,10 @@
 package theaugment.util;
 
+import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
@@ -41,6 +39,28 @@ public class AugmentPatches {
             for (AbstractCard c : instance.group) {
                 if (c != useCard && c.hasTag(CustomTags.SPONTANEOUS)) {
                     AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(c));
+                }
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = CardGroup.class,
+            method = "initialize",
+            paramtypez = {
+                    CardGroup.class,
+                    CardGroup.class
+            }
+    )
+    public static class PutAwayAdventitious {
+        @SpireInsertPatch (
+                rloc = 4,
+                localvars={"copy"}
+        )
+        public void Insert (CardGroup __instance, CardGroup __deck, CardGroup copy) {
+            for (AbstractCard c : copy.group) {
+                if (c.hasTag(CustomTags.ADVENTITIOUS)) {
+                    c.teleportToDiscardPile();
                 }
             }
         }
