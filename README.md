@@ -6,7 +6,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Simplify how Eidolon Form works
 * Common Attacks: Iron Fist, Glancing Blow, Regenerative Breaking, Snap Back, Shocking Grasp
 * Uncommon Attacks: Brute Force, Devour, Spellstrike, Witch Bolt, Great Cleave, Sunbeam, Zephyr Strike
 * Rare Attacks: Soulrend, Earthquake, Quadrature

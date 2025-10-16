@@ -17,7 +17,6 @@ public class EidolonFormPower extends BasePower {
     public static final String POWER_ID = makeID(EidolonFormPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    private static final List<AbstractCard> affected = new ArrayList<AbstractCard>();
 
     public EidolonFormPower(AbstractCreature owner) {
         super(POWER_ID, TYPE, TURN_BASED, owner, 1);
@@ -26,25 +25,7 @@ public class EidolonFormPower extends BasePower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        addToBot(new EidolonAction(this, amount));
-    }
-
-    public void markCard(AbstractCard c) {
-        affected.add(c);
-    }
-
-    @Override
-    public void onUseCard(AbstractCard c, UseCardAction action) {
-        for (AbstractCard ac : affected) {
-            if (AbstractDungeon.player.hand.contains(ac)) {
-                addToTop(new DiscardSpecificCardAction(ac));
-            }
-        }
-    }
-
-    @Override
-    public void onRemove() {
-        affected.clear();
+        addToBot(new EidolonAction(this.owner, amount));
     }
 
     @Override

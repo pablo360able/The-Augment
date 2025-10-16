@@ -37,7 +37,7 @@ public class EidolonForm extends BaseCard {
         EidolonFormPower eidol = p.hasPower(makeID("EidolonFormPower")) ? (EidolonFormPower)p.getPower(makeID("EidolonFormPower")) : new EidolonFormPower(p);
         addToBot(new ApplyPowerAction(p, p, eidol));
         if (upgraded) {
-            addToBot(new EidolonAction(eidol, eidol.amount));
+            addToBot(new EidolonAction(p, eidol.amount));
         }
     }
 

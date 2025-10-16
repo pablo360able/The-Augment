@@ -4,22 +4,22 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import theaugment.cards.CustomTags;
 import theaugment.powers.EidolonFormPower;
 
 public class EidolonAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private final AbstractPlayer p;
-    private final EidolonFormPower sp;
 
-    public EidolonAction(EidolonFormPower source_power, int amount) {
+    public EidolonAction(AbstractCreature p, int amount) {
         this.p = AbstractDungeon.player;
-        this.sp = source_power;
-        this.setValues(this.p, AbstractDungeon.player, amount);
+        this.setValues(this.p, p, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
     }
@@ -97,7 +97,7 @@ public class EidolonAction extends AbstractGameAction {
                         this.p.hand.addToTop(c);
                     }
 
-                    sp.markCard(c);
+                    c.tags.add(CustomTags.SPONTANEOUS);
 
                     this.p.hand.refreshHandLayout();
                     this.p.hand.applyPowers();
