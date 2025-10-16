@@ -87,6 +87,7 @@ public class AugmentPatches {
         }
     }
 
+    /*
     @SpirePatch(
             clz = AbstractCard.class,
             method = "calculateCardDamage",
@@ -156,4 +157,5 @@ public class AugmentPatches {
             }
         }
     }
+    */
 }

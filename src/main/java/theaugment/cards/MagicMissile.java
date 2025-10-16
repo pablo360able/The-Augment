@@ -1,10 +1,12 @@
 package theaugment.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.common.MagicMissileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import modifiers.MagicAttack;
 import theaugment.actions.StunningStrikeAction;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
@@ -27,7 +29,7 @@ public class MagicMissile extends BaseCard {
         setDamage(DAMAGE, UPG_DAMAGE);
 
         this.exhaust = true;
-        tags.add(CustomTags.MAGIC);
+        DamageModifierManager.addModifier(this, new MagicAttack());
     }
 
     @Override

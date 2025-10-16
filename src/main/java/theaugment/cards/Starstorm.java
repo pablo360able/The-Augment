@@ -1,11 +1,13 @@
 package theaugment.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import modifiers.MagicAttack;
 import theaugment.actions.StunningStrikeAction;
 import theaugment.character.Augment;
 import theaugment.orbs.Aether;
@@ -32,7 +34,7 @@ public class Starstorm extends BaseCard {
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC, UPG_MAGIC);
 
-        tags.add(CustomTags.MAGIC);
+        DamageModifierManager.addModifier(this, new MagicAttack());
     }
 
     @Override
