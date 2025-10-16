@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -29,17 +30,16 @@ public class AugmentPatches {
     }
 
     @SpirePatch(
-            clz = UseCardAction.class,
-            method = SpirePatch.CONSTRUCTOR,
+            clz = CardGroup.class,
+            method = "triggerOnOtherCardPlayed",
             paramtypez = {
-                    AbstractCard.class,
-                    AbstractCreature.class
+                    AbstractCard.class
             }
     )
     public static class DiscardSpontaneous {
-        public static void Postfix(UseCardAction __instance, AbstractCard __card, AbstractCreature __creature) {
-            for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                if (c.hasTag(CustomTags.SPONTANEOUS)) {
+        public static void Postfix(CardGroup instance, AbstractCard useCard) {
+            for (AbstractCard c : instance.group) {
+                if (c != useCard && c.hasTag(CustomTags.SPONTANEOUS)) {
                     AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(c));
                 }
             }
