@@ -82,10 +82,14 @@
   },
   "${modID}:IronFist": {
     "NAME": "Iron Fist",
-    "DESCRIPTION": "Deal !D! damage.  ${modID}:Blood: Gain block next turn equal to unblocked damage."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Gain block next turn equal to unblocked damage."
   },
   "${modID}:GlancingBlow": {
     "NAME": "Glancing Blow",
-    "DESCRIPTION": "Deal !D! damage.  ${modID}:Blood: Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Draw 1 card."
+  },
+  "${modID}:RegenerativeBreaking": {
+    "NAME": "Regenerative Breaking",
+    "DESCRIPTION": "Deal !D! damage twice. NL You cannot play any more attacks this turn. NL ${modID}:Blood: Gain [E]."
   }
 }
