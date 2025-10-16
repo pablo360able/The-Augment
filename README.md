@@ -6,6 +6,17 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
+* Simplify how Eidolon Form works
+* Common Attacks: Iron Fist, Glancing Blow, Regenerative Breaking, Snap Back, Shocking Grasp
+* Uncommon Attacks: Brute Force, Devour, Spellstrike, Witch Bolt, Great Cleave, Sunbeam, Zephyr Strike
+* Rare Attacks: Soulrend, Earthquake, Quadrature
+* Common Skills: Missile Spray, Advantage, Mind over Matter, Disengage, Purge Thought, Step of the Wind, Backstep, Fast Cast, Guardian Blade, Evade
+* Uncommon Skills: Realize, Inspiration, Recenter, Sanctuary, Multiattack, Feign Disaster, Light from Above, Take Cover, Enchant, Memorize
+* Rare Skills: Suppress, Jailbreak
+* Powers: Guiding Light, Artillery, Defensive Stance, Upcast, Investiture, Efficiency
+* Relics: All except Tidldibab
+* Potions: All
+
 ## Implement
 
 * Most art
