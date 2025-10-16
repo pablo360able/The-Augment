@@ -17,4 +17,10 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Concentration keyword
 * Rework Magic to work like Spontaneous and Adventitious
 
+## Balance
+* Nerf Stunning Strike (and possibly buff Magic Weapon)
+* Starstorm should end your turn (though not for balance reasons)
+* Knowledge is Power shouldn't trigger on draw-for-turn
+* Consider making Steelwind Strike magic
+
 ## Bugs
