@@ -6,11 +6,9 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Draw up alpha art
-
 ## Implement
 
-* All art
+* Most art
 * Most cards
 * Most relics
 * Concentration keyword
