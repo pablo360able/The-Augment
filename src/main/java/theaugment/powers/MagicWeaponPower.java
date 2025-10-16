@@ -11,12 +11,12 @@ import theaugment.util.Helpers;
 
 import static theaugment.TheAugmentMod.makeID;
 
-public class MagicAttackPower extends BasePower {
-    public static final String POWER_ID = makeID(MagicAttackPower.class.getSimpleName());
+public class MagicWeaponPower extends BasePower {
+    public static final String POWER_ID = makeID(MagicWeaponPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
-    public MagicAttackPower(AbstractCreature owner, int amount) {
+    public MagicWeaponPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
         this.updateDescription();
     }

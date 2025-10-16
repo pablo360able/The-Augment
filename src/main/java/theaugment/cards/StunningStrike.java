@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modifiers.MagicAttack;
 import theaugment.actions.StunningStrikeAction;
 import theaugment.character.Augment;
-import theaugment.powers.MagicAttackPower;
 import theaugment.util.CardStats;
 
 public class StunningStrike extends BaseCard {

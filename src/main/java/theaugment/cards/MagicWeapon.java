@@ -1,17 +1,13 @@
 package theaugment.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import theaugment.character.Augment;
 import theaugment.powers.LoseFocusPower;
-import theaugment.powers.MagicAttackPower;
+import theaugment.powers.MagicWeaponPower;
 import theaugment.util.CardStats;
 
 public class MagicWeapon extends BaseCard {
@@ -36,7 +32,7 @@ public class MagicWeapon extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new FocusPower(p, 2 *magicNumber), magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new LoseFocusPower(p, 2 *magicNumber), magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new MagicAttackPower(p, magicNumber)));
+        this.addToBot(new ApplyPowerAction(p, p, new MagicWeaponPower(p, magicNumber)));
     }
 
     @Override
