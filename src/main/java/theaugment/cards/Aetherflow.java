@@ -38,7 +38,7 @@ public class Aetherflow extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, block));
-        
+
         this.baseMagicNumber = 0;
 
         for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
