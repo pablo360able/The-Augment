@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import theaugment.actions.BlockNextTurnAction;
 import theaugment.actions.BloodAction;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
@@ -34,7 +35,7 @@ public class IronFist extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        addToBot(new BloodAction(m, p, new ApplyPowerAction(p, p, new NextTurnBlockPower(p, 0)), true));
+        addToBot(new BloodAction(m, p, new BlockNextTurnAction(p), true));
     }
 
     @Override
