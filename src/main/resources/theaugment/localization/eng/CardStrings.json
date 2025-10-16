@@ -83,5 +83,9 @@
   "${modID}:IronFist": {
     "NAME": "Iron Fist",
     "DESCRIPTION": "Deal !D! damage.  ${modID}:Blood: Gain block next turn equal to unblocked damage."
+  },
+  "${modID}:GlancingBlow": {
+    "NAME": "Glancing Blow",
+    "DESCRIPTION": "Deal !D! damage.  ${modID}:Blood: Draw 1 card."
   }
 }
