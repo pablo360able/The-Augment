@@ -79,5 +79,9 @@
   "${modID}:MartialAdept": {
     "NAME": "Martial Adept",
     "DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw !M! card(s)"
+  },
+  "${modID}:IronFist": {
+    "NAME": "Iron Fist",
+    "DESCRIPTION": "Deal !D! damage.  ${modID}:Blood: Gain block next turn equal to unblocked damage."
   }
 }
