@@ -9,7 +9,7 @@ import theaugment.actions.StunningStrikeAction;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
-public class MagicMissile extends MagicAttack {
+public class MagicMissile extends BaseCard {
     public static final String ID = makeID(MagicMissile.class.getSimpleName());
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,

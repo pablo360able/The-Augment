@@ -9,7 +9,7 @@ import theaugment.character.Augment;
 import theaugment.powers.MagicAttackPower;
 import theaugment.util.CardStats;
 
-public class StunningStrike extends MagicAttack {
+public class StunningStrike extends BaseCard {
     public static final String ID = makeID(StunningStrike.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
@@ -30,6 +30,7 @@ public class StunningStrike extends MagicAttack {
         setMagic(DEXTERITY, UPG_DEXTERITY);
 
         tags.add(CardTags.STRIKE);
+        tags.add(CustomTags.MAGIC);
     }
 
     @Override

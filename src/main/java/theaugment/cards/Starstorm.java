@@ -12,7 +12,7 @@ import theaugment.orbs.Aether;
 import theaugment.powers.StarstormPower;
 import theaugment.util.CardStats;
 
-public class Starstorm extends MagicAttack {
+public class Starstorm extends BaseCard {
     public static final String ID = makeID(Starstorm.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
@@ -31,6 +31,8 @@ public class Starstorm extends MagicAttack {
 
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC, UPG_MAGIC);
+
+        tags.add(CustomTags.MAGIC);
     }
 
     @Override

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theaugment.cards.CustomTags;
+import theaugment.util.Helpers;
 
 import static theaugment.TheAugmentMod.makeID;
 
@@ -22,9 +23,7 @@ public class MagicAttackPower extends BasePower {
 
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         //If NORMAL (attack) damage, modify damage by this power's amount
-        int strength = this.owner.hasPower("Strength") ? this.owner.getPower("Strength").amount : 0;
-        int focus = this.owner.hasPower("Focus") ? this.owner.getPower("Focus").amount : 0;
-        return type == DamageInfo.DamageType.NORMAL && !card.hasTag(CustomTags.MAGIC) ? damage + focus - strength : damage;
+        return !card.hasTag(CustomTags.MAGIC) ? Helpers.EnchantDamage(damage, type) : damage;
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
 import theaugment.relics.DefectiveProsthetic;
@@ -82,6 +83,44 @@ public class AugmentPatches {
                 if (c.hasTag(CustomTags.ADVENTITIOUS)) {
                     instance.discardPile.addToTop(c);
                 }
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = "calculateCardDamage",
+            paramtypez = {
+                    AbstractMonster.class
+            }
+    )
+    public static class MagicDamageOnCalculation {
+        @SpireInsertPatch (
+                rlocs = {12, 58},
+                localvars={"tmp"}
+        )
+        public static void Insert (AbstractCard instance, AbstractMonster m, float tmp) {
+            if (instance.hasTag(CustomTags.MAGIC)) {
+                tmp = Helpers.EnchantDamage(tmp, instance.damageTypeForTurn);
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = "applyPowers",
+            paramtypez = {
+                    AbstractMonster.class
+            }
+    )
+    public static class MagicDamageOnApplyPowers {
+        @SpireInsertPatch (
+                rlocs = {12, 42},
+                localvars={"tmp"}
+        )
+        public static void Insert (AbstractCard instance, AbstractMonster m, float tmp) {
+            if (instance.hasTag(CustomTags.MAGIC)) {
+                tmp = Helpers.EnchantDamage(tmp, instance.damageTypeForTurn);
             }
         }
     }
