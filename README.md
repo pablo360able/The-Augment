@@ -7,7 +7,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 ## Next up
 
 * Common Attacks: Iron Fist, Glancing Blow, Regenerative Breaking, Snap Back, Shocking Grasp
-* Uncommon Attacks: Spellstrike, Witch Bolt, Great Cleave, Sunbeam, Zephyr Strike
+* Uncommon Attacks: Spellstrike, Witch Bolt, Sunbeam, Zephyr Strike
 * Rare Attacks: Soulrend, Earthquake, Quadrature
 * Common Skills: Missile Spray, Advantage, Mind over Matter, Disengage, Purge Thought, Step of the Wind, Backstep, Fast Cast, Guardian Blade, Evade
 * Uncommon Skills: Realize, Inspiration, Recenter, Sanctuary, Multiattack, Feign Disaster, Light from Above, Take Cover, Enchant, Memorize
