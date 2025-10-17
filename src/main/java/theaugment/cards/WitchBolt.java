@@ -3,11 +3,7 @@ package theaugment.cards;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MagicMissileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,19 +12,19 @@ import modifiers.MagicAttack;
 import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
 
-public class Spellstrike extends BaseCard {
-    public static final String ID = makeID(Spellstrike.class.getSimpleName());
+public class WitchBolt extends BaseCard {
+    public static final String ID = makeID(WitchBolt.class.getSimpleName());
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.SPECIAL,
             CardTarget.ENEMY,
             0
     );
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 2;
 
-    public Spellstrike() {
+    public WitchBolt() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
@@ -56,6 +52,6 @@ public class Spellstrike extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Spellstrike();
+        return new WitchBolt();
     }
 }
