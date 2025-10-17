@@ -107,5 +107,9 @@
   "${modID}:WitchBolt": {
     "NAME": "Witch Bolt",
     "DESCRIPTION": "${modID}:Magic. NL Take 1 damage. NL Deal !D! damage. NL ${modID}:Blood: Put a copy of this card on top of your draw pile."
+  },
+  "${modID}:Sunbeam": {
+    "NAME": "Sunbeam",
+    "DESCRIPTION": "${modID}:Magic. NL Channel 1 *Aether. NL Deal !D! damage to all enemies."
   }
 }
