@@ -32,6 +32,7 @@ public class WitchBolt extends BaseCard {
 
         setDamage(DAMAGE, UPG_DAMAGE);
 
+        this.exhaust = true;
         DamageModifierManager.addModifier(this, new MagicAttack());
     }
 
