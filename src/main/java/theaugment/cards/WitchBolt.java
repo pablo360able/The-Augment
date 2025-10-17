@@ -20,7 +20,7 @@ public class WitchBolt extends BaseCard {
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,
             CardType.ATTACK,
-            CardRarity.SPECIAL,
+            CardRarity.UNCOMMON,
             CardTarget.ENEMY,
             0
     );
