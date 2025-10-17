@@ -115,5 +115,9 @@
   "${modID}:ZephyrStrike": {
     "NAME": "Zephyr Strike",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage to all enemies !M! times."
+  },
+  "${modID}:Soulrend": {
+    "NAME": "Soulrend",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL ${modID}:Blood: Gain 1 extra orb slot."
   }
 }
