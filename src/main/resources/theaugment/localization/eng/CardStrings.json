@@ -110,14 +110,18 @@
   },
   "${modID}:Sunbeam": {
     "NAME": "Sunbeam",
-    "DESCRIPTION": "${modID}:Magic. NL Channel 1 *Aether. NL Deal !D! damage to all enemies."
+    "DESCRIPTION": "${modID}:Magic. NL Channel 1 *Aether. NL Deal !D! damage to ALL enemies."
   },
   "${modID}:ZephyrStrike": {
     "NAME": "Zephyr Strike",
-    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage to all enemies !M! times."
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage to ALL enemies !M! times."
   },
   "${modID}:Soulrend": {
     "NAME": "Soulrend",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL ${modID}:Blood: Gain 1 extra orb slot."
+  },
+  "${modID}:Earthquake": {
+    "NAME": "Earthquake",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Twice as effective against Block."
   }
 }
