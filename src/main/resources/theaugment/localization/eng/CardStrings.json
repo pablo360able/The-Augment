@@ -111,5 +111,9 @@
   "${modID}:Sunbeam": {
     "NAME": "Sunbeam",
     "DESCRIPTION": "${modID}:Magic. NL Channel 1 *Aether. NL Deal !D! damage to all enemies."
+  },
+  "${modID}:ZephyrStrike": {
+    "NAME": "Zephyr Strike",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage to all enemies !M! times."
   }
 }

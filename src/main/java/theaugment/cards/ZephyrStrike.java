@@ -3,14 +3,20 @@ package theaugment.cards;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import modifiers.MagicAttack;
+import theaugment.actions.BloodAction;
 import theaugment.character.Augment;
 import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
@@ -20,27 +26,30 @@ public class ZephyrStrike extends BaseCard {
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             CardTarget.ALL_ENEMY,
             2
     );
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 5;
+    private static final int UPG_DAMAGE = 0;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 2;
 
     public ZephyrStrike() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(MAGIC, UPG_MAGIC);
 
         DamageModifierManager.addModifier(this, new MagicAttack());
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ChannelAction(new Aether()));
-        this.addToBot(new SFXAction("ATTACK_HEAVY"));
-        this.addToBot(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        for (int i = 0; i < magicNumber; i++) {
+            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, i % 2 == 0 ? AbstractGameAction.AttackEffect.SLASH_HORIZONTAL : AbstractGameAction.AttackEffect.SLASH_DIAGONAL, true));
+        }
+        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, 1)));
     }
 
     @Override
