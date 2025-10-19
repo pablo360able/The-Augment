@@ -78,7 +78,8 @@
   },
   "${modID}:MartialAdept": {
     "NAME": "Martial Adept",
-    "DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw !M! card(s)"
+    "DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw a card.",
+    "UPGRADE_DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw 2 cards."
   },
   "${modID}:IronFist": {
     "NAME": "Iron Fist",
