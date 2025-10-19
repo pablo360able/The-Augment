@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import modifiers.MagicAttack;
+import theaugment.modifiers.MagicAttack;
 import theaugment.actions.BloodAction;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;

@@ -6,13 +6,9 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import modifiers.MagicAttack;
+import theaugment.modifiers.MagicAttack;
 import theaugment.actions.BloodAction;
-import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
 
 public class WitchBolt extends BaseCard {

@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import modifiers.MagicAttack;
-import theaugment.cards.CustomTags;
+import theaugment.modifiers.MagicAttack;
 import theaugment.util.Helpers;
 
 import static theaugment.TheAugmentMod.makeID;
