@@ -26,12 +26,10 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Technical
 
-* Move magicattack into theaugment folder
 * Entropy could work with temp buffs by peeking at action queuestack
 * Test whether UnscheduleKipAction can be replaced by peeking at action queuestack
 * Look into replacing CustomTags with CustomVars for Spontaneous and Adventitious
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
-* Look into how power stacking ought to be handled
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)

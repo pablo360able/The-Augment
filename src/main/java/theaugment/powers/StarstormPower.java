@@ -17,9 +17,11 @@ public class StarstormPower extends BasePower {
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
     private final Starstorm attack;
+    private static int starstormIdOffset;
 
     public StarstormPower(AbstractCreature owner, Starstorm source_attack) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
+        super(POWER_ID + starstormIdOffset, TYPE, TURN_BASED, owner, -1);
+        starstormIdOffset++;
         this.attack = source_attack;
         this.updateDescription();
     }
