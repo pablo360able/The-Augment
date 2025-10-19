@@ -97,7 +97,11 @@ public class EidolonAction extends AbstractGameAction {
                         this.p.hand.addToTop(c);
                     }
 
-                    c.tags.add(CustomTags.SPONTANEOUS);
+                    if (!c.hasTag(CustomTags.SPONTANEOUS)) {
+                        c.tags.add(CustomTags.SPONTANEOUS);
+                        c.rawDescription = "Spontaneous. NL " + c.rawDescription;
+                        c.initializeDescription();
+                    }
 
                     this.p.hand.refreshHandLayout();
                     this.p.hand.applyPowers();
