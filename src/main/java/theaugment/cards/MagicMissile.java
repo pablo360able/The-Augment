@@ -19,7 +19,7 @@ public class MagicMissile extends BaseCard {
             0
     );
     private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 8;
+    private static final int UPG_DAMAGE = 3;
 
     public MagicMissile() {
         super(ID, info);
