@@ -123,5 +123,9 @@
   "${modID}:Earthquake": {
     "NAME": "Earthquake",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Twice as effective against Block."
+  },
+  "${modID}:Quadrature": {
+    "NAME": "Quadrature",
+    "DESCRIPTION": "${modID}:Magic. NL Deal X damage to all enemies X times. Deal damage an additional time based on your Focus."
   }
 }

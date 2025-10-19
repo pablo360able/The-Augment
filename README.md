@@ -28,7 +28,10 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Starstorm should end your turn (though not for balance reasons)
 * Knowledge is Power shouldn't trigger on draw-for-turn
 * Consider making Steelwind Strike magic
+
+## Other considerations
 * Consider changing timing of passive effect of Aether orbs
+* Consider whether Quadrature should hit fewer times with negative Focus
 
 ## Bugs
 
