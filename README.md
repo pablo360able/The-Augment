@@ -15,22 +15,37 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Powers: Guiding Light, Artillery, Defensive Stance, Upcast, Investiture, Efficiency
 * Relics: All except Tidldibab
 * Potions: All
+* Magic Missiles have to show up in tooltips
 
 ## Implement
 
-* Most art
+* Most art (energy = gold star?)
 * Most cards
 * Most relics
 * Concentration keyword
+
+## Technical
+
+* Move magicattack into theaugment folder
+* Entropy could work with temp buffs by peeking at action queuestack
+* Test whether UnscheduleKipAction can be replaced by peeking at action queuestack
+* Look into replacing CustomTags with CustomVars for Spontaneous and Adventitious
+* See if Siphoning Claw can be made to work with Claw Pack from Packmaster
+* Look into how power stacking ought to be handled
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)
 * Starstorm should end your turn (though not for balance reasons)
 * Knowledge is Power shouldn't trigger on draw-for-turn
 * Consider making Steelwind Strike magic
+* Potentially rename Future Strike to Glancing Blow and ditch the latter since it's just a Quick Slash upgrade
+* Consider whether Iron Fist should/test if it already does scale with Dex
+* Consider making Eidolon Form's upgrade give CD1C
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs
+* Apply Whirlwind's VFX into Steelwind and Zephyr Strikes
+* Replace generic names, including D&D spells and Magic keyword
 
 ## Bugs
 
