@@ -27,6 +27,7 @@ public class Bolt extends BaseCard {
 
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC, UPG_MAGIC);
+        this.cardsToPreview = new MagicMissile();
     }
 
     @Override
