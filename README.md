@@ -31,7 +31,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs
-* Consider whether Quadrature should hit fewer times with negative Focus
 
 ## Bugs
 

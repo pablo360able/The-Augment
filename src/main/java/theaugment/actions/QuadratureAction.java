@@ -30,8 +30,11 @@ public class QuadratureAction extends AbstractGameAction {
 
     public void update() {
         int effect = EnergyPanel.totalCount;
+        int focus = this.p.hasPower("Focus") ? this.p.getPower("Focus").amount : 0;
+        int strength = this.p.hasPower("Strength") ? this.p.getPower("Strength").amount : 0;
+
         if (this.energyOnUse != -1) {
-            effect = this.energyOnUse + (this.p.hasPower("Focus") ? this.p.getPower("Focus").amount : 0);
+            effect = this.energyOnUse + Math.max(focus, 0);
         }
 
         if (this.p.hasRelic("Chemical X")) {
@@ -41,7 +44,7 @@ public class QuadratureAction extends AbstractGameAction {
 
         if (effect > 0) {
             for(int i = 0; i < effect; ++i) {
-                this.addToBot(new DamageAllEnemiesAction(this.p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                this.addToBot(new DamageAllEnemiesAction(this.p, this.damage + focus - strength, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             }
 
             if (!this.freeToPlayOnce) {
