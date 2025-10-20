@@ -163,5 +163,9 @@
     "NAME": "Fast Cast",
     "DESCRIPTION": "${modID}:Spontaneous. NL Evoke your rightmost orb. NL Draw a card.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Evoke your rightmost orb. NL Draw !M! cards."
+  },
+  "${modID}:GuardianBlade": {
+    "NAME": "Guardian Blade",
+    "DESCRIPTION": "Retain. NL Gain !B! *Block. NL Your next Attack this turn is ${modID}:Magic."
   }
 }
