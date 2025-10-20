@@ -33,11 +33,9 @@ public class SteelwindStrike extends BaseCard {
         setMagic(MAGIC, UPG_MAGIC);
 
         tags.add(CardTags.STRIKE);
-    }
 
-    @Override
-    public void upgrade() {
-        this.baseCost = 0;
+        this.upgradeCost = true;
+        this.costUpgrade = 0;
     }
 
     @Override

@@ -23,11 +23,9 @@ public class Earthquake extends BaseCard {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
-    }
 
-    @Override
-    public void upgrade() {
-        this.baseCost = 3;
+        this.upgradeCost = true;
+        this.costUpgrade = 0;
     }
 
     @Override

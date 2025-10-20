@@ -26,11 +26,9 @@ public class MindOverMatter extends BaseCard {
 
         this.exhaust = true;
         tags.add(CustomTags.SPONTANEOUS);
-    }
 
-    @Override
-    public void upgrade() {
-        this.baseCost = 0;
+        this.upgradeCost = true;
+        this.costUpgrade = 0;
     }
 
     @Override

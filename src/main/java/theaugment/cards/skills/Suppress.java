@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.PurgeThoughtAction;
+import theaugment.actions.SuppressAction;
 import theaugment.cards.BaseCard;
+import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
@@ -14,28 +16,24 @@ public class Suppress extends BaseCard {
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.COMMON,
+            CardRarity.RARE,
             CardTarget.SELF,
-            0
+            4
     );
-    private static final int DRAW = 2;
-    private static final int UPG_DRAW = 1;
 
     public Suppress() {
         super(ID, info);
 
+        tags.add(CustomTags.SPONTANEOUS);
         this.exhaust = true;
-    }
 
-    @Override
-    public void upgrade() {
-        this.exhaust = false;
+        this.upgradeCost = true;
+        this.costUpgrade = 3;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p, p, 1));
-        addToBot(new PurgeThoughtAction());
+        addToBot(new SuppressAction());
     }
 
     @Override

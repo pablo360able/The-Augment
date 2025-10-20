@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -28,10 +29,15 @@ public class SuppressAction extends AbstractGameAction {
             if (this.p.hand.isEmpty()) {
                 this.isDone = true;
             } else if (this.p.hand.size() == 1) {
-                if (this.p.hand.getBottomCard().costForTurn == -1) {
-                    this.addToTop(new GainEnergyAction(EnergyPanel.getCurrentEnergy()));
-                } else if (this.p.hand.getBottomCard().costForTurn > 0) {
-                    this.addToTop(new GainEnergyAction(this.p.hand.getBottomCard().costForTurn));
+                CardGroup toRemove = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+                for (AbstractCard c : this.p.masterDeck.group) {
+                    if (c.uuid == this.p.hand.getBottomCard().uuid) {
+                        toRemove.addToTop(c);
+                    }
+                }
+                for (AbstractCard c : toRemove.group) {
+                    this.p.masterDeck.removeCard(c);
                 }
 
                 this.p.hand.moveToExhaustPile(this.p.hand.getBottomCard());
@@ -43,10 +49,15 @@ public class SuppressAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
                 for(AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                    if (c.costForTurn == -1) {
-                        this.addToTop(new ApplyPowerAction(p, p, new FocusPower(p, EnergyPanel.getCurrentEnergy())));
-                    } else if (c.costForTurn > 0) {
-                        this.addToTop(new ApplyPowerAction(p, p, new FocusPower(p, c.costForTurn)));
+                    CardGroup toRemove = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+                    for (AbstractCard c2 : this.p.masterDeck.group) {
+                        if (c2.uuid == c.uuid) {
+                            toRemove.addToTop(c2);
+                        }
+                    }
+                    for (AbstractCard c2 : toRemove.group) {
+                        this.p.masterDeck.removeCard(c2);
                     }
 
                     this.p.hand.moveToExhaustPile(c);

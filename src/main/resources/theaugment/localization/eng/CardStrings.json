@@ -222,5 +222,9 @@
   "${modID}:Memorize": {
     "NAME": "Memorize",
     "DESCRIPTION": "Innate. NL Scry !${modID}:scry!. NL Draw !M! cards. NL Permanently increase this card's Scry by 1. NL Exhaust."
+  },
+  "${modID}:Suppress": {
+    "NAME": "Suppress",
+    "DESCRIPTION": "Spontaneous. NL Exhaust a card in your hand. NL Permanently remove it from your deck after combat. NL Exhaust."
   }
 }

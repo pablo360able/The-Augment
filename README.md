@@ -24,6 +24,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Entropy could work with temp buffs by peeking at action queuestack
 * Test whether UnscheduleKipAction can be replaced by peeking at action queuestack
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
+* See about switching to costUpgrade w/ upgradeBaseCost
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)
@@ -41,5 +42,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider changing timing of passive effect of Aether orbs
 * Replace generic names, including D&D spells and Magic keyword
 * Recolor and potentially relocate added description text for Enchant and Eidolon actions, and see if they get annihilated by cards whose descriptions update
+* Suppress and Purge Thought actions may need their own text strings
 
 ## Bugs
