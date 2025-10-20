@@ -209,5 +209,9 @@
     "NAME": "Light from Above",
     "DESCRIPTION": "Upgrade one card in your hand for the rest of combat. NL If you have an empty orb slot, channel 1 Aether.",
     "UPGRADE_DESCRIPTION": "Upgrade all cards in your hand for the rest of combat. NL If you have an empty orb slot, channel 1 Aether."
+  },
+  "${modID}:TakeCover": {
+    "NAME": "Take Cover",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Gain !B! Block. NL Draw !M! cards."
   }
 }
