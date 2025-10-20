@@ -9,8 +9,8 @@ import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
-public class PurgeThought extends BaseCard {
-    public static final String ID = makeID(PurgeThought.class.getSimpleName());
+public class Suppress extends BaseCard {
+    public static final String ID = makeID(Suppress.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.SKILL,
@@ -18,8 +18,10 @@ public class PurgeThought extends BaseCard {
             CardTarget.SELF,
             0
     );
+    private static final int DRAW = 2;
+    private static final int UPG_DRAW = 1;
 
-    public PurgeThought() {
+    public Suppress() {
         super(ID, info);
 
         this.exhaust = true;
@@ -38,6 +40,6 @@ public class PurgeThought extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new PurgeThought();
+        return new Suppress();
     }
 }
