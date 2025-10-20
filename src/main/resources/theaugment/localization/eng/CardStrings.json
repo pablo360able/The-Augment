@@ -171,5 +171,11 @@
   "${modID}:Evade": {
     "NAME": "Evade",
     "DESCRIPTION": "${modID}:Spontaneous. NL Gain !B! Block. NL Scry !M!."
+  },
+  "${modID}:ActionSurge": {
+    "NAME": "Action Surge",
+    "DESCRIPTION": "Retain. NL Can only be played if you have no energy. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Can only be played if you have no energy. NL Gain [E] [E]. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["I have too much energy."]
   }
 }
