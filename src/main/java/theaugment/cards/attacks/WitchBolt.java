@@ -1,0 +1,47 @@
+package theaugment.cards.attacks;
+
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theaugment.cards.BaseCard;
+import theaugment.modifiers.MagicAttack;
+import theaugment.actions.BloodAction;
+import theaugment.util.CardStats;
+
+public class WitchBolt extends BaseCard {
+    public static final String ID = makeID(WitchBolt.class.getSimpleName());
+    private static final CardStats info = new CardStats(
+            CardColor.COLORLESS,
+            CardType.ATTACK,
+            CardRarity.UNCOMMON,
+            CardTarget.ENEMY,
+            0
+    );
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 3;
+
+    public WitchBolt() {
+        super(ID, info);
+
+        setDamage(DAMAGE, UPG_DAMAGE);
+
+        this.exhaust = true;
+        DamageModifierManager.addModifier(this, new MagicAttack());
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new LoseHPAction(p, p, 1));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
+        addToBot(new BloodAction(m, p, new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 1, false, true)));
+    }
+
+    @Override
+    public AbstractCard makeCopy() { //Optional
+        return new WitchBolt();
+    }
+}
