@@ -36,7 +36,7 @@
   },
   "${modID}:OpportunityAttack": {
     "NAME": "Opportunity Attack",
-    "DESCRIPTION": "${modID}:Spontaneous. NL Deal !D! damage. NL ${modID}:Blood. Draw 1 card."
+    "DESCRIPTION": "${modID}:Spontaneous. NL Deal !D! damage. NL ${modID}:Blood: Draw 1 card."
   },
   "${modID}:MagicMissile": {
     "NAME": "Magic Missile",
@@ -44,7 +44,8 @@
   },
   "${modID}:Bolt": {
     "NAME": "Bolt",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Magic *Missiles."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Magic *Missile into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! [#7FFF00]Magic[] *Missiles into your hand."
   },
   "${modID}:PowerUp": {
     "NAME": "Power Up",
@@ -56,13 +57,13 @@
   },
   "${modID}:Illuminate": {
     "NAME": "Illuminate",
-    "DESCRIPTION": "${modID}:Spontaneous. Channel 1 *Aether.",
-    "UPGRADE_DESCRIPTION": "Channel 1 *Aether."
+    "DESCRIPTION": "${modID}:Spontaneous. Channel 1 *${modID}:Aether.",
+    "UPGRADE_DESCRIPTION": "Channel 1 *${modID}:Aether."
   },
   "${modID}:Aetherflow": {
     "NAME": "Aetherflow",
     "DESCRIPTION": "Gain !B! Block. NL Draw 1 card for each *Aether channeled this combat.",
-    "EXTENDED_DESCRIPTION": [" NL (Channeled !M! Aether.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Channeled !M! ${modID}:Aether.)"]
   },
   "${modID}:SteelwindStrike": {
     "NAME": "Steelwind Strike",
@@ -70,7 +71,7 @@
   },
   "${modID}:Starstorm": {
     "NAME": "Starstorm",
-    "DESCRIPTION": "${modID}:Magic. NL Channel 3 Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "${modID}:Magic. NL Channel 3 ${modID}:Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times."
   },
   "${modID}:EidolonForm": {
     "NAME": "Eidolon Form",
@@ -79,8 +80,8 @@
   },
   "${modID}:MartialAdept": {
     "NAME": "Martial Adept",
-    "DESCRIPTION": "For the rest of the turn, whenever you deal unBlocked attack damage, draw a card.",
-    "UPGRADE_DESCRIPTION": "For the rest of the turn, whenever you deal unBlocked attack damage, draw 2 cards."
+    "DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "For the rest of the turn, whenever you deal unBlocked attack damage, draw !M! cards."
   },
   "${modID}:IronFist": {
     "NAME": "Iron Fist",
@@ -105,7 +106,7 @@
   "${modID}:Spellstrike": {
     "NAME": "Spellstrike",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage for each Aether channeled this combat.",
-    "EXTENDED_DESCRIPTION": [" NL (Channeled !M! Aether.)"]
+    "EXTENDED_DESCRIPTION": [" NL (Channeled !M! ${modID}:Aether.)"]
   },
   "${modID}:WitchBolt": {
     "NAME": "Witch Bolt",
@@ -113,7 +114,7 @@
   },
   "${modID}:Sunbeam": {
     "NAME": "Sunbeam",
-    "DESCRIPTION": "${modID}:Magic. NL Channel 1 *Aether. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "${modID}:Magic. NL Channel 1 *${modID}:Aether. NL Deal !D! damage to ALL enemies."
   },
   "${modID}:ZephyrStrike": {
     "NAME": "Zephyr Strike",
@@ -149,7 +150,7 @@
   },
   "${modID}:PurgeThought": {
     "NAME": "Purge Thought",
-    "DESCRIPTION": "Lose 1 hit point. NL Exhaust a card. NL Gain *Focus equal to its cost."
+    "DESCRIPTION": "Lose 1 hit point. NL Exhaust 1 card. NL Gain *Focus equal to its cost."
   },
   "${modID}:StepOfTheWind": {
     "NAME": "Step of the Wind",
@@ -161,7 +162,7 @@
   },
   "${modID}:FastCast": {
     "NAME": "Fast Cast",
-    "DESCRIPTION": "${modID}:Spontaneous. NL Evoke your rightmost orb. NL Draw a card.",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Evoke your rightmost orb. NL Draw !M! card.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Evoke your rightmost orb. NL Draw !M! cards."
   },
   "${modID}:GuardianBlade": {

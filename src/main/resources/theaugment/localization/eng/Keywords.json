@@ -59,5 +59,13 @@
       "adventitious"
     ],
     "DESCRIPTION": "Start each combat with this card in your discard pile."
+  },
+  {
+    "ID": "${modID}:Aether",
+    "PROPER_NAME": "Aether",
+    "NAMES": [
+      "aether"
+    ],
+    "DESCRIPTION": "Not affected by Focus. Passive: Gain 1 temporary Focus at the start of your turn. Active: Gain 1 (permanent) Focus."
   }
 ]
