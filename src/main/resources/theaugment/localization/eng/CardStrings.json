@@ -158,5 +158,10 @@
   "${modID}:Backstep": {
     "NAME": "Backstep",
     "DESCRIPTION": "Gain !B! *Block !M! times."
+  },
+  "${modID}:FastCast": {
+    "NAME": "Fast Cast",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Evoke your rightmost orb. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Evoke your rightmost orb. NL Draw !M! cards."
   }
 }
