@@ -25,7 +25,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Entropy could work with temp buffs by peeking at action queuestack
 * Test whether UnscheduleKipAction can be replaced by peeking at action queuestack
-* Look into replacing CustomTags with CustomVars for Spontaneous and Adventitious
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
 
 ## Balance
