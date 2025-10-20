@@ -167,5 +167,9 @@
   "${modID}:GuardianBlade": {
     "NAME": "Guardian Blade",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Your next Attack this turn is ${modID}:Magic."
+  },
+  "${modID}:Evade": {
+    "NAME": "Evade",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Gain !B! Block. NL Scry !M!."
   }
 }
