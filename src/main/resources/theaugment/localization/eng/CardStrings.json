@@ -142,5 +142,9 @@
   "${modID}:MindOverMatter": {
     "NAME": "Mind over Matter",
     "DESCRIPTION": "${modID}:Spontaneous. NL Lose all *Strength. NL Gain *Focus equal to lost *Strength (positive or negative)."
+  },
+  "${modID}:Disengage": {
+    "NAME": "Disengage",
+    "DESCRIPTION": "Gain !B! block. NL Gain this block an additional time for each enemy in combat."
   }
 }
