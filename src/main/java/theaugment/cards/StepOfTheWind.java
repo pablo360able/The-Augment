@@ -1,10 +1,13 @@
 package theaugment.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RagePower;
+import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import theaugment.character.Augment;
 import theaugment.powers.MartialAdeptPower;
 import theaugment.util.CardStats;
@@ -30,6 +33,8 @@ public class StepOfTheWind extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new SFXAction("ATTACK_WHIRLWIND"));
+        addToBot(new VFXAction(new WhirlwindEffect(), 0.0F));
         addToBot(new ApplyPowerAction(p, p, new RagePower(p, magicNumber)));
     }
 
