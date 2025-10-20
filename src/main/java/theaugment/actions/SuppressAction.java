@@ -12,12 +12,12 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-public class PurgeThoughtAction extends AbstractGameAction {
+public class SuppressAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private AbstractPlayer p;
 
-    public PurgeThoughtAction() {
+    public SuppressAction() {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.p = AbstractDungeon.player;
         this.duration = Settings.ACTION_DUR_FAST;
@@ -29,9 +29,9 @@ public class PurgeThoughtAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (this.p.hand.size() == 1) {
                 if (this.p.hand.getBottomCard().costForTurn == -1) {
-                    this.addToTop(new ApplyPowerAction(p, p, new FocusPower(p, EnergyPanel.getCurrentEnergy())));
+                    this.addToTop(new GainEnergyAction(EnergyPanel.getCurrentEnergy()));
                 } else if (this.p.hand.getBottomCard().costForTurn > 0) {
-                    this.addToTop(new ApplyPowerAction(p, p, new FocusPower(p, c.costForTurn)));
+                    this.addToTop(new GainEnergyAction(this.p.hand.getBottomCard().costForTurn));
                 }
 
                 this.p.hand.moveToExhaustPile(this.p.hand.getBottomCard());
