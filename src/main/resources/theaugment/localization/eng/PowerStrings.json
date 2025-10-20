@@ -60,5 +60,12 @@
       "At the end of your turn, gain #b",
       " #yFocus."
     ]
+  },
+  "${modID}:GuidingLightPower": {
+    "NAME": "Jailbroken",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yFocus."
+    ]
   }
 }

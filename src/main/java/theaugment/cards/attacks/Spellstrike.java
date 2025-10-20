@@ -12,6 +12,7 @@ import theaugment.cards.BaseCard;
 import theaugment.modifiers.MagicAttack;
 import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
+import theaugment.util.Helpers;
 
 public class Spellstrike extends BaseCard {
     public static final String ID = makeID(Spellstrike.class.getSimpleName());
@@ -36,17 +37,8 @@ public class Spellstrike extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.baseMagicNumber = 0;
 
-        for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
-            if (o instanceof Aether) {
-                ++this.baseMagicNumber;
-            }
-        }
-
-        this.magicNumber = this.baseMagicNumber;
-
-        for (int i = 0; i < this.magicNumber; i++) {
+        for (int i = 0; i < Helpers.AetherChanneled(); i++) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
     }
@@ -57,13 +49,7 @@ public class Spellstrike extends BaseCard {
     }
 
     public void applyPowers() {
-        int aetherCount = 0;
-
-        for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
-            if (o instanceof Aether) {
-                ++aetherCount;
-            }
-        }
+        int aetherCount = Helpers.AetherChanneled();
 
         if (aetherCount > 0) {
             this.baseMagicNumber = aetherCount;

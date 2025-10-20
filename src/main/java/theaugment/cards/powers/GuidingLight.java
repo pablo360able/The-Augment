@@ -10,6 +10,7 @@ import theaugment.cards.BaseCard;
 import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.powers.EidolonFormPower;
+import theaugment.powers.GuidingLightPower;
 import theaugment.util.CardStats;
 
 public class GuidingLight extends BaseCard {
@@ -17,29 +18,21 @@ public class GuidingLight extends BaseCard {
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.SELF,
-            3
+            1
     );
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
 
     public GuidingLight() {
         super(ID, info);
 
-        setMagic(MAGIC, UPG_MAGIC);
-
-        tags.add(CustomTags.ADVENTITIOUS);
-        tags.add(BaseModCardTags.FORM);
+        this.upgradeCost = true;
+        this.costUpgrade = 0;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        EidolonFormPower eidol = p.hasPower(makeID("EidolonFormPower")) ? (EidolonFormPower)p.getPower(makeID("EidolonFormPower")) : new EidolonFormPower(p);
-        addToBot(new ApplyPowerAction(p, p, eidol));
-        if (upgraded) {
-            addToBot(new EidolonAction(p, eidol.amount));
-        }
+        addToBot(new ApplyPowerAction(p, p, new GuidingLightPower()));
     }
 
     @Override

@@ -11,6 +11,7 @@ import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
+import theaugment.util.Helpers;
 
 public class Aetherflow extends BaseCard {
     public static final String ID = makeID(Aetherflow.class.getSimpleName());
@@ -37,28 +38,12 @@ public class Aetherflow extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, block));
 
-        this.baseMagicNumber = 0;
-
-        for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
-            if (o instanceof Aether) {
-                ++this.baseMagicNumber;
-            }
-        }
-
-        this.magicNumber = this.baseMagicNumber;
-
-        this.addToBot(new DrawCardAction(this.magicNumber));
+        this.addToBot(new DrawCardAction(Helpers.AetherChanneled()));
 
     }
 
     public void applyPowers() {
-        int aetherCount = 0;
-
-        for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
-            if (o instanceof Aether) {
-                ++aetherCount;
-            }
-        }
+        int aetherCount = Helpers.AetherChanneled();
 
         if (aetherCount > 0) {
             this.baseMagicNumber = aetherCount;
