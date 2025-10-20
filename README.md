@@ -39,7 +39,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs
-* Apply Whirlwind's VFX into Steelwind and Zephyr Strikes
 * Replace generic names, including D&D spells and Magic keyword
 
 ## Bugs

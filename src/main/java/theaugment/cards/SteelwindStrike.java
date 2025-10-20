@@ -1,12 +1,15 @@
 package theaugment.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
@@ -16,7 +19,7 @@ public class SteelwindStrike extends BaseCard {
             Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
             CardRarity.UNCOMMON,
-            CardTarget.ENEMY,
+            CardTarget.ALL_ENEMY,
             1
     );
     private static final int DAMAGE = 3;
@@ -40,9 +43,13 @@ public class SteelwindStrike extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new SFXAction("ATTACK_WHIRLWIND"));
+        this.addToBot(new VFXAction(new WhirlwindEffect(), 0.0F));
+
         for(int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        }    }
+        }
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional
