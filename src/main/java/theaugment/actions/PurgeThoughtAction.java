@@ -31,7 +31,7 @@ public class PurgeThoughtAction extends AbstractGameAction {
                 if (this.p.hand.getBottomCard().costForTurn == -1) {
                     this.addToTop(new ApplyPowerAction(p, p, new FocusPower(p, EnergyPanel.getCurrentEnergy())));
                 } else if (this.p.hand.getBottomCard().costForTurn > 0) {
-                    this.addToTop(new ApplyPowerAction(p, p, new FocusPower(p, c.costForTurn)));
+                    this.addToTop(new ApplyPowerAction(p, p, new FocusPower(p, this.p.hand.getBottomCard().costForTurn)));
                 }
 
                 this.p.hand.moveToExhaustPile(this.p.hand.getBottomCard());
