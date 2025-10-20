@@ -4,38 +4,37 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NoBlockPower;
+import com.megacrit.cardcrawl.powers.RagePower;
 import theaugment.character.Augment;
 import theaugment.powers.MartialAdeptPower;
-import theaugment.powers.PowerUpPower;
 import theaugment.util.CardStats;
 
-public class MartialAdept extends BaseCard {
-    public static final String ID = makeID(MartialAdept.class.getSimpleName());
+public class StepOfTheWind extends BaseCard {
+    public static final String ID = makeID(StepOfTheWind.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.RARE,
+            CardRarity.COMMON,
             CardTarget.SELF,
             1
     );
 
-    private static final int DRAW = 1;
-    private static final int UPG_DRAW = 1;
+    private static final int BLOCK = 4;
+    private static final int UPG_BLOCK = 2;
 
-    public MartialAdept() {
+    public StepOfTheWind() {
         super(ID, info);
 
-        setMagic(DRAW, UPG_DRAW);
+        setMagic(BLOCK, UPG_BLOCK);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new MartialAdeptPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new RagePower(p, magicNumber)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new MartialAdept();
+        return new StepOfTheWind();
     }
 }
