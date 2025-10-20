@@ -134,5 +134,9 @@
   "${modID}:MissileSpray": {
     "NAME": "Missile Spray",
     "DESCRIPTION": "Add X *Magic *Missiles to your hand."
+  },
+  "${modID}:Advantage": {
+    "NAME": "Advantage",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Draw !M! cards. NL Discard 1 card."
   }
 }
