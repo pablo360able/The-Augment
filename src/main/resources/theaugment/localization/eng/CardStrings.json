@@ -138,5 +138,9 @@
   "${modID}:Advantage": {
     "NAME": "Advantage",
     "DESCRIPTION": "${modID}:Spontaneous. NL Draw !M! cards. NL Discard 1 card."
+  },
+  "${modID}:MindOverMatter": {
+    "NAME": "Mind over Matter",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Lose all *Strength. NL Gain *Focus equal to lost *Strength (positive or negative)."
   }
 }
