@@ -15,7 +15,7 @@
   },
   "${modID}:Defend": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! block."
+    "DESCRIPTION": "Gain !B! Block."
   },
   "${modID}:StunningStrike": {
     "NAME": "Stunning Strike",
@@ -32,7 +32,7 @@
   },
   "${modID}:FutureStrike": {
     "NAME": "Future Strike",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Scry equal to unblocked damage."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Scry equal to unBlocked damage."
   },
   "${modID}:OpportunityAttack": {
     "NAME": "Opportunity Attack",
@@ -44,11 +44,11 @@
   },
   "${modID}:Bolt": {
     "NAME": "Bolt",
-    "DESCRIPTION": "Gain !B! block. NL Add !M! *Magic *Missiles."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Magic *Missiles."
   },
   "${modID}:PowerUp": {
     "NAME": "Power Up",
-    "DESCRIPTION": "Powers are free this turn. NL You can't gain block from cards for 2 turns."
+    "DESCRIPTION": "Powers are free this turn. NL You can't gain Block from cards for 2 turns."
   },
   "${modID}:KnowledgeIsPower": {
     "NAME": "Knowledge is Power",
@@ -61,7 +61,7 @@
   },
   "${modID}:Aetherflow": {
     "NAME": "Aetherflow",
-    "DESCRIPTION": "Gain !B! block. NL Draw 1 card for each *Aether channeled this combat.",
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 card for each *Aether channeled this combat.",
     "EXTENDED_DESCRIPTION": [" NL (Channeled !M! Aether.)"]
   },
   "${modID}:SteelwindStrike": {
@@ -79,12 +79,12 @@
   },
   "${modID}:MartialAdept": {
     "NAME": "Martial Adept",
-    "DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw a card.",
-    "UPGRADE_DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw 2 cards."
+    "DESCRIPTION": "For the rest of the turn, whenever you deal unBlocked attack damage, draw a card.",
+    "UPGRADE_DESCRIPTION": "For the rest of the turn, whenever you deal unBlocked attack damage, draw 2 cards."
   },
   "${modID}:IronFist": {
     "NAME": "Iron Fist",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Gain block next turn equal to unblocked damage."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Gain Block next turn equal to unBlocked damage."
   },
   "${modID}:GlancingBlow": {
     "NAME": "Glancing Blow",
@@ -145,7 +145,7 @@
   },
   "${modID}:Disengage": {
     "NAME": "Disengage",
-    "DESCRIPTION": "Gain !B! block. NL Gain this block an additional time for each enemy in combat."
+    "DESCRIPTION": "Gain !B! Block. NL Gain this Block an additional time for each enemy in combat."
   },
   "${modID}:PurgeThought": {
     "NAME": "Purge Thought",
@@ -153,11 +153,11 @@
   },
   "${modID}:StepOfTheWind": {
     "NAME": "Step of the Wind",
-    "DESCRIPTION": "Whenever you play an Attack this turn, gain !M! *Block."
+    "DESCRIPTION": "Whenever you play an Attack this turn, gain !M! Block."
   },
   "${modID}:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Gain !B! *Block !M! times."
+    "DESCRIPTION": "Gain !B! Block !M! times."
   },
   "${modID}:FastCast": {
     "NAME": "Fast Cast",
@@ -166,6 +166,6 @@
   },
   "${modID}:GuardianBlade": {
     "NAME": "Guardian Blade",
-    "DESCRIPTION": "Retain. NL Gain !B! *Block. NL Your next Attack this turn is ${modID}:Magic."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Your next Attack this turn is ${modID}:Magic."
   }
 }
