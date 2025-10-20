@@ -150,5 +150,9 @@
   "${modID}:PurgeThought": {
     "NAME": "Purge Thought",
     "DESCRIPTION": "Lose 1 hit point. NL Exhaust a card. NL Gain *Focus equal to its cost."
+  },
+  "${modID}:StepOfTheWind": {
+    "NAME": "Step of the Wind",
+    "DESCRIPTION": "Whenever you play an Attack this turn, gain !M! *Block."
   }
 }
