@@ -34,6 +34,7 @@ public class Illuminate extends BaseCard {
     @Override
     public void upgrade() {
         tags.remove(CustomTags.SPONTANEOUS);
+        super.upgrade();
     }
 
     @Override

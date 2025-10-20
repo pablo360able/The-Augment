@@ -22,12 +22,7 @@ public class PurgeThought extends BaseCard {
     public PurgeThought() {
         super(ID, info);
 
-        this.exhaust = true;
-    }
-
-    @Override
-    public void upgrade() {
-        this.exhaust = false;
+        setExhaust(true, false);
     }
 
     @Override

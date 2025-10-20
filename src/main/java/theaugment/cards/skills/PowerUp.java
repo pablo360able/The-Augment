@@ -22,6 +22,8 @@ public class PowerUp extends BaseCard {
 
     public PowerUp() {
         super(ID, info);
+
+        setSelfRetain(false, true);
     }
 
     @Override
@@ -30,11 +32,6 @@ public class PowerUp extends BaseCard {
         if (!p.hasPower(makeID("PowerUpPower"))) {
             addToBot(new ApplyPowerAction(p, p, new PowerUpPower(p)));
         }
-    }
-
-    @Override
-    public void upgrade() {
-        this.selfRetain = true;
     }
 
     @Override

@@ -27,7 +27,7 @@ public class Memorize extends BaseCard {
         super(ID, info);
 
         setMagic(MAGIC, UPG_MAGIC);
-        setInnate(true, true);
+        setInnate(true);
         setCustomVar("scry", 1, 0);
 
         this.exhaust = true;
