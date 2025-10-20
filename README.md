@@ -43,5 +43,3 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Replace generic names, including D&D spells and Magic keyword
 
 ## Bugs
-
-* Aetherflow and Spellstrike may not correctly display the number of orbs channeled this combat

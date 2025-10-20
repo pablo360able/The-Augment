@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.Frost;
 import theaugment.modifiers.MagicAttack;
 import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
@@ -53,5 +54,22 @@ public class Spellstrike extends BaseCard {
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Spellstrike();
+    }
+
+    public void applyPowers() {
+        int aetherCount = 0;
+
+        for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
+            if (o instanceof Aether) {
+                ++aetherCount;
+            }
+        }
+
+        if (aetherCount > 0) {
+            this.baseMagicNumber = aetherCount;
+            super.applyPowers();
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
     }
 }

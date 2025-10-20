@@ -53,6 +53,23 @@ public class Aetherflow extends BaseCard {
 
     }
 
+    public void applyPowers() {
+        int aetherCount = 0;
+
+        for(AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
+            if (o instanceof Aether) {
+                ++aetherCount;
+            }
+        }
+
+        if (aetherCount > 0) {
+            this.baseMagicNumber = aetherCount;
+            super.applyPowers();
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
+    }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Aetherflow();

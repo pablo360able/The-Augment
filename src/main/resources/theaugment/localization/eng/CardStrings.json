@@ -61,7 +61,8 @@
   },
   "${modID}:Aetherflow": {
     "NAME": "Aetherflow",
-    "DESCRIPTION": "Gain !B! block. NL Draw 1 card for each *Aether channeled this combat (currently !M!)."
+    "DESCRIPTION": "Gain !B! block. NL Draw 1 card for each *Aether channeled this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Channeled !M! Aether.)"]
   },
   "${modID}:SteelwindStrike": {
     "NAME": "Steelwind Strike",
@@ -103,7 +104,8 @@
   },
   "${modID}:Spellstrike": {
     "NAME": "Spellstrike",
-    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage for each Aether channeled this combat (currently !M!)."
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage for each Aether channeled this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Channeled !M! Aether.)"]
   },
   "${modID}:WitchBolt": {
     "NAME": "Witch Bolt",
