@@ -191,5 +191,10 @@
   "${modID}:Recenter": {
     "NAME": "Recenter",
     "DESCRIPTION": "Gain X Focus. NL Exhaust."
+  },
+  "${modID}:Sanctuary": {
+    "NAME": "Sanctuary",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Can only be played if every card in your hand is a Skill. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["I have non-Skill cards in my hand."]
   }
 }

@@ -36,6 +36,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider making Eidolon Form's upgrade give CD1C
 * Nerf Disengage slightly
 * Consider whether Purge Thought should cost 1 like it originally did
+* Consider whether Sanctuary should be Exhaust or Spontaneous
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs

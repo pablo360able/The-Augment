@@ -31,8 +31,8 @@ public class MagicWeapon extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new FocusPower(p, 2 *magicNumber), magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new LoseFocusPower(p, 2 *magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new FocusPower(p, 2 *magicNumber), 2 *magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new LoseFocusPower(p, 2 *magicNumber), 2 *magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new MagicWeaponPower(p, magicNumber)));
     }
 
