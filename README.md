@@ -36,6 +36,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider whether Iron Fist should/test if it already does scale with Dex
 * Consider making Eidolon Form's upgrade give CD1C
 * Nerf Disengage slightly
+* Consider whether Purge Thought should cost 1 like it originally did
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs

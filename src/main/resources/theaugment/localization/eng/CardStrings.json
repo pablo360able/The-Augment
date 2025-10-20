@@ -146,5 +146,9 @@
   "${modID}:Disengage": {
     "NAME": "Disengage",
     "DESCRIPTION": "Gain !B! block. NL Gain this block an additional time for each enemy in combat."
+  },
+  "${modID}:PurgeThought": {
+    "NAME": "Purge Thought",
+    "DESCRIPTION": "Lose 1 hit point. NL Exhaust a card. NL Gain *Focus equal to its cost."
   }
 }
