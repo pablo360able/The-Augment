@@ -6,7 +6,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Uncommon Skills: Realize, Inspiration, Recenter, Sanctuary, Multiattack, Feign Disaster, Light from Above, Take Cover, Enchant, Memorize
 * Rare Skills: Suppress, Jailbreak
 * Powers: Guiding Light, Artillery, Defensive Stance, Upcast, Investiture, Efficiency
 * Relics: All except Tidldibab
