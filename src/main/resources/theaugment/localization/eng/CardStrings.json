@@ -154,5 +154,9 @@
   "${modID}:StepOfTheWind": {
     "NAME": "Step of the Wind",
     "DESCRIPTION": "Whenever you play an Attack this turn, gain !M! *Block."
+  },
+  "${modID}:Backstep": {
+    "NAME": "Backstep",
+    "DESCRIPTION": "Gain !B! *Block !M! times."
   }
 }
