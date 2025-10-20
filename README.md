@@ -35,6 +35,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Potentially rename Future Strike to Glancing Blow and ditch the latter since it's just a Quick Slash upgrade
 * Consider whether Iron Fist should/test if it already does scale with Dex
 * Consider making Eidolon Form's upgrade give CD1C
+* Nerf Disengage slightly
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs
