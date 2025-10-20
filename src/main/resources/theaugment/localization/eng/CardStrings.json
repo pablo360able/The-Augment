@@ -178,5 +178,9 @@
     "DESCRIPTION": "Retain. NL Can only be played if you have no energy. NL Gain [E]. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Can only be played if you have no energy. NL Gain [E] [E]. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["I have too much energy."]
+  },
+  "${modID}:Realize": {
+    "NAME": "Realize",
+    "DESCRIPTION": "Lose 1 Focus. NL Gain an additional orb slot."
   }
 }
