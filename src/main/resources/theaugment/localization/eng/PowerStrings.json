@@ -36,7 +36,7 @@
     "NAME": "Starstorm",
     "DESCRIPTIONS": [
       "At the start of your turn, deal #b",
-      " #y${modID}:Magic damage to a random enemy #b",
+      " #yMagic damage to a random enemy #b",
       " times."
     ]
   },
@@ -62,10 +62,10 @@
     ]
   },
   "${modID}:GuidingLightPower": {
-    "NAME": "Jailbroken",
+    "NAME": "Guiding Light",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b",
-      " #yFocus."
+      "#yRetain up to #b",
+      " cards for each #yAether channeled."
     ]
   }
 }

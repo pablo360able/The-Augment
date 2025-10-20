@@ -230,5 +230,9 @@
   "${modID}:Jailbreak": {
     "NAME": "Jailbreak",
     "DESCRIPTION": "Lose !M! Focus this turn. NL Draw cards equal to your Focus."
+  },
+  "${modID}:GuidingLight": {
+    "NAME": "Guiding Light",
+    "DESCRIPTION": "Each turn, retain cards up to the number of Aether orbs channeled this combat."
   }
 }
