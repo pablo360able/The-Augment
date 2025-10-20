@@ -130,5 +130,9 @@
   "${modID}:Quadrature": {
     "NAME": "Quadrature",
     "DESCRIPTION": "${modID}:Magic. NL Deal X damage to all enemies X times. Deal damage an additional time based on your Focus."
+  },
+  "${modID}:MissileSpray": {
+    "NAME": "Missile Spray",
+    "DESCRIPTION": "Add X *Magic *Missiles to your hand."
   }
 }
