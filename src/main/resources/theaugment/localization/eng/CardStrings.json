@@ -226,5 +226,9 @@
   "${modID}:Suppress": {
     "NAME": "Suppress",
     "DESCRIPTION": "Spontaneous. NL Exhaust a card in your hand. NL Permanently remove it from your deck after combat. NL Exhaust."
+  },
+  "${modID}:Jailbreak": {
+    "NAME": "Jailbreak",
+    "DESCRIPTION": "Lose !M! Focus this turn. NL Draw cards equal to your Focus."
   }
 }

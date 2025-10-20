@@ -53,5 +53,12 @@
       "Whenever you deal unblocked attack damage, draw #b",
       " card(s)."
     ]
+  },
+  "${modID}:GainFocusPower": {
+    "NAME": "Jailbroken",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yFocus."
+    ]
   }
 }
