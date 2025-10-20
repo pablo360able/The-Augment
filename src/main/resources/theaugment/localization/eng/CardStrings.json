@@ -196,5 +196,9 @@
     "NAME": "Sanctuary",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Can only be played if every card in your hand is a Skill. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["I have non-Skill cards in my hand."]
+  },
+  "${modID}:Multiattack": {
+    "NAME": "Multiattack",
+    "DESCRIPTION": "Reduce the cost of all Attacks in your hand to 0 this turn."
   }
 }
