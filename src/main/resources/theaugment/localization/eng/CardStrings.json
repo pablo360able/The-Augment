@@ -182,5 +182,10 @@
   "${modID}:Realize": {
     "NAME": "Realize",
     "DESCRIPTION": "Lose 1 Focus. NL Gain an additional orb slot."
+  },
+  "${modID}:BonusAction": {
+    "NAME": "Bonus Action",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Put one ${modID}:Spontaneous card from your discard pile into your hand. NL It costs 1 less this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Put one ${modID}:Spontaneous card from your discard pile into your hand. NL It costs 1 less this combat. NL Exhaust."
   }
 }
