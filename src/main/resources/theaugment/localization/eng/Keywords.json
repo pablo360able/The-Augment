@@ -67,5 +67,13 @@
       "aether"
     ],
     "DESCRIPTION": "Orb: Gain Focus."
+  },
+  {
+    "ID": "${modID}:Blur",
+    "PROPER_NAME": "Blur",
+    "NAMES": [
+      "blur"
+    ],
+    "DESCRIPTION": "Retain excess block at the start of your turn."
   }
 ]

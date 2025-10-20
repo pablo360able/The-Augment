@@ -200,5 +200,9 @@
   "${modID}:Multiattack": {
     "NAME": "Multiattack",
     "DESCRIPTION": "Reduce the cost of all Attacks in your hand to 0 this turn."
+  },
+  "${modID}:FeignDisaster": {
+    "NAME": "Feign Disaster",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Gain !B! Block. NL Gain !M! ${modID}:Blur. NL You cannot attack this turn."
   }
 }
