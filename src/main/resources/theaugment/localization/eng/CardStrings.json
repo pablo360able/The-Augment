@@ -256,5 +256,9 @@
   "${modID}:Efficiency": {
     "NAME": "Efficiency",
     "DESCRIPTION": "At the start of each turn, select !M! card. Reduce its cost by one this combat."
+  },
+  "${modID}:ExploitWeakness": {
+    "NAME": "Exploit Weakness",
+    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Double this card's damage this combat. NL Deal !D! damage NL Exhaust."
   }
 }

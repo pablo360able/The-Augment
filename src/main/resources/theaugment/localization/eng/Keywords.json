@@ -75,5 +75,13 @@
       "blur"
     ],
     "DESCRIPTION": "Retain excess block at the start of your turn."
+  },
+  {
+    "ID": "${modID}:Compensate",
+    "PROPER_NAME": "Compensate",
+    "NAMES": [
+      "compensate"
+    ],
+    "DESCRIPTION": "Trigger the following effect when this card is discarded during your turn."
   }
 ]
