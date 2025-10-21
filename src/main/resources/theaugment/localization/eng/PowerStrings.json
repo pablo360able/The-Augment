@@ -67,5 +67,19 @@
       "#yRetain up to #b",
       " cards for each #yAether channeled."
     ]
+  },
+  "${modID}:ArtilleryPower": {
+    "NAME": "Artillery",
+    "DESCRIPTIONS": [
+      "#yAt the start of each turn, lose #b",
+      " hit points and add that many copies of Magic Missile to your hand."
+    ]
+  },
+  "${modID}:ArtilleryPower+": {
+    "NAME": "Artillery+",
+    "DESCRIPTIONS": [
+      "#yAt the start of each turn, lose #b",
+      " hit points and add that many copies of Magic Missile+ to your hand."
+    ]
   }
 }

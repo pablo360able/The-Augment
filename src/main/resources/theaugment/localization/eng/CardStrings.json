@@ -234,5 +234,10 @@
   "${modID}:GuidingLight": {
     "NAME": "Guiding Light",
     "DESCRIPTION": "Each turn, retain cards up to the number of Aether orbs channeled this combat."
+  },
+  "${modID}:Artillery": {
+    "NAME": "Artillery",
+    "DESCRIPTION": "At the start of each turn, lose 1 hit point and add a *Magic *Missile to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, lose 1 hit point and add a [#7FFF00]Magic[] *Missile+ to your hand."
   }
 }
