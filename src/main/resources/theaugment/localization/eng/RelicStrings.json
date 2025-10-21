@@ -54,5 +54,15 @@
     "NAME": "Training Wand",
     "FLAVOR": "Young mages use these when learning spellcraft, and accomplished wizards to maintain their fundamentals.",
     "DESCRIPTIONS": ["You can now gain #yFocus at Rest Sites (up to 3 times)."]
+  },
+  "${modID}:Clepsydra": {
+    "NAME": "Clepsydra",
+    "FLAVOR": "An ancient timekeeping device based on the flowing of water.",
+    "DESCRIPTIONS": [
+      "Every #b",
+      " turns, gain ",
+      " #yFocus. At the end of that turn, lose ",
+      " #yFocus."
+    ]
   }
 }
