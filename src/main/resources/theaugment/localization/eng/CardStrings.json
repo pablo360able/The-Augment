@@ -248,5 +248,9 @@
   "${modID}:Upcast": {
     "NAME": "Upcast",
     "DESCRIPTION": "Gain !M! Focus."
+  },
+  "${modID}:Fireproof": {
+    "NAME": "Fireproof",
+    "DESCRIPTION": "Take no damage from your own cards and orbs."
   }
 }

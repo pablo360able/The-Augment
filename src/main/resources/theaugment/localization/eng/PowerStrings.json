@@ -71,15 +71,21 @@
   "${modID}:ArtilleryPower": {
     "NAME": "Artillery",
     "DESCRIPTIONS": [
-      "#yAt the start of each turn, lose #b",
+      "At the start of each turn, lose #b",
       " hit points and add that many copies of Magic Missile to your hand."
     ]
   },
   "${modID}:ArtilleryPower+": {
     "NAME": "Artillery+",
     "DESCRIPTIONS": [
-      "#yAt the start of each turn, lose #b",
+      "At the start of each turn, lose #b",
       " hit points and add that many copies of Magic Missile+ to your hand."
+    ]
+  },
+  "${modID}:FireproofPower": {
+    "NAME": "Fireproof",
+    "DESCRIPTIONS": [
+      "Take no damage from your own cards and orbs."
     ]
   }
 }
