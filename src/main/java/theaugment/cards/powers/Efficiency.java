@@ -17,7 +17,7 @@ public class Efficiency extends BaseCard {
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.SELF,
             2
     );
