@@ -44,5 +44,10 @@
       "If you do not play any #yAttacks during your turn, draw ",
       " additional cards next turn."
     ]
+  },
+  "${modID}:Arthame": {
+    "NAME": "Arthame",
+    "FLAVOR": "An arcane knife with a black handle used in spellcraft, as described by a certain grimoire.",
+    "DESCRIPTIONS": ["Attacks that cost #b0 are #yMagic."]
   }
 }
