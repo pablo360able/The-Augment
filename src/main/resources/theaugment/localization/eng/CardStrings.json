@@ -259,6 +259,10 @@
   },
   "${modID}:ExploitWeakness": {
     "NAME": "Exploit Weakness",
-    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Double this card's damage this combat. NL Deal !D! damage NL Exhaust."
+    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Double this card's damage this combat. NL Deal !D! damage. NL Exhaust."
+  },
+  "${modID}:EvadeCapture": {
+    "NAME": "Evade Capture",
+    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Double this card's Block this combat. NL Gain !B! Block. NL Exhaust."
   }
 }

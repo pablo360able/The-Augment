@@ -1,6 +1,8 @@
 package theaugment.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -44,9 +46,9 @@ public class BonusActionAction extends AbstractGameAction {
                         if (this.player.hand.size() < 10) {
                             this.player.hand.addToHand(c);
                             if (this.forCombat) {
-                                c.modifyCostForCombat(-1);
+                                this.addToBot(new ReduceCostAction(c.uuid, 1));
                             } else {
-                                c.setCostForTurn(c.costForTurn - 1);
+                                this.addToBot(new ReduceCostForTurnAction(c, 1));
                             }
 
                             this.player.discardPile.removeCard(c);
@@ -71,9 +73,9 @@ public class BonusActionAction extends AbstractGameAction {
                     if (this.player.hand.size() < 10) {
                         this.player.hand.addToHand(c);
                         if (this.forCombat) {
-                            c.modifyCostForCombat(-1);
+                            this.addToBot(new ReduceCostAction(c.uuid, 1));
                         } else {
-                            c.setCostForTurn(c.costForTurn - 1);
+                            this.addToBot(new ReduceCostForTurnAction(c, 1));
                         }
 
                         this.player.discardPile.removeCard(c);
