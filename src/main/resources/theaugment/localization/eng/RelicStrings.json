@@ -49,5 +49,10 @@
     "NAME": "Arthame",
     "FLAVOR": "An arcane knife with a black handle used in spellcraft, as described by a certain grimoire.",
     "DESCRIPTIONS": ["Attacks that cost #b0 are #yMagic."]
+  },
+  "${modID}:TrainingWand": {
+    "NAME": "Training Wand",
+    "FLAVOR": "Young mages use these when learning spellcraft, and accomplished wizards to maintain their fundamentals.",
+    "DESCRIPTIONS": ["You can now gain #yFocus at Rest Sites (up to 3 times)."]
   }
 }
