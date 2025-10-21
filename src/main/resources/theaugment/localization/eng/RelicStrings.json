@@ -72,5 +72,12 @@
       "Whenever you enter a Rest Site, start the next combat with ",
       " #yFocus."
     ]
+  },
+  "${modID}:Dreidl": {
+    "NAME": "Dreidl",
+    "FLAVOR": "A great miracle happened here.",
+    "DESCRIPTIONS": [
+      "Whenever you discard one or more cards, draw a card."
+    ]
   }
 }
