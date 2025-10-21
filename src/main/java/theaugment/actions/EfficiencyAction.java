@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theaugment.cards.CustomTags;
 
+import static theaugment.TheAugmentMod.makeID;
+
 public class EfficiencyAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
@@ -73,7 +75,7 @@ public class EfficiencyAction extends AbstractGameAction {
     }
 
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("AnyCardFromDeckToHandAction");
+        uiStrings = CardCrawlGame.languagePack.getUIString(makeID(EfficiencyAction.class.getSimpleName()));
         TEXT = uiStrings.TEXT;
     }
 }

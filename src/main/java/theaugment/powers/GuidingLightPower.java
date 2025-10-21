@@ -30,6 +30,6 @@ public class GuidingLightPower extends BasePower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount * Helpers.AetherChanneled() + DESCRIPTIONS[1];
     }
 }
