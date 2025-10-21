@@ -64,5 +64,13 @@
       " #yFocus. At the end of that turn, lose ",
       " #yFocus."
     ]
+  },
+  "${modID}:HangingGarden": {
+    "NAME": "Hanging Garden",
+    "FLAVOR": "While not literally suspended, the terraced gardens of Babylon were a marvel of historical hydroponics.",
+    "DESCRIPTIONS": [
+      "Whenever you enter a Rest Site, start the next combat with ",
+      " #yFocus."
+    ]
   }
 }
