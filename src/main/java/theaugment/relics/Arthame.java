@@ -4,8 +4,10 @@ package theaugment.relics;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theaugment.character.Augment;
 import theaugment.modifiers.MagicAttack;
+import theaugment.powers.MagicWeaponPower;
 import theaugment.util.Helpers;
 
 import static theaugment.TheAugmentMod.makeID;
@@ -32,6 +34,9 @@ public class Arthame extends BaseRelic {
             if (mod instanceof MagicAttack) {
                 return damage;
             }
+        }
+        if (AbstractDungeon.player.getPower(MagicWeaponPower.POWER_ID) != null) {
+            return damage;
         }
         return Helpers.EnchantDamage(damage, card.damageTypeForTurn);
     }
