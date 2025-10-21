@@ -28,5 +28,13 @@
       " #yAttacks in a single turn, gain #b",
       " #yFocus."
     ]
+  },
+  "${modID}:WandOfMissiles": {
+    "NAME": "Wand of Missiles",
+    "FLAVOR": "A reliable backup weapon no Sergeant-Mage would be caught dead without.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add #b",
+      " #yMagic #yMissiles into your hand."
+    ]
   }
 }
