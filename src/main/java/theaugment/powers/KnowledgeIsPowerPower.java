@@ -22,7 +22,7 @@ public class KnowledgeIsPowerPower extends BasePower {
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (DrawCardAction.drawnCards.size() != 1) {
+        if (DrawCardAction.drawnCards.size() != 1 || AbstractDungeon.actionManager.actions.get(0) instanceof DrawCardAction) {
             return;
         }
 

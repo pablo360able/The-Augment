@@ -36,5 +36,13 @@
       "At the start of each combat, add #b",
       " #yMagic #yMissiles into your hand."
     ]
+  },
+  "${modID}:ComponentPouch": {
+    "NAME": "Component Pouch",
+    "FLAVOR": "Eye of newt and toe of frog\nWool of bat and tongue of dog\nAdder’s fork and blind-worm’s sting\nLizard’s leg and owlet’s wing",
+    "DESCRIPTIONS": [
+      "If you do not play any #yAttacks during your turn, draw ",
+      " additional cards next turn."
+    ]
   }
 }
