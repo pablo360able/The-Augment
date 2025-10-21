@@ -1,5 +1,6 @@
 package theaugment.actions;
 
+import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -67,10 +68,9 @@ public class RewardCardAction extends AbstractGameAction {
 
                 addToBot(new MakeTempCardInHandAction(chosen));
 
-                RewardItem reward = new RewardItem();
-                reward.cards.clear();
-                reward.cards.add(chosen);
-                AbstractDungeon.getCurrRoom().rewards.add(reward);
+                ArrayList<AbstractCard> card = new ArrayList<>();
+                card.add(chosen);
+                AbstractDungeon.getCurrRoom().rewards.add(StSLib.generateCardReward(card, false));
 
                 this.isDone = true;
             } else {
@@ -109,10 +109,9 @@ public class RewardCardAction extends AbstractGameAction {
                                 AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                             }
 
-                            RewardItem reward = new RewardItem();
-                            reward.cards.clear();
-                            reward.cards.add(disCard);
-                            AbstractDungeon.getCurrRoom().rewards.add(reward);
+                            ArrayList<AbstractCard> card = new ArrayList<>();
+                            card.add(disCard);
+                            AbstractDungeon.getCurrRoom().rewards.add(StSLib.generateCardReward(card, false));
 
                             AbstractDungeon.cardRewardScreen.discoveryCard = null;
                         }
@@ -125,10 +124,7 @@ public class RewardCardAction extends AbstractGameAction {
 
             }
         } else {
-            RewardItem reward = new RewardItem();
-            reward.cards.clear();
-            reward.cards.addAll(generatedCards);
-            AbstractDungeon.getCurrRoom().rewards.add(reward);
+            AbstractDungeon.getCurrRoom().rewards.add(StSLib.generateCardReward(generatedCards, false));
         }
     }
 
