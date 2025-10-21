@@ -273,7 +273,11 @@
   },
   "${modID}:FieldTest": {
     "NAME": "Field Test",
-    "DESCRIPTION": "Add a random card to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat.",
-    "UPGRADE_DESCRIPTION": "Add one of three random cards to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat."
+    "DESCRIPTION": "Add a random card to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add one of three random cards to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat. NL Exhasut."
+  },
+  "${modID}:Retune": {
+    "NAME": "Retune",
+    "DESCRIPTION": "Gain !M! Focus. NL You may add one of three random Blue cards to your deck after combat. NL Exhaust."
   }
 }

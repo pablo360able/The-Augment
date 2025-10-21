@@ -1,15 +1,17 @@
 package theaugment.cards.skills;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import theaugment.actions.RewardCardAction;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
-public class FieldTest extends BaseCard {
-    public static final String ID = makeID(FieldTest.class.getSimpleName());
+public class Retune extends BaseCard {
+    public static final String ID = makeID(Retune.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.SKILL,
@@ -18,9 +20,9 @@ public class FieldTest extends BaseCard {
             2
     );
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
-    public FieldTest() {
+    public Retune() {
         super(ID, info);
 
         setMagic(MAGIC, UPG_MAGIC);
@@ -30,11 +32,12 @@ public class FieldTest extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new RewardCardAction(Augment.Meta.CARD_COLOR, magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new FocusPower(p, magicNumber)));
+        addToBot(new RewardCardAction(CardColor.BLUE, 3, false));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new FieldTest();
+        return new Retune();
     }
 }

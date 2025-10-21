@@ -125,6 +125,7 @@ public class RewardCardAction extends AbstractGameAction {
             }
         } else {
             AbstractDungeon.getCurrRoom().rewards.add(StSLib.generateCardReward(generatedCards, false));
+            this.isDone = true;
         }
     }
 
