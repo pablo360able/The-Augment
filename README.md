@@ -22,7 +22,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 ## Technical
 
 * Entropy could work with temp buffs by peeking at action queuestack
-* Test whether UnscheduleKipAction can be replaced by peeking at action queuestack
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
 
 ## Balance
