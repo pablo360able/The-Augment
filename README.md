@@ -29,7 +29,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider making Steelwind Strike magic
 * Potentially rename Future Strike to Glancing Blow and ditch the latter since it's just a Quick Slash upgrade
 * Consider whether Iron Fist should/test if it already does scale with Dex
-* Consider making Eidolon Form's upgrade give CD1C
 * Nerf Disengage slightly
 * Consider whether Purge Thought should cost 1 like it originally did
 * Consider whether Sanctuary should be Exhaust or Spontaneous
