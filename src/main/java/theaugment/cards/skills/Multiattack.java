@@ -24,8 +24,7 @@ public class Multiattack extends BaseCard {
     public Multiattack() {
         super(ID, info);
 
-        this.upgradeCost = true;
-        this.costUpgrade = 2;
+        setCostUpgrade(2);
     }
 
     @Override

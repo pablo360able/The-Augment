@@ -32,10 +32,9 @@ public class SteelwindStrike extends BaseCard {
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC, UPG_MAGIC);
 
-        tags.add(CardTags.STRIKE);
+        setCostUpgrade(0);
 
-        this.upgradeCost = true;
-        this.costUpgrade = 0;
+        tags.add(CardTags.STRIKE);
     }
 
     @Override

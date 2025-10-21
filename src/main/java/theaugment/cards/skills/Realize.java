@@ -25,8 +25,7 @@ public class Realize extends BaseCard {
     public Realize() {
         super(ID, info);
 
-        this.upgradeCost = true;
-        this.costUpgrade = 0;
+        setCostUpgrade(0);
     }
 
     @Override

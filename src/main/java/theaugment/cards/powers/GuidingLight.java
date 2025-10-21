@@ -26,8 +26,7 @@ public class GuidingLight extends BaseCard {
     public GuidingLight() {
         super(ID, info);
 
-        this.upgradeCost = true;
-        this.costUpgrade = 0;
+        setCostUpgrade(0);
     }
 
     @Override

@@ -22,8 +22,7 @@ public class Fireproof extends BaseCard {
     public Fireproof() {
         super(ID, info);
 
-        this.upgradeCost = true;
-        this.costUpgrade = 0;
+        setCostUpgrade(0);
     }
 
     @Override

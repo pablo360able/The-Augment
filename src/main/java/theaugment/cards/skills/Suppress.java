@@ -27,8 +27,7 @@ public class Suppress extends BaseCard {
         tags.add(CustomTags.SPONTANEOUS);
         this.exhaust = true;
 
-        this.upgradeCost = true;
-        this.costUpgrade = 3;
+        setCostUpgrade(3);
     }
 
     @Override
