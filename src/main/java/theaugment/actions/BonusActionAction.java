@@ -73,7 +73,7 @@ public class BonusActionAction extends AbstractGameAction {
                     if (this.player.hand.size() < 10) {
                         this.player.hand.addToHand(c);
                         if (this.forCombat) {
-                            this.addToBot(new ReduceCostAction(c.uuid, 1));
+                            this.addToBot(new ReduceCostAction(c));
                         } else {
                             this.addToBot(new ReduceCostForTurnAction(c, 1));
                         }

@@ -130,7 +130,7 @@
   },
   "${modID}:Quadrature": {
     "NAME": "Quadrature",
-    "DESCRIPTION": "${modID}:Magic. NL Deal X damage to all enemies X times. Deal damage an additional time based on your Focus."
+    "DESCRIPTION": "${modID}:Magic. NL Deal X damage to ALL enemies X times. Deal damage an additional time based on your Focus."
   },
   "${modID}:MissileSpray": {
     "NAME": "Missile Spray",
@@ -264,5 +264,11 @@
   "${modID}:EvadeCapture": {
     "NAME": "Evade Capture",
     "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Double this card's Block this combat. NL Gain !B! Block. NL Exhaust."
+  },
+  "${modID}:Spellslinger": {
+    "NAME": "Spellslinger",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Unplayable. NL ${modID}:Compensate: Add 1 *Magic *Missile to your hand.",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Unplayable. NL ${modID}:Compensate: Add 2 [#7FFF00]Magic[] *Missiles to your hand.",
+    "EXTENDED_DESCRIPTION": ["I can't play this card."]
   }
 }
