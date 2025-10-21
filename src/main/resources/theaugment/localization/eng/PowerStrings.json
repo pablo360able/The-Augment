@@ -87,5 +87,12 @@
     "DESCRIPTIONS": [
       "Take no damage from your own cards and orbs."
     ]
+  },
+  "${modID}:EfficiencyPower": {
+    "NAME": "Efficiency",
+    "DESCRIPTIONS": [
+      "Reduce the cost of #b",
+      " card(s) in your hand by one this combat."
+    ]
   }
 }

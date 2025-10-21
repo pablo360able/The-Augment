@@ -43,7 +43,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider changing timing of passive effect of Aether orbs
 * Replace generic names, including D&D spells and Magic keyword
 * Recolor and potentially relocate added description text for Enchant and Eidolon actions, and see if they get annihilated by cards whose descriptions update
-* Suppress and Purge Thought actions may need their own text strings
+* Suppress, Purge Thought, and Efficiency actions need their own text strings
 * Guiding Light's power needs to update its description
 
 ## Bugs

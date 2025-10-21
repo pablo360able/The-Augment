@@ -252,5 +252,9 @@
   "${modID}:Fireproof": {
     "NAME": "Fireproof",
     "DESCRIPTION": "Take no damage from your own cards and orbs."
+  },
+  "${modID}:Efficiency": {
+    "NAME": "Efficiency",
+    "DESCRIPTION": "At the start of each turn, select !M! card. Reduce its cost by one this combat."
   }
 }
