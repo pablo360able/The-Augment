@@ -8,5 +8,26 @@
       " into a description.",
       " Exactly how depends on the potion, and you can set it up however you want."
     ]
+  },
+  "${modID}:GracePotion": {
+    "NAME": "Grace Potion",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yFocus. At the end of your turn, lose #b",
+      " #yFocus."
+    ]
+  },
+  "${modID}:AetherVial": {
+    "NAME": "Aether Vial",
+    "DESCRIPTIONS": [
+      "#yChannel #b",
+      " #yAether for each orb slot."
+    ]
+  },
+  "${modID}:BottledChutzpah": {
+    "NAME": "Bottled Chutzpah",
+    "DESCRIPTIONS": [
+      "Double your #yStrength, #yDexterity, and #yFocus this turn."
+    ]
   }
 }

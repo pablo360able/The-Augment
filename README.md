@@ -6,14 +6,15 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Potions: All
+* Compensate cards: Exploit Weakness, Spellslinger, Evade Capture
 
 ## Implement
 
 * Most art (energy = gold star?)
 * About half the cards
-* Most relics
+* Tidldibab relic
 * Concentration keyword
+* Entropy
 
 ## Technical
 

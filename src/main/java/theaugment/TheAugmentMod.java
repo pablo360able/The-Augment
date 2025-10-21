@@ -6,6 +6,7 @@ import basemod.interfaces.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
+import theaugment.potions.BasePotion;
 import theaugment.relics.BaseRelic;
 import theaugment.util.GeneralUtils;
 import theaugment.util.KeywordInfo;
@@ -76,6 +77,19 @@ public class TheAugmentMod implements
         //If you want to set up a config panel, that will be done here.
         //You can find information about this on the BaseMod wiki page "Mod Config and Panel".
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+
+        registerPotions();
+    }
+
+    private void registerPotions() {        new AutoAdd(modID) //Loads files from this mod
+            .packageFilter(BasePotion.class) //In the same package as this class
+            .any(BasePotion.class, (info, potion) -> { //Run this code for any classes that extend this class
+                //These three null parameters are colors.
+                //If they're not null, they'll overwrite whatever color is set in the potions themselves.
+                //This is an old feature added before having potions determine their own color was possible.
+                BaseMod.addPotion(potion.getClass(), null, null, null, potion.ID, potion.playerClass);
+                //playerClass will make a potion character-specific. By default, it's null and will do nothing.
+            });
     }
 
     /*----------Localization----------*/
