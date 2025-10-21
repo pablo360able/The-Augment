@@ -244,5 +244,9 @@
     "NAME": "Defensive Stance",
     "DESCRIPTION": "${modID}:Spontaneous. NL Lose 2 Strength. NL Gain !M! Dexterity.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Lose 1 Strength. NL Gain !M! Dexterity."
+  },
+  "${modID}:Upcast": {
+    "NAME": "Upcast",
+    "DESCRIPTION": "Gain !M! Focus."
   }
 }
