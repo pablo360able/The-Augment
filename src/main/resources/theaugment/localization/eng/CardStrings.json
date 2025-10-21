@@ -239,5 +239,10 @@
     "NAME": "Artillery",
     "DESCRIPTION": "At the start of each turn, lose 1 hit point and add a *Magic *Missile to your hand.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, lose 1 hit point and add a [#7FFF00]Magic[] *Missile+ to your hand."
+  },
+  "${modID}:DefensiveStance": {
+    "NAME": "Defensive Stance",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Lose 2 Strength. NL Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Lose 1 Strength. NL Gain !M! Dexterity."
   }
 }
