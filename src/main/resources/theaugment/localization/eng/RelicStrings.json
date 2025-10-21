@@ -79,5 +79,12 @@
     "DESCRIPTIONS": [
       "Whenever you discard one or more cards, draw a card."
     ]
+  },
+  "${modID}:HackersAlmanac": {
+    "NAME": "Hacker's Almanac",
+    "FLAVOR": "The line between jargon file and anarchist's cookbook is fine.",
+    "DESCRIPTIONS": [
+      "See two additional cards in rewards for normal combats, and one for rewards for elite combats."
+    ]
   }
 }

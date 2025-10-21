@@ -21,6 +21,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Entropy could work with temp buffs by peeking at action queuestack
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
+* Validate Soure Code and Hacker's Almanac against non-battle card rewards
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)
