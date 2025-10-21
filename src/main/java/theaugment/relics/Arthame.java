@@ -38,6 +38,9 @@ public class Arthame extends BaseRelic {
         if (AbstractDungeon.player.getPower(MagicWeaponPower.POWER_ID) != null) {
             return damage;
         }
-        return Helpers.EnchantDamage(damage, card.damageTypeForTurn);
+        if (card.freeToPlay() || card.costForTurn == 0) {
+            return Helpers.EnchantDamage(damage, card.damageTypeForTurn);
+        }
+        return damage;
     }
 }
