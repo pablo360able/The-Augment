@@ -34,7 +34,7 @@ public class RewardCardAction extends AbstractGameAction {
         this.duration = num == 1 ? Settings.ACTION_DUR_XFAST : Settings.ACTION_DUR_FAST;
     }
 
-    public RewardCardAction(AbstractCard.CardColor color, int num) {this(color, num, false);}
+    public RewardCardAction(AbstractCard.CardColor color, int num) {this(color, num, true);}
 
     @Override
     public void update() {
@@ -57,7 +57,7 @@ public class RewardCardAction extends AbstractGameAction {
             }
         }
 
-        if (this.retrieveCard) {
+        if (this.toAdd) {
 
             if (this.count == 1) {
                 AbstractCard chosen = generatedCards.get(0);

@@ -270,5 +270,10 @@
     "DESCRIPTION": "${modID}:Spontaneous. NL Unplayable. NL ${modID}:Compensate: Add 1 *Magic *Missile to your hand.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Unplayable. NL ${modID}:Compensate: Add 2 [#7FFF00]Magic[] *Missiles to your hand.",
     "EXTENDED_DESCRIPTION": ["I can't play this card."]
+  },
+  "${modID}:FieldTest": {
+    "NAME": "Field Test",
+    "DESCRIPTION": "Add a random card to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat.",
+    "UPGRADE_DESCRIPTION": "Add one of three random cards to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat."
   }
 }
