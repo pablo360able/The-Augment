@@ -14,7 +14,7 @@ import static theaugment.TheAugmentMod.makeID;
 public class Phurba extends BaseRelic {
     private static final String NAME = Phurba.class.getSimpleName();
     public static final String ID = makeID(NAME);
-    private static final RelicTier RARITY = RelicTier.SHOP;
+    private static final RelicTier RARITY = RelicTier.COMMON;
     private static final LandingSound SOUND = LandingSound.CLINK;
 
     public Phurba() {
