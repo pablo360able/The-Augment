@@ -19,5 +19,14 @@
     "DESCRIPTIONS": [
       "Permanently gain 1 additional Orb slot.  Blue cards can now appear anywhere Fuchsia cards do."
     ]
+  },
+  "${modID}:Phurba": {
+    "NAME": "Phurba",
+    "FLAVOR": "A ceremonial stake used to establish stability in certain rituals.",
+    "DESCRIPTIONS": [
+      "Every time you play #b",
+      " #yAttacks in a single turn, gain #b",
+      " #yFocus."
+    ]
   }
 }
