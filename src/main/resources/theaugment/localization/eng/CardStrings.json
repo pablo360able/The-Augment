@@ -96,7 +96,7 @@
     "DESCRIPTION": "Deal !D! damage twice. NL You cannot play any more attacks this turn. NL ${modID}:Blood: Gain [E]."
   },
   "${modID}:SnapBack": {
-    "NAME": "SnapBack",
+    "NAME": "Snap Back",
     "DESCRIPTION": "Deal !D! damage twice. NL Put one card from your discard pile on top of your deck."
   },
   "${modID}:ShockingGrasp": {

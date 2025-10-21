@@ -61,15 +61,38 @@ public class RewardCardAction extends AbstractGameAction {
 
             if (this.count == 1) {
                 AbstractCard chosen = generatedCards.get(0);
-
+                AbstractCard disCard = chosen.makeStatEquivalentCopy();
+                AbstractCard disCard2 = chosen.makeStatEquivalentCopy();
                 if (AbstractDungeon.player.hasPower("MasterRealityPower")) {
-                    chosen.upgrade();
+                    disCard.upgrade();
                 }
 
-                addToBot(new MakeTempCardInHandAction(chosen));
+                disCard.setCostForTurn(0);
+                disCard2.setCostForTurn(0);
+                disCard.current_x = -1000.0F * Settings.xScale;
+                disCard2.current_x = -1000.0F * Settings.xScale + AbstractCard.IMG_HEIGHT_S;
+                if (this.amount == 1) {
+                    if (AbstractDungeon.player.hand.size() < 10) {
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    } else {
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    }
+
+                    AbstractCard var4 = null;
+                } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                } else if (AbstractDungeon.player.hand.size() == 9) {
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                } else {
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                }
+
 
                 ArrayList<AbstractCard> card = new ArrayList<>();
-                card.add(chosen);
+                card.add(disCard);
                 AbstractDungeon.getCurrRoom().rewards.add(StSLib.generateCardReward(card, false));
 
                 this.isDone = true;
