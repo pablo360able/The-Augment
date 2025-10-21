@@ -134,7 +134,7 @@ public class RewardCardAction extends AbstractGameAction {
 
         for(Map.Entry<String, AbstractCard> c : CardLibrary.cards.entrySet()) {
             AbstractCard card = c.getValue();
-            if (card.color == color && card.rarity != AbstractCard.CardRarity.BASIC && (!UnlockTracker.isCardLocked(c.getKey()) || Settings.treatEverythingAsUnlocked())) {
+            if ((color == null || card.color == color) && card.rarity != AbstractCard.CardRarity.BASIC && (!UnlockTracker.isCardLocked(c.getKey()) || Settings.treatEverythingAsUnlocked())) {
                 tmpPool.add(card);
             }
         }

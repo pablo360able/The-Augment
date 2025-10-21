@@ -279,5 +279,9 @@
   "${modID}:Retune": {
     "NAME": "Retune",
     "DESCRIPTION": "Gain !M! Focus. NL You may add one of three random Blue cards to your deck after combat. NL Exhaust."
+  },
+  "${modID}:MadScience": {
+    "NAME": "Mad Science",
+    "DESCRIPTION": "Add 1 of 4 random cards from any color to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat. NL Exhaust."
   }
 }
