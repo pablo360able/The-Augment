@@ -14,7 +14,7 @@ public class BackStrikeAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (this.m != null && this.m.getPower("Frail") != null) {
+        if (this.m != null && this.m.hasPower("Frail")) {
             this.addToTop(new GainEnergyAction(1));
             this.addToTop(new DrawCardAction(1));
         }

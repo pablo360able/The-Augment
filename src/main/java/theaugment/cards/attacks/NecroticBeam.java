@@ -3,50 +3,68 @@ package theaugment.cards.attacks;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.modifiers.MagicAttack;
-import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
 import theaugment.util.Helpers;
 
-public class Spellstrike extends BaseCard {
-    public static final String ID = makeID(Spellstrike.class.getSimpleName());
+public class NecroticBeam extends BaseCard {
+    public static final String ID = makeID(NecroticBeam.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             CardTarget.ENEMY,
-            0
+            2
     );
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 20;
+    private static final int UPG_DAMAGE = 5;
 
-    public Spellstrike() {
+    public NecroticBeam() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
 
-        tags.add(CardTags.STRIKE);
+        setExhaust(true);
         DamageModifierManager.addModifier(this, new MagicAttack());
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
+    }
 
-        for (int i = 0; i < Helpers.AetherChanneled(); i++) {
-            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+    @Override
+    public void calculateCardDamage(AbstractMonster m) {
+        super.calculateCardDamage(m);
+        if (m.hasPower("Frail")) {
+            this.damage *= 2;
         }
     }
 
     @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m.isDeadOrEscaped() && m.hasPower("Frail")) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+
+    }
+
+    @Override
     public AbstractCard makeCopy() { //Optional
-        return new Spellstrike();
+        return new NecroticBeam();
     }
 
     public void applyPowers() {

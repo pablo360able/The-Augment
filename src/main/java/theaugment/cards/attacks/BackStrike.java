@@ -43,7 +43,7 @@ public class BackStrike extends BaseCard {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
 
         for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!m.isDeadOrEscaped() && m.getPower("Frail") != null) {
+            if (!m.isDeadOrEscaped() && m.hasPower("Frail")) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }

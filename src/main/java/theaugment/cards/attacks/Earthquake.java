@@ -5,12 +5,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.EarthquakeAction;
 import theaugment.cards.BaseCard;
+import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
 public class Earthquake extends BaseCard {
     public static final String ID = makeID(Earthquake.class.getSimpleName());
     private static final CardStats info = new CardStats(
-            CardColor.COLORLESS,
+            Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
             CardRarity.RARE,
             CardTarget.ENEMY,

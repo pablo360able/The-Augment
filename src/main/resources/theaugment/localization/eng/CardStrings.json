@@ -294,6 +294,10 @@
   },
   "${modID}:FaerieFire": {
     "NAME": "Faerie Fire",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${modID}:Blood: Apply !M! Vulnerable and !M! Frail. NL Exhaust."
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage to ALL enemies. NL ${modID}:Blood: Apply !M! Vulnerable and !M! Frail. NL Exhaust."
+  },
+  "${modID}:NecroticBeam": {
+    "NAME": "Necrotic Beam",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Double this damage if the target is Frail. NL Exhaust."
   }
 }

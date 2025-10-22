@@ -8,7 +8,8 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Compensate cards: Exploit Weakness, Spellslinger, Evade Capture
 * Reward cards: Field Test, Retune, Mad Science
-* Frail cards: Back Strike, Faerie Fire, Necrotic Beam, Ray of Enfeeblement, Mega Debuff, 
+* Frail cards: Back Strike, Faerie Fire, Necrotic Beam, Ray of Enfeeblement, Mega Debuff
+* Misc: Phantasmal Force, Bio-Repair
 
 ## Implement
 
@@ -43,3 +44,5 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Potentially relocate added description text for Enchant and Eidolon actions, and see if they get annihilated by cards whose descriptions update
 
 ## Bugs
+
+* Necrotic Beam's damage is not doubled on display
