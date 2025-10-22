@@ -6,6 +6,8 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
+* Temporary Artifact: Protection, Warding
+
 ## Implement
 
 * Most art (energy = gold star?)
