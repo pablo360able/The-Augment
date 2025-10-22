@@ -41,6 +41,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider whether Guiding Light retains too many cards too easily
 * Consider making Frail cards apply Frail first (this would be a buff)
 * Nerf Pillage's damage into the ground
+* Definitely swap the rarities on Iron Fist and Stunning Strike
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs
