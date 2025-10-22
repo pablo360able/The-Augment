@@ -307,5 +307,10 @@
   "${modID}:Pillage": {
     "NAME": "Pillage",
     "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain !M! Regen. NL Exhaust."
+  },
+  "${modID}:PhantasmalForce": {
+    "NAME": "Phantasmal Force",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile for free and exhaust it.",
+    "UPGRADE_DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile twice for free and exhaust it."
   }
 }
