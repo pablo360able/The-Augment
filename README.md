@@ -47,3 +47,4 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 ## Bugs
 
 * Necrotic Beam's damage is not doubled on display
+* Stunning Strike triggers twice if the first hit is fatal

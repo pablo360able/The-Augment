@@ -94,5 +94,12 @@
       "Reduce the cost of #b",
       " card(s) in your hand by one this combat."
     ]
+  },
+  "${modID}:MaxHpIfRegenPower": {
+    "NAME": "Bio-Repair",
+    "DESCRIPTIONS": [
+      "If you have any #yRegen at the end of combat, increase your max HP by #b",
+      "."
+    ]
   }
 }

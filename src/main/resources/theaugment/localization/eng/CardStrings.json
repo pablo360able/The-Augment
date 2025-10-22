@@ -312,5 +312,9 @@
     "NAME": "Phantasmal Force",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile for free and exhaust it.",
     "UPGRADE_DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile twice for free and exhaust it."
+  },
+  "${modID}:BioRepair": {
+    "NAME": "Bio-Repair",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Gain !M! Regen. NL If you have any Regen at the end of combat, raise your Max HP by 1."
   }
 }
