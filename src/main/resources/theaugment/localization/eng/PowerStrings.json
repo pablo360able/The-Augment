@@ -105,8 +105,16 @@
   "${modID}:LoseArtifactPower": {
     "NAME": "Artifact Down",
     "DESCRIPTIONS": [
-      "At the end of your turn, lose #b",
+      "At the start of your turn, lose #b",
       " #yArtifact."
+    ]
+  },
+  "${modID}:WardingPower": {
+    "NAME": "Warding",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yArtifact and lose #b",
+      " #yArtifact at the start of your next turn."
     ]
   }
 }

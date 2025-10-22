@@ -24,7 +24,8 @@ public class LoseArtifactPower extends BasePower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
+    @Override
+    public void atStartOfTurn() {
         this.flash();
         if (this.owner.hasPower("Artifact")) {
             AbstractPower artifactPower = this.owner.getPower("Artifact");

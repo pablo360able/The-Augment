@@ -23,8 +23,7 @@
   },
   "${modID}:MagicWeapon": {
     "NAME": "Magic Weapon",
-    "DESCRIPTION": "Gain 2 Focus. NL Your next Attack is ${modID}:Magic.",
-    "UPGRADE_DESCRIPTION": "Gain 4 Focus. NL Your next 2 attacks are Magic."
+    "DESCRIPTION": "Gain !M! Focus. NL At the end of this turn, lose !M! Focus. NL Your next Attack is ${modID}:Magic."
   },
   "${modID}:SiphoningClaw": {
     "NAME": "Siphoning Claw",
@@ -76,7 +75,7 @@
   "${modID}:EidolonForm": {
     "NAME": "Eidolon Form",
     "DESCRIPTION": "Adventitious. NL At the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous.",
-    "UPGRADE_DESCRIPTION": "Adventitious. NL Now and at the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous."
+    "UPGRADE_DESCRIPTION": "Adventitious. NL Now and [#FFFFFF]at[] the start of your turn, add 1 card from your draw pile to your hand. NL It becomes ${modID}:Spontaneous."
   },
   "${modID}:MartialAdept": {
     "NAME": "Martial Adept",
@@ -319,7 +318,12 @@
   },
   "${modID}:Protection": {
     "NAME": "Protection",
-    "DESCRIPTION": "Gain !M! Artifact. NL Lose !M! Artifact at the end of the turn.",
+    "DESCRIPTION": "Gain !M! Artifact. NL At the start of next turn, lose !M! Artifact.",
     "UPGRADE_DESCRIPTION": "Gain !M! Artifact."
+  },
+  "${modID}:Warding": {
+    "NAME": "Warding",
+    "DESCRIPTION": "${Spontaneous}. NL At the start of your turn, gain !M! Artifact and \"At the start of the next turn, lose !M! Artifact\".",
+    "UPGRADE_DESCRIPTION": "${Spontaneous}. NL Now and [#FFFFFF]at[] the start of your turn, gain !M! Artifact and \"At the start of the next turn, lose !M! Artifact.\"."
   }
 }
