@@ -323,7 +323,11 @@
   },
   "${modID}:Warding": {
     "NAME": "Warding",
-    "DESCRIPTION": "${Spontaneous}. NL At the start of your turn, gain !M! Artifact and \"At the start of the next turn, lose !M! Artifact\".",
-    "UPGRADE_DESCRIPTION": "${Spontaneous}. NL Now and [#FFFFFF]at[] the start of your turn, gain !M! Artifact and \"At the start of the next turn, lose !M! Artifact.\"."
+    "DESCRIPTION": "${modID}:Spontaneous. NL At the start of your turn, gain !M! Artifact and \"At the start of the next turn, lose !M! Artifact\".",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Now and [#FFFFFF]at[] the start of your turn, gain !M! Artifact and \"At the start of the next turn, lose !M! Artifact.\"."
+  },
+  "${modID}:ArcaneSmite": {
+    "NAME": "Arcane Smite",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage X times. NL Lose 1 Orb slot. NL If you have no Orb slot to remove, Exhaust."
   }
 }

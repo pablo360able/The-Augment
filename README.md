@@ -25,6 +25,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
 * Validate Source Code and Hacker's Almanac against non-battle card rewards
 * Migrate SpirePatches to use Locators
+* See if the X-cost attacks are being overstacked with MagicWeaponPower (and, theoretically, Arthame + Chemical X)
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)
@@ -38,6 +39,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider whether Sanctuary should be Exhaust or Spontaneous
 * Consider whether Guiding Light retains too many cards too easily
 * Consider making Frail cards apply Frail first (this would be a buff)
+* Nerf Pillage's damage into the ground
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs
