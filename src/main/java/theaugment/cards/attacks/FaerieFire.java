@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -44,8 +45,10 @@ public class FaerieFire extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, damage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
-        addToBot(new BloodAction(m, p, new AllEnemyApplyPowerAction(p, magicNumber, (mo) -> new VulnerablePower(mo, magicNumber, false))));
-        addToBot(new BloodAction(m, p, new AllEnemyApplyPowerAction(p, magicNumber, (mo) -> new FrailPower(mo, magicNumber, false))));
+        for(AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            addToBot(new BloodAction(mo, p, new ApplyPowerAction(mo, p, new VulnerablePower(mo, magicNumber, false))));
+            addToBot(new BloodAction(mo, p, new ApplyPowerAction(mo, p, new FrailPower(mo, magicNumber, false))));
+        }
     }
 
     @Override
