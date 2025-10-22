@@ -333,5 +333,9 @@
   "${modID}:ShadowStrike": {
     "NAME": "Shadow Strike",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Channel !M! Dark."
+  },
+  "${modID}:Stoneskin": {
+    "NAME": "Stoneskin",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Gain !B! Block. NL Gain one less [E] at the start of your next turn."
   }
 }

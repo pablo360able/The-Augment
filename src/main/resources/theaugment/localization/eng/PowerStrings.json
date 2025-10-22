@@ -116,5 +116,13 @@
       " #yArtifact and lose #b",
       " #yArtifact at the start of your next turn."
     ]
+  },
+  "${modID}:FatiguedPower": {
+    "NAME": "Warding",
+    "DESCRIPTIONS": [
+      "Gain one less [E] at the start of your next turn.",
+      "Gain one less [E] at the start of your next #b",
+      " turns."
+    ]
   }
 }
