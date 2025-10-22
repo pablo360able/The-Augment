@@ -355,5 +355,9 @@
   "${modID}:BurningClarity": {
     "NAME": "Burning Clarity",
     "DESCRIPTION": "Whenever you lose HP from a card or orb, gain !M! Focus."
+  },
+  "${modID}:Divine": {
+    "NAME": "Divine",
+    "DESCRIPTION": "Whenever you draw one or more cards during your turn, first Scry !M!."
   }
 }

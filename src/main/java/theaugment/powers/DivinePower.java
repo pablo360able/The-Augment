@@ -21,7 +21,11 @@ public class DivinePower extends BasePower implements PreDrawPower {
     }
 
     @Override
-    public void onCardDrawPreDraw(boolean endTurnDraw) {
+    public void onCardDrawPreDraw(AbstractCreature source, int amount, boolean endTurnDraw) {
+        if (source != this.owner || AbstractDungeon.actionManager.currentAction instanceof DrawCardAction) {
+            return;
+        }
+
         this.addToTop(new ScryAction(this.amount));
     }
 

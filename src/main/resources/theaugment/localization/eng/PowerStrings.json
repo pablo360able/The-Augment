@@ -133,11 +133,18 @@
       " #yMagic Attack benefit from #yFocus twice."
     ]
   },
-  "${modID}:BurningClarity": {
+  "${modID}:BurningClarityPower": {
     "NAME": "Burning Clarity",
     "DESCRIPTIONS": [
       "Whenever you lose HP from a card or orb, gain #b",
       " #yFocus."
+    ]
+  },
+  "${modID}:DivinePower": {
+    "NAME": "Divine",
+    "DESCRIPTIONS": [
+      "Whenever you draw one or more cards during your turn, first #yScry #b",
+      "."
     ]
   }
 }

@@ -124,10 +124,10 @@ public class AugmentPatches {
             }
     )
     public static class OnCardDrawPreDraw {
-        public static void Prefix (DrawCardAction __instance, AbstractCreature owner, int amount, boolean endTurnDraw) {
-            for (AbstractPower p : owner.powers) {
+        public static void Prefix (DrawCardAction __instance, AbstractCreature source, int amount, boolean endTurnDraw) {
+            for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof PreDrawPower) {
-                    ((PreDrawPower)p).onCardDrawPreDraw(endTurnDraw);
+                    ((PreDrawPower)p).onCardDrawPreDraw(source, amount, endTurnDraw);
                 }
             }
         }

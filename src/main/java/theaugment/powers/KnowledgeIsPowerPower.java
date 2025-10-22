@@ -21,13 +21,13 @@ public class KnowledgeIsPowerPower extends BasePower implements PreDrawPower {
     }
 
     @Override
-    public void onCardDrawPreDraw(boolean endTurnDraw) {
-        if (endTurnDraw) {
+    public void onCardDrawPreDraw(AbstractCreature source, int amount, boolean endTurnDraw) {
+        if (source != this.owner || AbstractDungeon.actionManager.currentAction instanceof DrawCardAction) {
             return;
         }
 
-        addToBot(new ApplyPowerAction(owner, owner, new FocusPower(owner, amount)));
-        addToBot(new ApplyPowerAction(owner, owner, new LoseFocusPower(owner, amount)));
+        addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, this.amount)));
+        addToBot(new ApplyPowerAction(this.owner, this.owner, new LoseFocusPower(this.owner, this.amount)));
     }
 
     @Override
