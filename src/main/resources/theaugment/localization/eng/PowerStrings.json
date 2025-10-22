@@ -124,5 +124,13 @@
       "Gain one less [E] at the start of your next #b",
       " turns."
     ]
+  },
+  "${modID}:PotentMagicPower": {
+    "NAME": "Warding",
+    "DESCRIPTIONS": [
+      "Each turn, your first #yMagic Attack benefits from #yFocus twice.",
+      "Each turn, your first #b",
+      " #yMagic Attack benefit from #yFocus twice."
+    ]
   }
 }
