@@ -8,6 +8,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Compensate cards: Exploit Weakness, Spellslinger, Evade Capture
 * Reward cards: Field Test, Retune, Mad Science
+* Frail cards: Back Strike, Faerie Fire, Necrotic Beam, Ray of Enfeeblement, Mega Debuff, 
 
 ## Implement
 
@@ -21,7 +22,8 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Entropy could work with temp buffs by peeking at action queuestack
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
-* Validate Soure Code and Hacker's Almanac against non-battle card rewards
+* Validate Source Code and Hacker's Almanac against non-battle card rewards
+* Migrate SpirePatches to use Locators
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)

@@ -283,5 +283,9 @@
   "${modID}:MadScience": {
     "NAME": "Mad Science",
     "DESCRIPTION": "Add 1 of 4 random cards from any color to your hand. NL It costs 0 this turn. NL You may add it to your deck after combat. NL Exhaust."
+  },
+  "${modID}:RayOfEnfeeblement": {
+    "NAME": "Ray of Enfeeblement",
+    "DESCRIPTION": "Target gains !M! Weak and !M! Frail and loses !M! Strength. NL Exhaust."
   }
 }

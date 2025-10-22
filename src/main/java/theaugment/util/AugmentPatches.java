@@ -1,13 +1,17 @@
 package theaugment.util;
 
+import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
 import theaugment.relics.DefectiveProsthetic;
@@ -82,6 +86,27 @@ public class AugmentPatches {
             for (AbstractCard c : instance.masterDeck.group) {
                 if (c.hasTag(CustomTags.ADVENTITIOUS)) {
                     instance.discardPile.addToTop(c);
+                }
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractCreature.class,
+            method = "addBlock",
+            paramtypez = {
+                    int.class
+            }
+    )
+    public static class ApplyFrailToEnemies {
+        @SpireInsertPatch (
+                rloc = 1,
+                localvars={"tmp"}
+        )
+        public static void Insert (AbstractCreature instance, int blockAmount, @ByRef float[] tmp) {
+            if (!instance.isPlayer) {
+                for (AbstractPower p : instance.powers) {
+                    tmp[0] = p.modifyBlock(tmp[0]);
                 }
             }
         }
