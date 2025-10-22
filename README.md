@@ -37,6 +37,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider whether Purge Thought should cost 1 like it originally did
 * Consider whether Sanctuary should be Exhaust or Spontaneous
 * Consider whether Guiding Light retains too many cards too easily
+* Consider making Frail cards apply Frail first (this would be a buff)
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs

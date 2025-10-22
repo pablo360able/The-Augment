@@ -299,5 +299,9 @@
   "${modID}:NecroticBeam": {
     "NAME": "Necrotic Beam",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Double this damage if the target is Frail. NL Exhaust."
+  },
+  "${modID}:MegaDebuff": {
+    "NAME": "Mega Debuff",
+    "DESCRIPTION": "${modID}:Adventitious. NL Apply !M! Weak, !M! Vulnerable, and !M! Frail to ALL enemies. NL Exhaust."
   }
 }
