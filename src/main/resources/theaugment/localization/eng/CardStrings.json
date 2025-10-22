@@ -291,5 +291,9 @@
   "${modID}:BackStrike": {
     "NAME": "Back Strike",
     "DESCRIPTION": "Deal !D! damage. NL If the target is Frail, gain [E] and draw 1 card."
+  },
+  "${modID}:FaerieFire": {
+    "NAME": "Faerie Fire",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL ${modID}:Blood: Apply !M! Vulnerable and !M! Frail. NL Exhaust."
   }
 }

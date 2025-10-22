@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class BloodAction extends AbstractGameAction {
     private final AbstractGameAction[] ifBlood;
@@ -45,7 +47,17 @@ public class BloodAction extends AbstractGameAction {
     public void update() {
         this.tickDuration();
         if (this.isDone) {
-            if(target.lastDamageTaken > 0) {
+            boolean effective = false;
+            if (target != null) {
+                effective = target.lastDamageTaken > 0;
+            } else {
+                for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                    if (m.lastDamageTaken > 0) {
+                        effective = true;
+                    }
+                }
+            }
+            if(effective) {
                 for (AbstractGameAction consequence : ifBlood) {
                     if (byDamage) {consequence.amount = target.lastDamageTaken;}
                     this.addToBot(consequence);
