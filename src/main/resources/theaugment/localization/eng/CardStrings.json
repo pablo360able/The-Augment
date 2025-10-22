@@ -340,6 +340,11 @@
   },
   "${modID}:VampiricTutor": {
     "NAME": "Vampiric Tutor",
-    "DESCRIPTION": "Retain. Lose !M! max HP. NL Put a card from your draw pile into your hand."
+    "DESCRIPTION": "Retain. NL Lose !M! max HP. NL Put a card from your draw pile into your hand."
+  },
+  "${modID}:CircleBack": {
+    "NAME": "CircleBack",
+    "DESCRIPTION": "Shuffle all Powers in your discard pile into your draw pile. NL Scry equal to the number of powers shuffled this way. NL Draw 3 cards. NL Exhaust.",
+    "DESCRIPTION": "Shuffle all Powers in your discard pile into your draw pile. NL Scry equal to the number of powers shuffled this way. NL Draw until your hand is full. NL Exhaust."
   }
 }
