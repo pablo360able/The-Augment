@@ -287,5 +287,9 @@
   "${modID}:RayOfEnfeeblement": {
     "NAME": "Ray of Enfeeblement",
     "DESCRIPTION": "Target gains !M! Weak and !M! Frail and loses !M! Strength. NL Exhaust."
+  },
+  "${modID}:BackStrike": {
+    "NAME": "Back Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If the target is Frail, gain [E] and draw 1 card."
   }
 }
