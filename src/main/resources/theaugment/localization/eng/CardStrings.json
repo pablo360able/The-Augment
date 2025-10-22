@@ -303,5 +303,9 @@
   "${modID}:MegaDebuff": {
     "NAME": "Mega Debuff",
     "DESCRIPTION": "${modID}:Adventitious. NL Apply !M! Weak, !M! Vulnerable, and !M! Frail to ALL enemies. NL Exhaust."
+  },
+  "${modID}:Pillage": {
+    "NAME": "Pillage",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain !M! Regen. NL Exhaust."
   }
 }
