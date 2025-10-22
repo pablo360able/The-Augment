@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import theaugment.util.Helpers;
 
 public class ArcaneSmiteAction extends AbstractGameAction {
     private final boolean freeToPlayOnce;
@@ -30,11 +31,9 @@ public class ArcaneSmiteAction extends AbstractGameAction {
 
     public void update() {
         int effect = EnergyPanel.totalCount;
-        int focus = this.p.hasPower("Focus") ? this.p.getPower("Focus").amount : 0;
-        int strength = this.p.hasPower("Strength") ? this.p.getPower("Strength").amount : 0;
 
         if (this.energyOnUse != -1) {
-            effect = this.energyOnUse + Math.max(focus, 0);
+            effect = this.energyOnUse;
         }
 
         if (this.p.hasRelic("Chemical X")) {
@@ -44,7 +43,7 @@ public class ArcaneSmiteAction extends AbstractGameAction {
 
         if (effect > 0) {
             for(int i = 0; i < effect; ++i) {
-                this.addToBot(new DamageAction(this.m, new DamageInfo(this.p, this.damage + focus - strength, this.damageTypeForTurn), AttackEffect.SLASH_HEAVY));
+                this.addToBot(new DamageAction(this.m, new DamageInfo(this.p, (int) Helpers.EnchantDamage(this.damage, this.damageTypeForTurn), this.damageTypeForTurn), AttackEffect.SLASH_HEAVY));
             }
 
             if (!this.freeToPlayOnce) {
