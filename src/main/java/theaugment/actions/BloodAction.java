@@ -60,7 +60,7 @@ public class BloodAction extends AbstractGameAction {
             if(effective) {
                 for (AbstractGameAction consequence : ifBlood) {
                     if (byDamage) {consequence.amount = target.lastDamageTaken;}
-                    this.addToBot(consequence);
+                    this.addToTop(consequence);
                 }
             }
         }

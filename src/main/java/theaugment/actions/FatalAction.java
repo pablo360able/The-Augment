@@ -58,7 +58,7 @@ public class FatalAction extends AbstractGameAction {
             }
             if(effective) {
                 for (AbstractGameAction consequence : this.ifFatal) {
-                    this.addToBot(consequence);
+                    this.addToTop(consequence);
                 }
             }
         }
