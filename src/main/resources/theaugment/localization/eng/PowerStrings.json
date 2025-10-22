@@ -126,11 +126,18 @@
     ]
   },
   "${modID}:PotentMagicPower": {
-    "NAME": "Warding",
+    "NAME": "Potent Magic",
     "DESCRIPTIONS": [
       "Each turn, your first #yMagic Attack benefits from #yFocus twice.",
       "Each turn, your first #b",
       " #yMagic Attack benefit from #yFocus twice."
+    ]
+  },
+  "${modID}:BurningClarity": {
+    "NAME": "Burning Clarity",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP from a card or orb, gain #b",
+      " #yFocus."
     ]
   }
 }

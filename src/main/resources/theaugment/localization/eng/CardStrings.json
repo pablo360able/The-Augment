@@ -351,5 +351,9 @@
     "NAME": "Potent Magic",
     "DESCRIPTION": "Each turn, your first ${modID}:Magic Attack benefits from Focus twice.",
     "UPGRADE_DESCRIPTION": "Each turn, your first !M! ${modID}:Magic Attacks benefits from Focus twice."
+  },
+  "${modID}:BurningClarity": {
+    "NAME": "Burning Clarity",
+    "DESCRIPTION": "Whenever you lose HP from a card or orb, gain !M! Focus."
   }
 }

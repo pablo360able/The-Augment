@@ -6,22 +6,22 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
-import theaugment.powers.EfficiencyPower;
+import theaugment.powers.BurningClarityPower;
 import theaugment.util.CardStats;
 
-public class Efficiency extends BaseCard {
-    public static final String ID = makeID(Efficiency.class.getSimpleName());
+public class BurningClarity extends BaseCard {
+    public static final String ID = makeID(BurningClarity.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.SELF,
-            2
+            1
     );
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 0;
+    private static final int UPG_MAGIC = 1;
 
-    public Efficiency() {
+    public BurningClarity() {
         super(ID, info);
 
         setMagic(MAGIC, UPG_MAGIC);
@@ -30,11 +30,11 @@ public class Efficiency extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new EfficiencyPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new BurningClarityPower(p, magicNumber)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Efficiency();
+        return new BurningClarity();
     }
 }
