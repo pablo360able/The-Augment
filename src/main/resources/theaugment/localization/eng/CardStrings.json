@@ -316,5 +316,10 @@
   "${modID}:BioRepair": {
     "NAME": "Bio-Repair",
     "DESCRIPTION": "${modID}:Spontaneous. NL Gain !M! Regen. NL If you have any Regen at the end of combat, raise your Max HP by 1."
+  },
+  "${modID}:Protection": {
+    "NAME": "Protection",
+    "DESCRIPTION": "Gain !M! Artifact. NL Lose !M! Artifact at the end of the turn.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Artifact."
   }
 }

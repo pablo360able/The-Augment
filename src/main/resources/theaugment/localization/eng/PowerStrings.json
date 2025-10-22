@@ -101,5 +101,12 @@
       "If you have any #yRegen at the end of combat, increase your max HP by #b",
       "."
     ]
+  },
+  "${modID}:LoseArtifactPower": {
+    "NAME": "Artifact Down",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b",
+      " #yArtifact."
+    ]
   }
 }
