@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
+import theaugment.powers.PreDrawPower;
 import theaugment.relics.DefectiveProsthetic;
 
 public class AugmentPatches {
@@ -107,6 +109,25 @@ public class AugmentPatches {
             if (!instance.isPlayer) {
                 for (AbstractPower p : instance.powers) {
                     tmp[0] = p.modifyBlock(tmp[0]);
+                }
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = DrawCardAction.class,
+            method = SpirePatch.CONSTRUCTOR,
+            paramtypez = {
+                    AbstractCreature.class,
+                    int.class,
+                    boolean.class
+            }
+    )
+    public static class OnCardDrawPreDraw {
+        public static void Prefix (DrawCardAction __instance, AbstractCreature owner, int amount, boolean endTurnDraw) {
+            for (AbstractPower p : owner.powers) {
+                if (p instanceof PreDrawPower) {
+                    ((PreDrawPower)p).onCardDrawPreDraw(endTurnDraw);
                 }
             }
         }

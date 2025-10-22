@@ -26,6 +26,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Validate Source Code and Hacker's Almanac against non-battle card rewards
 * Migrate SpirePatches to use Locators
 * See if the X-cost attacks are being overstacked with MagicWeaponPower (and, theoretically, Arthame + Chemical X)
+* DrawCardAction's endTurnDraw boolean can be used to apply the fix I want for KiP and potentially Divine
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)
