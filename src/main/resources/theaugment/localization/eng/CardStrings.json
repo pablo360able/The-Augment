@@ -337,5 +337,9 @@
   "${modID}:Stoneskin": {
     "NAME": "Stoneskin",
     "DESCRIPTION": "${modID}:Spontaneous. NL Gain !B! Block. NL Gain one less [E] at the start of your next turn."
+  },
+  "${modID}:VampiricTutor": {
+    "NAME": "Vampiric Tutor",
+    "DESCRIPTION": "Retain. Lose !M! max HP. NL Put a card from your draw pile into your hand."
   }
 }
