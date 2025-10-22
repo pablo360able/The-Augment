@@ -36,6 +36,7 @@ public class ZephyrStrike extends BaseCard {
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC, UPG_MAGIC);
 
+        tags.add(CardTags.STRIKE);
         DamageModifierManager.addModifier(this, new MagicAttack());
     }
 

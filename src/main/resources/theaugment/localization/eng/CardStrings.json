@@ -329,5 +329,9 @@
   "${modID}:ArcaneSmite": {
     "NAME": "Arcane Smite",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage X times. NL Lose 1 Orb slot. NL If you have no Orb slot to remove, Exhaust."
+  },
+  "${modID}:ShadowStrike": {
+    "NAME": "Shadow Strike",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Channel !M! Dark."
   }
 }
