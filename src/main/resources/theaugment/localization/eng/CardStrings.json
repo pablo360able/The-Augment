@@ -53,7 +53,7 @@
   },
   "${modID}:KnowledgeIsPower": {
     "NAME": "Knowledge is Power",
-    "DESCRIPTION": "${modID}:Adventitious. NL Whenever you draw cards, gain !M! Focus."
+    "DESCRIPTION": "${modID}:Adventitious. NL Whenever you draw cards, gain !M! Focus for that turn."
   },
   "${modID}:Illuminate": {
     "NAME": "Illuminate",

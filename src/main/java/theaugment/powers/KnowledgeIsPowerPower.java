@@ -27,6 +27,7 @@ public class KnowledgeIsPowerPower extends BasePower {
         }
 
         addToBot(new ApplyPowerAction(owner, owner, new FocusPower(owner, amount)));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseFocusPower(owner, amount)));
     }
 
     @Override

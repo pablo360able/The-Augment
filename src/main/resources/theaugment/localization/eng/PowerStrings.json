@@ -29,7 +29,7 @@
     "NAME": "Knowledge is Power",
     "DESCRIPTIONS": [
       "Whenever you draw cards, gain #b",
-      " #yFocus."
+      " #yFocus this turn."
     ]
   },
   "${modID}:StarstormPower": {
