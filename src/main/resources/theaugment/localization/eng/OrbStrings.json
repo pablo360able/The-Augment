@@ -17,5 +17,13 @@
       " NL #yEvoke: Gain #b",
       " Focus."
     ]
+  },
+  "${modID}:Flame": {
+    "NAME": "Flame",
+    "DESCRIPTION": [
+      "#yPassive: Take 1 damage and increase this orb's damage by #b",
+      ". NL #yEvoke: Deal #b",
+      " damage to ALL enemies."
+    ]
   }
 }

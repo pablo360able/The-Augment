@@ -83,5 +83,13 @@
       "compensate"
     ],
     "DESCRIPTION": "Trigger the following effect when this card is discarded during your turn."
+  },
+  {
+    "ID": "${modID}:Flame",
+    "PROPER_NAME": "Flame",
+    "NAMES": [
+      "flame"
+    ],
+    "DESCRIPTION": "Orb: Increases damage but damages you every turn. When #yEvoked, deals damage to ALL enemies."
   }
 ]
