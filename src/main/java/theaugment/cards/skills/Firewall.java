@@ -2,6 +2,7 @@ package theaugment.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -35,6 +36,9 @@ public class Firewall extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (p.hasEmptyOrb()) {
+            addToBot(new ChannelAction(new Flame()));
+        }
         addToBot(new GainBlockAction(p, block));
         int flame = 0;
         for (AbstractOrb o : p.orbs) {

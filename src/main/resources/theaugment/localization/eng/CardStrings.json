@@ -388,7 +388,7 @@
   },
   "${modID}:Firewall": {
     "NAME": "Firewall",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !M! damage for each ${modID}:FLame in your orb slots whenever you are attacked this turn."
+    "DESCRIPTION": "If you have an empty orb slot, Channel 1 ${modID}:Flame. NL Gain !B! Block. NL Deal !M! damage for each ${modID}:FLame in your orb slots whenever you are attacked this turn."
   },
   "${modID}:DelayedBlastFireball": {
     "NAME": "Delayed Blast Fireball",
