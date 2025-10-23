@@ -42,18 +42,6 @@ public class GreenFlameBlade extends BaseCard {
     }
 
     @Override
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-
-        for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (m.getIntentBaseDmg() < 0) {
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                break;
-            }
-        }
-    }
-
-    @Override
     public AbstractCard makeCopy() { //Optional
         return new GreenFlameBlade();
     }
