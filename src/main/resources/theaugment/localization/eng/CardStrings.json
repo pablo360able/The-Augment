@@ -285,11 +285,11 @@
   },
   "${modID}:RayOfEnfeeblement": {
     "NAME": "Ray of Enfeeblement",
-    "DESCRIPTION": "Target gains !M! Weak and !M! Frail and loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "The enemy gains !M! Weak and !M! Frail and loses !M! Strength. NL Exhaust."
   },
   "${modID}:BackStrike": {
     "NAME": "Back Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the target is Frail, gain [E] and draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is Frail, gain [E] and draw 1 card."
   },
   "${modID}:FaerieFire": {
     "NAME": "Faerie Fire",
@@ -297,7 +297,7 @@
   },
   "${modID}:NecroticBeam": {
     "NAME": "Necrotic Beam",
-    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Double this damage if the target is Frail. NL Exhaust."
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Double this damage if the enemy is Frail. NL Exhaust."
   },
   "${modID}:MegaDebuff": {
     "NAME": "Mega Debuff",
@@ -363,5 +363,9 @@
   "${modID}:OutwitFate": {
     "NAME": "Outwit Fate",
     "DESCRIPTION": "Whenever you discard a card from your draw pile, gain !M! Block."
+  },
+  "${modID}:UnarmedStrike": {
+    "NAME": "Unarmed Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy doesn't intend to attack, deal !D! damage again."
   }
 }

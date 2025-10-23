@@ -6,10 +6,9 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Temporary Artifact: Protection, Warding
-* Misc Attacks: Arcane Smite, Shadow Strike
-* Misc Skills: Stoneskin, Vampiric Tutor, Circle Back
-* Misc Powers: Potent Magic, Burning Clarity, Divine, Outwit Fate
+* Intent-based cards: Unarmed Strike, Bide, Mitigation, Surprise
+* Flame orbs: Fireball, Burning Fist, Firewall, Delayed Blast Fireball, Green Flame Blade
+* Bouncing: Riposte, Self-Defense, Shield, Rebuke
 
 ## Implement
 
