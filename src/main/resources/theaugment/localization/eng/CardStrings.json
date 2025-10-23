@@ -398,5 +398,9 @@
   "${modID}:GreenFlameBlade": {
     "NAME": "Green Flame Blade",
     "DESCRIPTION": "If you have an empty orb slot, Channel 1 ${modID}:Flame. NL Your next Attack this turn has \"${modID}:Blood: Deal !M! damage to ALL enemies.\""
+  },
+  "${modID}:Riposte": {
+    "NAME": "Riposte",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you take no damage from an attack, return this from the discard pile to your Hand"
   }
 }

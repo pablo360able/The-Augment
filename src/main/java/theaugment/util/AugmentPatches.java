@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
+import theaugment.cards.OnAttackedCard;
 import theaugment.powers.PreDrawPower;
 import theaugment.relics.DefectiveProsthetic;
 
@@ -133,4 +135,20 @@ public class AugmentPatches {
         }
     }
 
+    @SpirePatch(
+            clz = AbstractPlayer.class,
+            method = "damage",
+            paramtypez = {
+                    DamageInfo.class
+            }
+    )
+    public static class TriggerOnAttacked {
+        public static void Postfix (AbstractPlayer instance, DamageInfo info) {
+            for (AbstractCard c : instance.discardPile.group) {
+                if (c instanceof OnAttackedCard) {
+                    ((OnAttackedCard)c).triggerOnAttacked(info);
+                }
+            }
+        }
+    }
 }
