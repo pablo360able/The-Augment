@@ -6,7 +6,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Intent-based cards: Unarmed Strike, Bide, Mitigation, Surprise
+* Intent-based cards: Unarmed Strike, Bide, Surprise
 * Flame orbs: Fireball, Burning Fist, Firewall, Delayed Blast Fireball, Green Flame Blade
 * Bouncing: Riposte, Self-Defense, Shield, Rebuke
 
