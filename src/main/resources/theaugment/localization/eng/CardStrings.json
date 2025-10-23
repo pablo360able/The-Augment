@@ -385,5 +385,9 @@
   "${modID}:BurningFist": {
     "NAME": "Burning Fist",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Channel !M! ${modID}:Flame."
+  },
+  "${modID}:Firewall": {
+    "NAME": "Firewall",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !M! damage for each ${modID}:FLame in your orb slots whenever you are attacked this turn."
   }
 }
