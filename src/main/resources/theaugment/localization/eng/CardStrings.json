@@ -381,5 +381,9 @@
   "${modID}:Fireball": {
     "NAME": "Fireball",
     "DESCRIPTION": "${modID}:Magic. NL Channel !M! ${modID}:Flame. NL Deal !D! damage to ALL enemies."
+  },
+  "${modID}:BurningFist": {
+    "NAME": "Burning Fist",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage. NL Channel !M! ${modID}:Flame."
   }
 }
