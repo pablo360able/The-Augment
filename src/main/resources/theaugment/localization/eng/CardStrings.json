@@ -359,5 +359,9 @@
   "${modID}:Divine": {
     "NAME": "Divine",
     "DESCRIPTION": "Whenever you draw one or more cards during your turn, first Scry !M!."
+  },
+  "${modID}:OutwitFate": {
+    "NAME": "Outwit Fate",
+    "DESCRIPTION": "Whenever you discard a card from your draw pile, gain !M! Block."
   }
 }

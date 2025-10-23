@@ -146,5 +146,12 @@
       "Whenever you draw one or more cards during your turn, first #yScry #b",
       "."
     ]
+  },
+  "${modID}:OutwitFatePower": {
+    "NAME": "Outwit Fate",
+    "DESCRIPTIONS": [
+      "Whenever you discard a card from your draw pile, gain #b",
+      " #yBlock."
+    ]
   }
 }
