@@ -367,5 +367,10 @@
   "${modID}:UnarmedStrike": {
     "NAME": "Unarmed Strike",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy doesn't intend to attack, deal !D! damage again."
+  },
+  "${modID}:Bide": {
+    "NAME": "Bide",
+    "DESCRIPTION": "If the enemy doesn't intend to attack, gain !M! Focus.",
+    "UPGRADE_DESCRIPTION": "Retain. NL If the enemy doesn't intend to attack, gain !M! Focus."
   }
 }
