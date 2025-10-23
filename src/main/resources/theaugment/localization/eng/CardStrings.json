@@ -394,5 +394,9 @@
     "NAME": "Delayed Blast Fireball",
     "DESCRIPTION": "${modID}:Spontaneous. NL If you have an empty orb slot, Channel 1 ${modID}:Flame. NL Increase the damage of all *Flame orbs.",
     "UPGRADE_DESCRIPTION": "If you have an empty orb slot, Channel 1 ${modID}:Flame. NL Increase the damage of all *Flame orbs."
+  },
+  "${modID}:GreenFlameBlade": {
+    "NAME": "Green Flame Blade",
+    "DESCRIPTION": "If you have an empty orb slot, Channel 1 ${modID}:Flame. NL Your next Attack this turn has \"${modID}:Blood: Deal !M! damage to ALL enemies.\""
   }
 }

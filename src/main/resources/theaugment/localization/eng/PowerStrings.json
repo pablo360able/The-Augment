@@ -153,5 +153,12 @@
       "Whenever you discard a card from your draw pile, gain #b",
       " #yBlock."
     ]
+  },
+  "${modID}:GreenFlamePower": {
+    "NAME": "Green Flame",
+    "DESCRIPTIONS": [
+      "Your next Attack this turn has \"#yBlood: Deal #b",
+      " damage to ALL enemies.\""
+    ]
   }
 }
