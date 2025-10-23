@@ -160,5 +160,13 @@
       "Your next Attack this turn has \"#yBlood: Deal #b",
       " damage to ALL enemies.\""
     ]
+  },
+  "${modID}:EntropyPower": {
+    "NAME": "EntropyPower",
+    "DESCRIPTIONS": [
+      "Negates #b",
+      " buff. Cancels out with Artifact.",
+      " buffs. Cancels out with Artifact."
+    ]
   }
 }

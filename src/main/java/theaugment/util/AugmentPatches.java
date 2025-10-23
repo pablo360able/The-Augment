@@ -3,20 +3,23 @@ package theaugment.util;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
 import theaugment.cards.OnAttackedCard;
+import theaugment.powers.EntropyPower;
 import theaugment.powers.PreDrawPower;
 import theaugment.relics.DefectiveProsthetic;
 
@@ -151,4 +154,50 @@ public class AugmentPatches {
             }
         }
     }
+
+    @SpirePatch(
+            clz = RemoveDebuffsAction.class,
+            method = "update"
+    )
+    public static class RemoveEntropy {
+        public static void Prefix (RemoveDebuffsAction __instance, AbstractCreature ___c) {
+            if (___c.hasPower(EntropyPower.POWER_ID)) {
+                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(___c, ___c, EntropyPower.POWER_ID));
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = ApplyPowerAction.class,
+            method = "update"
+    )
+    public static class BlockBuffs {
+        public static SpireReturn<Void> Prefix (ApplyPowerAction instance, float ___duration, float ___startingDuration, AbstractPower ___powerToApply) {
+            if (instance.target != null && !instance.target.isDeadOrEscaped()) {
+                if (___duration == ___startingDuration) {
+                    if (___powerToApply.type == AbstractPower.PowerType.BUFF) {
+                        if (instance.target.hasPower(EntropyPower.POWER_ID)) {
+                            if (___powerToApply.ID.equals("Artifact")) {
+                                int diff = ___powerToApply.amount - instance.target.getPower(EntropyPower.POWER_ID).amount;
+                                if (diff > 0) {
+                                    ___powerToApply.amount = diff;
+                                    AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, EntropyPower.POWER_ID));
+                                } else if (diff < 0) {
+                                    instance.target.getPower(EntropyPower.POWER_ID).amount = diff;
+                                    return SpireReturn.Return();
+                                } else {
+                                    AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, EntropyPower.POWER_ID));
+                                    return SpireReturn.Return();
+                                }
+                            } else if (!___powerToApply.ID.equals(EntropyPower.POWER_ID)) {
+                                return SpireReturn.Return();
+                            }
+                        }
+                    }
+                }
+            }
+            return SpireReturn.Continue();
+        }
+    }
 }
+
