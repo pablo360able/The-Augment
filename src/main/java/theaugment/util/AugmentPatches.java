@@ -161,18 +161,6 @@ public class AugmentPatches {
     }
 
     @SpirePatch(
-            clz = RemoveDebuffsAction.class,
-            method = "update"
-    )
-    public static class RemoveEntropy {
-        public static void Prefix (RemoveDebuffsAction __instance, AbstractCreature ___c) {
-            if (___c.hasPower(EntropyPower.POWER_ID)) {
-                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(___c, ___c, EntropyPower.POWER_ID));
-            }
-        }
-    }
-
-    @SpirePatch(
             clz = ApplyPowerAction.class,
             method = "update"
     )
