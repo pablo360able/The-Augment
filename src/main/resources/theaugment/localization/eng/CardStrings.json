@@ -372,5 +372,10 @@
     "NAME": "Bide",
     "DESCRIPTION": "If the enemy doesn't intend to attack, gain !M! Focus.",
     "UPGRADE_DESCRIPTION": "Retain. NL If the enemy doesn't intend to attack, gain !M! Focus."
+  },
+  "${modID}:Surprise": {
+    "NAME": "Surprise",
+    "DESCRIPTION": "Innate. NL ${modID}:Spontaneous. NL Draw !M! cards. NL Draw an additional card for each enemy that doesn't intend to attack. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL ${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL Draw !M! cards. NL Draw an additional card for each enemy that doesn't intend to attack. NL Exhaust."
   }
 }
