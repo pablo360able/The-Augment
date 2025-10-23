@@ -193,7 +193,7 @@
   },
   "${modID}:Sanctuary": {
     "NAME": "Sanctuary",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Can only be played if every card in your hand is a Skill. NL Exhaust.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Can only be played if every card in your hand is a Skill.",
     "EXTENDED_DESCRIPTION": ["I have non-Skill cards in my hand."]
   },
   "${modID}:Multiattack": {
@@ -415,5 +415,10 @@
     "NAME": "Rebuke",
     "DESCRIPTION": "${modID}:Spontaneous. NL Evoke your next Orb. NL Whenever you take damage from an enemy, return this from the discard pile to your Hand.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Evoke your next Orb. NL Channel the Orb that was just Evoked. NL Whenever you take damage from an enemy, return this from the discard pile to your Hand."
+  },
+  "${modID}:ConcealPower": {
+    "NAME": "Conceal Power",
+    "DESCRIPTION": "Double your Block. NL Gain !M! Entropy. NL Can only be played if every card in your hand is a Skill.",
+    "EXTENDED_DESCRIPTION": ["I have non-Skill cards in my hand."]
   }
 }

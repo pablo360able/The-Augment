@@ -10,8 +10,8 @@ public class EntropyPower extends BasePower {
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
-    public EntropyPower(AbstractCreature owner) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, 1);
+    public EntropyPower(AbstractCreature owner, int amount) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, amount);
         this.updateDescription();
     }
 

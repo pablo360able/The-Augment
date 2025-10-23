@@ -1,5 +1,6 @@
 package theaugment.util;
 
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -172,26 +173,57 @@ public class AugmentPatches {
             method = "update"
     )
     public static class BlockBuffs {
-        public static SpireReturn<Void> Prefix (ApplyPowerAction instance, float ___duration, float ___startingDuration, AbstractPower ___powerToApply) {
+        public static SpireReturn<Void> Prefix (ApplyPowerAction instance, @ByRef float[] ___duration, float ___startingDuration, AbstractPower ___powerToApply) {
             if (instance.target != null && !instance.target.isDeadOrEscaped()) {
-                if (___duration == ___startingDuration) {
-                    if (___powerToApply.type == AbstractPower.PowerType.BUFF) {
-                        if (instance.target.hasPower(EntropyPower.POWER_ID)) {
-                            if (___powerToApply.ID.equals("Artifact")) {
-                                int diff = ___powerToApply.amount - instance.target.getPower(EntropyPower.POWER_ID).amount;
-                                if (diff > 0) {
-                                    ___powerToApply.amount = diff;
-                                    AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, EntropyPower.POWER_ID));
-                                } else if (diff < 0) {
-                                    instance.target.getPower(EntropyPower.POWER_ID).amount = diff;
-                                    return SpireReturn.Return();
-                                } else {
-                                    AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, EntropyPower.POWER_ID));
-                                    return SpireReturn.Return();
+                if (___duration[0] == ___startingDuration) {
+                    if (___powerToApply.type == AbstractPower.PowerType.BUFF && instance.target.hasPower(EntropyPower.POWER_ID)) {
+                        if (___powerToApply.ID.equals("Artifact")) {
+                            int diff = ___powerToApply.amount - instance.target.getPower(EntropyPower.POWER_ID).amount;
+                            if (diff > 0) {
+                                ___powerToApply.amount = diff;
+                                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, EntropyPower.POWER_ID));
+                            } else if (diff < 0) {
+                                instance.target.getPower(EntropyPower.POWER_ID).amount = -diff;
+                                ___duration[0] -= Gdx.graphics.getDeltaTime();
+                                if (___duration[0] < 0.0F) {
+                                    instance.isDone = true;
                                 }
-                            } else if (!___powerToApply.ID.equals(EntropyPower.POWER_ID)) {
+                                return SpireReturn.Return();
+                            } else {
+                                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, EntropyPower.POWER_ID));
+                                ___duration[0] -= Gdx.graphics.getDeltaTime();
+                                if (___duration[0] < 0.0F) {
+                                    instance.isDone = true;
+                                }
                                 return SpireReturn.Return();
                             }
+                        } else if (!___powerToApply.ID.equals(EntropyPower.POWER_ID)) {
+                            instance.target.getPower(EntropyPower.POWER_ID).amount--;
+                            ___duration[0] -= Gdx.graphics.getDeltaTime();
+                            if (___duration[0] < 0.0F) {
+                                instance.isDone = true;
+                            }
+                            return SpireReturn.Return();
+                        }
+                    } else if (___powerToApply.ID.equals(EntropyPower.POWER_ID) && instance.target.hasPower("Artifact")) {
+                        int diff = ___powerToApply.amount - instance.target.getPower("Artifact").amount;
+                        if (diff > 0) {
+                            ___powerToApply.amount = diff;
+                            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, "Artifact"));
+                        } else if (diff < 0) {
+                            instance.target.getPower("Artifact").amount = -diff;
+                            ___duration[0] -= Gdx.graphics.getDeltaTime();
+                            if (___duration[0] < 0.0F) {
+                                instance.isDone = true;
+                            }
+                            return SpireReturn.Return();
+                        } else {
+                            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, "Artifact"));
+                            ___duration[0] -= Gdx.graphics.getDeltaTime();
+                            if (___duration[0] < 0.0F) {
+                                instance.isDone = true;
+                            }
+                            return SpireReturn.Return();
                         }
                     }
                 }
