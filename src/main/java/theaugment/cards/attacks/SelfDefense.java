@@ -14,8 +14,8 @@ import theaugment.cards.OnAttackedCard;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
-public class Riposte extends BaseCard implements OnAttackedCard {
-    public static final String ID = makeID(Riposte.class.getSimpleName());
+public class SelfDefense extends BaseCard implements OnAttackedCard {
+    public static final String ID = makeID(SelfDefense.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
@@ -23,13 +23,16 @@ public class Riposte extends BaseCard implements OnAttackedCard {
             CardTarget.ENEMY,
             0
     );
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 4;
+    private static final int UPG_DAMAGE = 2;
+    private static final int BLOCK = 4;
+    private static final int UPG_BLOCK = 2;
 
-    public Riposte() {
+    public SelfDefense() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
+        setBlock(BLOCK, UPG_BLOCK);
 
         tags.add(CustomTags.SPONTANEOUS);
     }
@@ -41,12 +44,12 @@ public class Riposte extends BaseCard implements OnAttackedCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Riposte();
+        return new SelfDefense();
     }
 
     @Override
     public void triggerOnAttacked(DamageInfo info) {
-        if (info.owner != AbstractDungeon.player && AbstractDungeon.player.lastDamageTaken == 0) {
+        if (info.owner != AbstractDungeon.player && AbstractDungeon.player.lastDamageTaken > 0) {
             this.addToBot(new DiscardToHandAction(this));
         }
     }
