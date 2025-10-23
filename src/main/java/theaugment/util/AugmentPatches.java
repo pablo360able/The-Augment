@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -17,12 +18,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseDexterityPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
 import theaugment.cards.OnAttackedCard;
-import theaugment.powers.EntropyPower;
-import theaugment.powers.PreDrawPower;
+import theaugment.powers.*;
 import theaugment.relics.DefectiveProsthetic;
+
+import java.util.ArrayList;
 
 public class AugmentPatches {
     @SpirePatch(
@@ -176,7 +180,19 @@ public class AugmentPatches {
         public static SpireReturn<Void> Prefix (ApplyPowerAction instance, @ByRef float[] ___duration, float ___startingDuration, AbstractPower ___powerToApply) {
             if (instance.target != null && !instance.target.isDeadOrEscaped()) {
                 if (___duration[0] == ___startingDuration) {
-                    if (___powerToApply.type == AbstractPower.PowerType.BUFF && instance.target.hasPower(EntropyPower.POWER_ID)) {
+                    if (instance.target.hasPower(LingeringEntropyPower.POWER_ID)) {
+                        AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, LingeringEntropyPower.POWER_ID));
+                        String[] buffDebuffs = new String[]{LoseStrengthPower.POWER_ID, LoseDexterityPower.POWER_ID, LoseFocusPower.POWER_ID, LoseArtifactPower.POWER_ID};
+                        for (String buffId : buffDebuffs) {
+                            if (___powerToApply.ID.equals(buffId)) {
+                                ___duration[0] -= Gdx.graphics.getDeltaTime();
+                                if (___duration[0] < 0.0F) {
+                                    instance.isDone = true;
+                                }
+                                return SpireReturn.Return();
+                            }
+                        }
+                    } else if (___powerToApply.type == AbstractPower.PowerType.BUFF && instance.target.hasPower(EntropyPower.POWER_ID)) {
                         if (___powerToApply.ID.equals("Artifact")) {
                             int diff = ___powerToApply.amount - instance.target.getPower(EntropyPower.POWER_ID).amount;
                             if (diff > 0) {
@@ -197,8 +213,17 @@ public class AugmentPatches {
                                 }
                                 return SpireReturn.Return();
                             }
-                        } else if (!___powerToApply.ID.equals(EntropyPower.POWER_ID)) {
+                        } else {
                             instance.target.getPower(EntropyPower.POWER_ID).amount--;
+                            if (instance.target.getPower(EntropyPower.POWER_ID).amount == 0) {
+                                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(instance.target, instance.target, EntropyPower.POWER_ID));
+                            }
+                            if (!AbstractDungeon.actionManager.actions.isEmpty()) {
+                                AbstractGameAction next = AbstractDungeon.actionManager.actions.get(0);
+                                if (AbstractDungeon.actionManager.actions.get(0) instanceof ApplyPowerAction) {
+                                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(instance.target, instance.target, new LingeringEntropyPower(instance.target)));
+                                }
+                            }
                             ___duration[0] -= Gdx.graphics.getDeltaTime();
                             if (___duration[0] < 0.0F) {
                                 instance.isDone = true;

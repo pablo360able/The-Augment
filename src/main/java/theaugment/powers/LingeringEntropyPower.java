@@ -1,17 +1,17 @@
 package theaugment.powers;
 
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 import static theaugment.TheAugmentMod.makeID;
 
-public class EntropyPower extends BasePower {
-    public static final String POWER_ID = makeID(EntropyPower.class.getSimpleName());
+public class LingeringEntropyPower extends BasePower {
+    public static final String POWER_ID = makeID(LingeringEntropyPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.DEBUFF;
     private static final boolean TURN_BASED = false;
 
-    public EntropyPower(AbstractCreature owner, int amount) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+    public LingeringEntropyPower(AbstractCreature owner) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
+        this.isPostActionPower = true;
         this.updateDescription();
     }
 
