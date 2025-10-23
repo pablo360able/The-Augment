@@ -91,5 +91,13 @@
       "flame"
     ],
     "DESCRIPTION": "Orb: Increases damage but damages you every turn. When #yEvoked, deals damage to ALL enemies."
+  },
+  {
+    "ID": "${modID}:Entropy",
+    "PROPER_NAME": "Entropy",
+    "NAMES": [
+      "entropy"
+    ],
+    "DESCRIPTION": "Negates the next buff.\nCancels out Artifact."
   }
 ]
