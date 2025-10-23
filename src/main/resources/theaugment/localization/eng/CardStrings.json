@@ -401,10 +401,19 @@
   },
   "${modID}:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "${modID}:Spontaneous. NL Deal !D! damage. NL Whenever you take no damage from an enemy, return this from the discard pile to your Hand"
+    "DESCRIPTION": "${modID}:Spontaneous. NL Deal !D! damage. NL Whenever you take no damage from an enemy, return this from the discard pile to your Hand."
   },
   "${modID}:SelfDefense": {
     "NAME": "Self-Defense",
-    "DESCRIPTION": "${modID}:Spontaneous. NL Deal !D! damage. NL Gain !B! Block. NL Whenever you take damage from an enemy, return this from the discard pile to your Hand"
+    "DESCRIPTION": "${modID}:Spontaneous. NL Deal !D! damage. NL Gain !B! Block. NL Whenever you take damage from an enemy, return this from the discard pile to your Hand."
+  },
+  "${modID}:Shield": {
+    "NAME": "Shield",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Gain !B! Block. NL Whenever you take no damage from an enemy, return this from the discard pile to your Hand."
+  },
+  "${modID}:Rebuke": {
+    "NAME": "Rebuke",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Evoke your next Orb. NL Whenever you take damage from an enemy, return this from the discard pile to your Hand.",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL Evoke your next Orb. NL Channel the Orb that was just Evoked. NL Whenever you take damage from an enemy, return this from the discard pile to your Hand."
   }
 }
