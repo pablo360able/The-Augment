@@ -8,7 +8,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Entropy: Conceal Power, Mitigation
 * Formerly Fixed Cost: Counterspell, Power Word Kill
-* Misc: Shillelagh, Focused Strike, Quickening, Readied Action, Backup Plan, Double Back
+* Misc: Shillelagh, Focused Strike, Quickening, Readied Action, Backup Plan, Double Back, Timewinder
 * Relics: Backpack, Eddington's Arrow, Tidldibab
 
 ## Implement
