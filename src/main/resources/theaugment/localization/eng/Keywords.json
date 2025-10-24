@@ -99,5 +99,13 @@
       "entropy"
     ],
     "DESCRIPTION": "Negates the next buff.\nCancels out Artifact."
+  },
+  {
+    "ID": "${modID}:Stun",
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "stun"
+    ],
+    "DESCRIPTION": "Stunned enemies skip their turn."
   }
 ]
