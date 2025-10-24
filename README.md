@@ -6,18 +6,16 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Entropy: Conceal Power, Mitigation
-* Formerly Fixed Cost: Counterspell, Power Word Kill
-* Misc: Shillelagh, Focused Strike, Quickening, Readied Action, Backup Plan, Double Back, Timewinder, Hold Priority, Blank Slate, Mirror Image
-* Relics: Backpack, Eddington's Arrow, Tidldibab
+* Concentration
+  * Skills: Enhance Ability, Summon Fiend
+  * Powers: Inquire, Enrage, Eye of the Storm, Force Barrage, Investiture, Abjure
+* Miscellaneous
+  * Spell Sniper, Signature Spell
+* Energy art (gold star?)
 
 ## Implement
 
-* Most art (energy = gold star?)
-* About half the cards
-* Tidldibab relic
-* Concentration keyword
-* Entropy
+* Enemy behavior changes on block/remove buffs
 
 ## Technical
 
