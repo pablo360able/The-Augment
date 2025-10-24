@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 import theaugment.cards.BaseCard;
 import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
+import theaugment.powers.EntropyPower;
 import theaugment.powers.LoseArtifactPower;
 import theaugment.powers.MaxHpIfRegenPower;
 import theaugment.powers.WardingPower;
@@ -38,7 +39,9 @@ public class Warding extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new WardingPower(p, magicNumber)));
         if (upgraded) {
-            addToBot(new ApplyPowerAction(p, p, new LoseArtifactPower(p, magicNumber)));
+            if (!p.hasPower(EntropyPower.POWER_ID)) {
+                addToBot(new ApplyPowerAction(p, p, new LoseArtifactPower(p, magicNumber)));
+            }
             addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber)));
         }
     }

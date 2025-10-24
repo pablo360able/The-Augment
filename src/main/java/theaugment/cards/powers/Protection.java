@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
+import theaugment.powers.EntropyPower;
 import theaugment.powers.LoseArtifactPower;
 import theaugment.util.CardStats;
 
@@ -30,7 +31,7 @@ public class Protection extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!upgraded) {
+        if (!upgraded && !p.hasPower(EntropyPower.POWER_ID)) {
             addToBot(new ApplyPowerAction(p, p, new LoseArtifactPower(p, magicNumber)));
         }
         addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber)));
