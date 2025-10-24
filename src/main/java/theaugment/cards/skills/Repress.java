@@ -1,18 +1,16 @@
 package theaugment.cards.skills;
 
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theaugment.actions.PurgeThoughtAction;
-import theaugment.actions.SuppressAction;
+import theaugment.actions.RepressAction;
 import theaugment.cards.BaseCard;
 import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
-public class Suppress extends BaseCard {
-    public static final String ID = makeID(Suppress.class.getSimpleName());
+public class Repress extends BaseCard {
+    public static final String ID = makeID(Repress.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.SKILL,
@@ -21,7 +19,7 @@ public class Suppress extends BaseCard {
             4
     );
 
-    public Suppress() {
+    public Repress() {
         super(ID, info);
 
         tags.add(CustomTags.SPONTANEOUS);
@@ -32,11 +30,11 @@ public class Suppress extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SuppressAction());
+        addToBot(new RepressAction());
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Suppress();
+        return new Repress();
     }
 }
