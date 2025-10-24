@@ -94,5 +94,13 @@
       "Upon pickup, obtain six useful cards.",
       "The Back Packs..."
     ]
+  },
+  "${modID}:EddingtonsArrow": {
+    "NAME": "Eddington's Arrow",
+    "FLAVOR": "The second law of thermodynamics is more of a suggestion than a rule, but it's one you're likely to follow.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, apply #b",
+      " #yEntropy to ALL enemies."
+    ]
   }
 }
