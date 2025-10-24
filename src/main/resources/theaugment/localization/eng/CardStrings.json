@@ -445,5 +445,10 @@
   "${modID}:Quickening": {
     "NAME": "Quickening",
     "DESCRIPTION": "Draw !M! cards. NL If both of them are Skills, gain [E]."
+  },
+  "${modID}:ReadiedAction": {
+    "NAME": "Readied Action",
+    "DESCRIPTION": "Retain !M! card. NL It costs [E] less next turn but becomes ${modID}:Spontaneous.",
+    "UPGRADE_DESCRIPTION": "Retain !M! cards. NL They costs [E] less next turn but become ${modID}:Spontaneous."
   }
 }
