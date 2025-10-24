@@ -437,5 +437,9 @@
   "${modID}:Shillelagh": {
     "NAME": "Shillelagh",
     "DESCRIPTION": "Deal !D! damage. NL This Attack is ${modID}:Magic unless your Strength is greater than your Focus."
+  },
+  "${modID}:FocusedStrike": {
+    "NAME": "Focused Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Trigger the passive effect of each of your Orbs."
   }
 }
