@@ -459,5 +459,9 @@
     "NAME": "Double Back",
     "DESCRIPTION": "${modID}:Spontaneous. NL Choose a card in your discard pile. NL Play the chosen card twice and exhaust it. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose a card in your discard pile. NL Play the chosen card twice and exhaust it. NL Exhaust."
+  },
+  "${modID}:Timewinder": {
+    "NAME": "Timewinder",
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage twice. NL If this kills an enemy, take an extra turn after this one."
   }
 }
