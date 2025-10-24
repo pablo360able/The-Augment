@@ -168,5 +168,13 @@
       " buff. Cancels out with Artifact.",
       " buffs. Cancels out with Artifact."
     ]
+  },
+  "${modID}:HoldingPower": {
+    "NAME": "Holding",
+    "DESCRIPTIONS": [
+      "If you have excess #yBlock at the start of your next turn, gain [E] #b",
+      " time",
+      " times."
+    ]
   }
 }

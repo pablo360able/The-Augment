@@ -463,5 +463,9 @@
   "${modID}:Timewinder": {
     "NAME": "Timewinder",
     "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage twice. NL If this kills an enemy, take an extra turn after this one."
+  },
+  "${modID}:HoldPriority": {
+    "NAME": "Hold Priority",
+    "DESCRIPTION": "Gain !B! Block. NL End your turn. NL If you have excess Block at the start of your next turn, gain [E]."
   }
 }
