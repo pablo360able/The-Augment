@@ -16,8 +16,8 @@ public class FatiguedPower extends BasePower {
     private static final PowerType TYPE = PowerType.DEBUFF;
     private static final boolean TURN_BASED = true;
 
-    public FatiguedPower(AbstractCreature owner, int energyAmt) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, energyAmt);
+    public FatiguedPower(AbstractCreature owner, int turns) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, turns);
         if (this.amount >= 999) {
             this.amount = 999;
         }

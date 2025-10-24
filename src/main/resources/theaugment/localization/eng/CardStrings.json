@@ -450,5 +450,9 @@
     "NAME": "Readied Action",
     "DESCRIPTION": "Retain !M! card. NL It costs [E] less next turn but becomes ${modID}:Spontaneous.",
     "UPGRADE_DESCRIPTION": "Retain !M! cards. NL They costs [E] less next turn but become ${modID}:Spontaneous."
+  },
+  "${modID}:BackupPlan": {
+    "NAME": "Backup Plan",
+    "DESCRIPTION": "Take an extra turn after this one. NL Gain one less [E] at the start of your next turn."
   }
 }
