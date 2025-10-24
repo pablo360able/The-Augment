@@ -20,10 +20,8 @@ public class MultiattackAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             for (AbstractCard c : p.hand.group) {
-                if (c.type == AbstractCard.CardType.ATTACK && c.costForTurn > 0) {
-                    c.costForTurn = 0;
-                    c.isCostModified = true;
-                    c.superFlash(Color.GOLD.cpy());
+                if (c.type == AbstractCard.CardType.ATTACK) {
+                    c.setCostForTurn(-9);
                 }
             }
         }
