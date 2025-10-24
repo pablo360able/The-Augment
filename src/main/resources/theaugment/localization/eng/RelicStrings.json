@@ -86,5 +86,13 @@
     "DESCRIPTIONS": [
       "See two additional cards in rewards for normal combats, and one for rewards for elite combats."
     ]
+  },
+  "${modID}:Backpack": {
+    "NAME": "Backpack",
+    "FLAVOR": "A convenient method of carrying miscellanea for anyone from a schoolchild to a soldier.",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain six useful cards.",
+      "The Back Packs..."
+    ]
   }
 }
