@@ -183,5 +183,11 @@
       "Whenever an enemy attack deals no damage, gain #b",
       " #yDexterity and lose it at the end of your turn."
     ]
+  },
+  "${modID}:EchosGracePower": {
+    "NAME": "Echo's Grace",
+    "DESCRIPTIONS": [
+      "#yConcentration. Double your #yFocus."
+    ]
   }
 }

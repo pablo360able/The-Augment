@@ -1,0 +1,31 @@
+
+package theaugment.powers;
+
+
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.powers.FocusPower;
+
+import static theaugment.TheAugmentMod.makeID;
+
+public class EchosGracePower extends ConcentrationPower {
+    public static final String POWER_ID = makeID(EchosGracePower.class.getSimpleName());
+    private static final PowerType TYPE = PowerType.BUFF;
+    private static final boolean TURN_BASED = false;
+
+    public EchosGracePower(int amount) {
+        super(POWER_ID, TYPE, TURN_BASED, amount);
+        this.updateDescription();
+    }
+
+    @Override
+    public void onRemove() {
+        this.addToTop(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -this.amount)));
+    }
+
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
+    }
+}

@@ -107,5 +107,13 @@
       "stun"
     ],
     "DESCRIPTION": "Stunned enemies skip their turn."
+  },
+  {
+    "ID": "${modID}:Concentration",
+    "PROPER_NAME": "Concentration",
+    "NAMES": [
+      "concentration"
+    ],
+    "DESCRIPTION": "Whenever you play a #yPower with #yConcentration, end the current #yConcentration power.\nYou may also end it at the start of your turn."
   }
 ]

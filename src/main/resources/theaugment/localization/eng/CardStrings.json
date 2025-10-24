@@ -475,5 +475,17 @@
   "${modID}:MirrorImage": {
     "NAME": "Mirror Image",
     "DESCRIPTION": "Gain !B! Block. NL End your turn. NL Whenever you take no damage from an enemy's attack this turn, gain !M! Dexterity and lose !M! Dexterity at the end of next turn."
+  },
+  "${modID}:DropConcentration": {
+    "NAME": "Drop Concentration",
+    "DESCRIPTION": "End the current ${modID}:Concentration Power."
+  },
+  "${modID}:MaintainConcentration": {
+    "NAME": "Drop Concentration",
+    "DESCRIPTION": "Maintain the current ${modID}:Concentration Power."
+  },
+  "${modID}:EchosGrace": {
+    "NAME": "Echo's Grace",
+    "DESCRIPTION": "${modID}:Concentration. Double your Focus."
   }
 }
