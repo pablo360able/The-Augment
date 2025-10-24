@@ -10,12 +10,19 @@ import theaugment.powers.MagicDamagePower;
 
 public abstract class Helpers {
     public static float EnchantDamage(float damage, DamageInfo.DamageType type) {
+        return EnchantDamage(damage, type, false);
+    }
+
+    public static float EnchantDamage(float damage, DamageInfo.DamageType type, boolean smart) {
         if (type != DamageInfo.DamageType.NORMAL) {
             return damage;
         }
         AbstractPlayer p = AbstractDungeon.player;
         int strength = p.hasPower("Strength") ? p.getPower("Strength").amount : 0;
         int focus = p.hasPower("Focus") ? p.getPower("Focus").amount : 0;
+        if (strength > focus) {
+            return damage;
+        }
         float magicDamage = damage + focus - strength;
         for (AbstractPower power : p.powers) {
             if (power instanceof MagicDamagePower) {

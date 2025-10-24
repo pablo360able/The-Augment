@@ -433,5 +433,9 @@
     "NAME": "Power Word: Kill",
     "DESCRIPTION": "${modID}:Spontaneous. NL If the enemy has !M! or less HP, set their HP to 0. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. Nl ${modID}:Compensate: Draw 1 card. NL If the enemy has !M! or less HP, set their HP to 0. NL Exhaust."
+  },
+  "${modID}:Shillelagh": {
+    "NAME": "Shillelagh",
+    "DESCRIPTION": "Deal !D! damage. NL This Attack is ${modID}:Magic unless your Strength is greater than your Focus."
   }
 }

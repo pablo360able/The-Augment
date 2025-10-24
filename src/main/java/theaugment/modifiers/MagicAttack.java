@@ -9,24 +9,26 @@ import theaugment.util.Helpers;
 import static theaugment.TheAugmentMod.makeID;
 
 public class MagicAttack extends AbstractDamageModifier {
+    public boolean smart;
+
     public static final String ID = makeID(MagicAttack.class.getSimpleName());
 
     public MagicAttack() {
         this(true);
     }
 
-    public MagicAttack(boolean autoBind) {
-        this.automaticBindingForCards = autoBind;
+    public MagicAttack(boolean smart) {
+        this.smart = smart;
     }
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCreature target, AbstractCard card) {
-        return Helpers.EnchantDamage(damage, type);
+        return Helpers.EnchantDamage(damage, type, smart);
     }
 
     @Override
     public AbstractDamageModifier makeCopy() {
-        return new MagicAttack(this.automaticBindingForCards);
+        return new MagicAttack(this.smart);
     }
 
     @Override
