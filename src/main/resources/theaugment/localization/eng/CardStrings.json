@@ -454,5 +454,10 @@
   "${modID}:BackupPlan": {
     "NAME": "Backup Plan",
     "DESCRIPTION": "Take an extra turn after this one. NL Gain one less [E] at the start of your next turn."
+  },
+  "${modID}:DoubleBack": {
+    "NAME": "Double Back",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Choose a card in your discard pile. NL Play the chosen card twice and exhaust it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in your discard pile. NL Play the chosen card twice and exhaust it. NL Exhaust."
   }
 }
