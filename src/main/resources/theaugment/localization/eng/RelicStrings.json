@@ -102,5 +102,13 @@
       "At the start of each combat, apply #b",
       " #yEntropy to ALL enemies."
     ]
+  },
+  "${modID}:Tidldibab": {
+    "NAME": "Tidldibab",
+    "FLAVOR": "Possibly an ancient flute crafted by Neanderthals. Possibly nothing of the sort. Time has erased the possibility of certainty.",
+    "DESCRIPTIONS": [
+      "Gain [E] and #b",
+      " #yEntropy at the start of your turn."
+    ]
   }
 }
