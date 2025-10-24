@@ -441,5 +441,9 @@
   "${modID}:FocusedStrike": {
     "NAME": "Focused Strike",
     "DESCRIPTION": "Deal !D! damage. NL Trigger the passive effect of each of your Orbs."
+  },
+  "${modID}:Quickening": {
+    "NAME": "Quickening",
+    "DESCRIPTION": "Draw !M! cards. NL If both of them are Skills, gain [E]."
   }
 }
