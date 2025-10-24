@@ -2,6 +2,7 @@ package theaugment.powers;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import theaugment.actions.BloodAction;
 import theaugment.actions.ConcentrationAction;
 
@@ -33,6 +35,18 @@ public abstract class ConcentrationPower extends BasePower {
     @Override
     public void atStartOfTurn() {
         this.addToTop(new ConcentrationAction(this));
+    }
+
+    @Override
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info.owner != null && info.owner != this.owner) {
+            if (this.owner.hasPower("Focus")) {
+                this.addToTop(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -1)));
+            } else {
+                this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            }
+        }
+        return super.onAttacked(info, damageAmount);
     }
 
     @Override

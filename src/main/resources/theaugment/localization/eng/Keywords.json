@@ -114,6 +114,6 @@
     "NAMES": [
       "concentration"
     ],
-    "DESCRIPTION": "Whenever you play a #yPower with #yConcentration, end the current #yConcentration power.\nYou may also end it at the start of your turn."
+    "DESCRIPTION": "Whenever you play a #yPower with #yConcentration, end the current #yConcentration power.\nWhenever you take damage from an enemy, lose 1 #yFocus or, if you have none, end the current #yConcentration power.\nYou may also end it at the start of your turn."
   }
 ]
