@@ -8,7 +8,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Entropy: Conceal Power, Mitigation
 * Formerly Fixed Cost: Counterspell, Power Word Kill
-* Misc: Shillelagh, Focused Strike, Quickening, Readied Action, Backup Plan, Double Back, Timewinder, Hold Priority
+* Misc: Shillelagh, Focused Strike, Quickening, Readied Action, Backup Plan, Double Back, Timewinder, Hold Priority, Blank Slate, Mirror Image
 * Relics: Backpack, Eddington's Arrow, Tidldibab
 
 ## Implement
@@ -27,6 +27,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Migrate SpirePatches to use Locators
 * See if the X-cost attacks are being overstacked with MagicWeaponPower (and, theoretically, Arthame + Chemical X)
 * DrawCardAction's endTurnDraw boolean can be used to apply the fix I want for KiP and potentially Divine
+* Check how Entropy interacts with Mirror Image and temporary Artifact
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)

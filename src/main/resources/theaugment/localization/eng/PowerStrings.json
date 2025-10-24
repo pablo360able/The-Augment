@@ -176,5 +176,12 @@
       " time",
       " times."
     ]
+  },
+  "${modID}:MirrorImagePower": {
+    "NAME": "Mirror Image",
+    "DESCRIPTIONS": [
+      "Whenever an enemy attack deals no damage, gain #b",
+      " #yDexterity and lose it at the end of your turn."
+    ]
   }
 }

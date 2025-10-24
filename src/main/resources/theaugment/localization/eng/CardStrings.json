@@ -467,5 +467,13 @@
   "${modID}:HoldPriority": {
     "NAME": "Hold Priority",
     "DESCRIPTION": "Gain !B! Block. NL End your turn. NL If you have excess Block at the start of your next turn, gain [E]."
+  },
+  "${modID}:BlankSlate": {
+    "NAME": "Blank Slate",
+    "DESCRIPTION": "Remove ALL buffs and debuffs from ALL combatants. NL End your turn. NL Exhaust."
+  },
+  "${modID}:MirrorImage": {
+    "NAME": "Mirror Image",
+    "DESCRIPTION": "Gain !B! Block. NL End your turn. NL Whenever you take no damage from an enemy's attack this turn, gain !M! Dexterity and lose !M! Dexterity at the end of next turn."
   }
 }
