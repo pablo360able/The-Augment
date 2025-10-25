@@ -76,10 +76,10 @@
     ]
   },
   "${modID}:ArtilleryPower+": {
-    "NAME": "Artillery+",
+    "NAME": "Artillery",
     "DESCRIPTIONS": [
       "At the start of each turn, lose #b",
-      " hit points and add that many copies of Magic Missile+ to your hand."
+      " hit points and add that many upgraded copies of Magic Missile to your hand."
     ]
   },
   "${modID}:FireproofPower": {
