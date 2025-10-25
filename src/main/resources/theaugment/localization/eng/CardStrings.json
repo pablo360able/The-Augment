@@ -503,5 +503,9 @@
   "${modID}:Inquire": {
     "NAME": "Inquire",
     "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Concentration: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to buff. NL ${modID}:Concentration."
+  },
+  "${modID}:Enrage": {
+    "NAME": "Enrage",
+    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Concentration: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to defend, or to debuff without attacking. NL ${modID}:Concentration."
   }
 }

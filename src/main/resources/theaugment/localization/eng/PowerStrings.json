@@ -211,5 +211,12 @@
       "#yConcentration: At the start of your turn, gain #b",
       " #yStrength for each enemy that intends to buff."
     ]
+  },
+  "${modID}:EnragePower": {
+    "NAME": "Enrage",
+    "DESCRIPTIONS": [
+      "#yConcentration: At the start of your turn, gain #b",
+      " #yStrength for each enemy that intends to defend, or to debuff without attacking."
+    ]
   }
 }
