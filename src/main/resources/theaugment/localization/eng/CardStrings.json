@@ -516,5 +516,10 @@
   "${modID}:ForceBarrage": {
     "NAME": "Force Barrage",
     "DESCRIPTION": "Whenever you play *Magic *Missile, gain !M! Focus. Lose that Focus at the end of your turn. NL ${modID}:Concentration."
+  },
+  "${modID}:Investiture": {
+    "NAME": "Investiture",
+    "DESCRIPTION": "At the start of your turn, trigger the passive ability of your next Orb. NL ${modID}:Concentration.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, trigger the passive ability of your next Orb !M! times. NL ${modID}:Concentration."
   }
 }

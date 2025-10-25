@@ -233,11 +233,19 @@
       " #yFocus for each enemy that intends to attack."
     ]
   },
-  "${modID}:ForceBarragePower+": {
+  "${modID}:ForceBarragePower": {
     "NAME": "Force Barrage",
     "DESCRIPTIONS": [
       "#yConcentration: Whenever you play #yMagic #yMissile, gain #b",
       " #yFocus. Lose that #yFocus at the end of your turn."
+    ]
+  },
+  "${modID}:InvestiturePower": {
+    "NAME": "Investiture",
+    "DESCRIPTIONS": [
+      "#yConcentration: At the start of your turn, trigger the passive ability of your next Orb.",
+      "#yConcentration: At the start of your turn, trigger the passive ability of your next Orb #b",
+      " times."
     ]
   }
 }
