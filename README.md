@@ -8,7 +8,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * Concentration
   * Skills: Enhance Ability, Summon Fiend
-  * Powers: Inquire, Enrage, Eye of the Storm, Force Barrage, Investiture, Ward, Abjure
+  * Powers: Inquire, Enrage, Eye of the Storm, Force Barrage, Investiture, Abjure
 * Miscellaneous
   * Fated Blow, Spell Sniper, Signature Spell
 * Energy art (gold star?)
@@ -47,7 +47,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Consider changing timing of passive effect of Aether orbs
 * Replace generic names, including D&D spells and Magic keyword
 * Potentially relocate added description text for Enchant and Eidolon actions, and see if they get annihilated by cards whose descriptions update
-* Rename either Ward or Warding
 
 ## Bugs
 
