@@ -13,6 +13,7 @@ import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.powers.EntropyPower;
 import theaugment.util.CardStats;
+import theaugment.util.Helpers;
 
 public class Mitigation extends BaseCard {
     public static final String ID = makeID(Mitigation.class.getSimpleName());
@@ -38,13 +39,13 @@ public class Mitigation extends BaseCard {
             if (mo.getIntentBaseDmg() >= 0) {
                 addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, magicNumber * 2, false)));
             }
-            if (mo.intent == AbstractMonster.Intent.DEBUFF || mo.intent == AbstractMonster.Intent.ATTACK_DEBUFF || mo.intent == AbstractMonster.Intent.DEFEND_DEBUFF) {
+            if (Helpers.IntentContains(mo, AbstractMonster.Intent.DEBUFF)) {
                 addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, magicNumber * 2, false)));
             }
-            if (mo.intent == AbstractMonster.Intent.ATTACK_DEFEND || mo.intent == AbstractMonster.Intent.DEFEND || mo.intent == AbstractMonster.Intent.DEFEND_BUFF || mo.intent == AbstractMonster.Intent.DEFEND_DEBUFF) {
+            if (Helpers.IntentContains(mo, AbstractMonster.Intent.DEFEND)) {
                 addToBot(new ApplyPowerAction(mo, p, new FrailPower(mo, magicNumber * 2, false)));
             }
-            if (mo.intent == AbstractMonster.Intent.BUFF || mo.intent == AbstractMonster.Intent.ATTACK_BUFF || mo.intent == AbstractMonster.Intent.DEFEND_BUFF) {
+            if (Helpers.IntentContains(mo, AbstractMonster.Intent.BUFF)) {
                 addToBot(new ApplyPowerAction(mo, p, new EntropyPower(mo, magicNumber)));
             }
         }
