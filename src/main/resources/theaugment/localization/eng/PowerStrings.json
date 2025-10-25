@@ -218,5 +218,19 @@
       "#yConcentration: At the start of your turn, gain #b",
       " #yStrength for each enemy that intends to defend, or to debuff without attacking."
     ]
+  },
+  "${modID}:EyeOfTheStormPower": {
+    "NAME": "Eye of the Storm",
+    "DESCRIPTIONS": [
+      "#yConcentration: At the start of your turn, gain #b",
+      " #yFocus for each enemy that intends to attack. Lose that #yFocus at the end of your turn."
+    ]
+  },
+  "${modID}:EyeOfTheStormPower+": {
+    "NAME": "Eye of the Storm",
+    "DESCRIPTIONS": [
+      "#yConcentration: At the start of your turn, gain #b",
+      " #yFocus for each enemy that intends to attack."
+    ]
   }
 }

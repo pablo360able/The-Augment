@@ -502,10 +502,15 @@
   },
   "${modID}:Inquire": {
     "NAME": "Inquire",
-    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Concentration: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to buff. NL ${modID}:Concentration."
+    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to buff. NL ${modID}:Concentration."
   },
   "${modID}:Enrage": {
     "NAME": "Enrage",
-    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Concentration: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to defend, or to debuff without attacking. NL ${modID}:Concentration."
+    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to defend, or to debuff without attacking. NL ${modID}:Concentration."
+  },
+  "${modID}:Eye of the Storm": {
+    "NAME": "Enrage",
+    "DESCRIPTION": "${modID}:Spontaneous. NL At the start of your turn, gain !M! Focus for each enemy that intends to attack. NL Lose that Focus at the end of the turn. NL ${modID}:Concentration.",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL At the start of your turn, gain !M! Focus for each enemy that intends to attack. NL ${modID}:Concentration."
   }
 }
