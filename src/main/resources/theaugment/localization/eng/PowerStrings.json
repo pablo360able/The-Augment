@@ -204,5 +204,12 @@
       "#yConcentration: Gain #b",
       " #yDexterity."
     ]
+  },
+  "${modID}:InquirePower": {
+    "NAME": "Curiosity",
+    "DESCRIPTIONS": [
+      "#yConcentration: At the start of your turn, gain #b",
+      " #yStrength for each enemy that intends to buff."
+    ]
   }
 }

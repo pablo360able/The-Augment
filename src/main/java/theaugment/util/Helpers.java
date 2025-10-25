@@ -3,6 +3,7 @@ package theaugment.util;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theaugment.orbs.Aether;
@@ -42,5 +43,20 @@ public abstract class Helpers {
         }
 
         return num;
+    }
+
+    public static boolean IntentContains(AbstractMonster m, AbstractMonster.Intent intent) {
+        if (intent == AbstractMonster.Intent.ATTACK) {
+            return m.intent == AbstractMonster.Intent.ATTACK || m.intent == AbstractMonster.Intent.ATTACK_BUFF || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m.intent == AbstractMonster.Intent.ATTACK_DEFEND;
+        }
+        else if (intent == AbstractMonster.Intent.DEFEND) {
+            return m.intent == AbstractMonster.Intent.DEFEND || m.intent == AbstractMonster.Intent.DEFEND_BUFF || m.intent == AbstractMonster.Intent.DEFEND_DEBUFF || m.intent == AbstractMonster.Intent.ATTACK_DEFEND;
+        } else if (intent == AbstractMonster.Intent.BUFF) {
+            return m.intent == AbstractMonster.Intent.BUFF || m.intent == AbstractMonster.Intent.ATTACK_BUFF || m.intent == AbstractMonster.Intent.DEFEND_BUFF;
+        } else if (intent == AbstractMonster.Intent.DEBUFF) {
+            return m.intent == AbstractMonster.Intent.DEBUFF || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m.intent == AbstractMonster.Intent.DEFEND_DEBUFF || m.intent == AbstractMonster.Intent.STRONG_DEBUFF;
+        } else {
+            return m.intent == intent;
+        }
     }
 }

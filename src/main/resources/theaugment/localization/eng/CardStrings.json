@@ -499,5 +499,9 @@
   "${modID}:EnhanceAbility": {
     "NAME": "Enhance Ability",
     "DESCRIPTION": "${modID}:Spontaneous. NL Gain Strength, Dexterity, or Focus equal to your current Focus. NL ${modID}:Concentration."
+  },
+  "${modID}:Inquire": {
+    "NAME": "Inquire",
+    "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Concentration: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to buff. NL ${modID}:Concentration."
   }
 }

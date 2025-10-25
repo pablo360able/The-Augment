@@ -42,7 +42,7 @@ public abstract class ConcentrationPower extends BasePower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.owner != null && info.owner != this.owner) {
+        if (info.owner != null && info.owner != this.owner && damageAmount > 0) {
             if (this.owner.hasPower("Focus")) {
                 this.addToTop(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -1)));
             } else {
