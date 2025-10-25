@@ -232,5 +232,12 @@
       "#yConcentration: At the start of your turn, gain #b",
       " #yFocus for each enemy that intends to attack."
     ]
+  },
+  "${modID}:ForceBarragePower+": {
+    "NAME": "Force Barrage",
+    "DESCRIPTIONS": [
+      "#yConcentration: Whenever you play #yMagic #yMissile, gain #b",
+      " #yFocus. Lose that #yFocus at the end of your turn."
+    ]
   }
 }

@@ -33,7 +33,7 @@ public class EyeOfTheStormPower extends ConcentrationPower {
         if (attacking > 0) {
             this.flash();
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, this.amount * attacking)));
-            if (!this.upgraded) {
+            if (!this.upgraded && !this.owner.hasPower("Artifact")) {
                 this.addToBot(new ApplyPowerAction(this.owner, this.owner, new LoseFocusPower(this.owner, this.amount * attacking)));
             }
         }

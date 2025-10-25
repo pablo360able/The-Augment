@@ -508,9 +508,13 @@
     "NAME": "Enrage",
     "DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL At the start of your turn, gain !M! Strength for each enemy that intends to defend, or to debuff without attacking. NL ${modID}:Concentration."
   },
-  "${modID}:Eye of the Storm": {
-    "NAME": "Enrage",
+  "${modID}:EyeOfTheStorm": {
+    "NAME": "Eye of the Storm",
     "DESCRIPTION": "${modID}:Spontaneous. NL At the start of your turn, gain !M! Focus for each enemy that intends to attack. NL Lose that Focus at the end of the turn. NL ${modID}:Concentration.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL At the start of your turn, gain !M! Focus for each enemy that intends to attack. NL ${modID}:Concentration."
+  },
+  "${modID}:ForceBarrage": {
+    "NAME": "Force Barrage",
+    "DESCRIPTION": "Whenever you play *Magic *Missile, gain !M! Focus. Lose that Focus at the end of your turn. NL ${modID}:Concentration."
   }
 }
