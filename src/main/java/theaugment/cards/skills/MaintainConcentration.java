@@ -24,6 +24,10 @@ public class MaintainConcentration extends BaseCard {
         super(ID, info);
     }
 
+    public MaintainConcentration(String cardImage) {
+        super(ID, info, cardImage);
+    }
+
     @Override
     public boolean canUpgrade() {
         return false;

@@ -481,11 +481,23 @@
     "DESCRIPTION": "End the current ${modID}:Concentration Power."
   },
   "${modID}:MaintainConcentration": {
-    "NAME": "Drop Concentration",
+    "NAME": "Maintain Concentration",
     "DESCRIPTION": "Maintain the current ${modID}:Concentration Power."
   },
   "${modID}:EchosGrace": {
     "NAME": "Echo's Grace",
-    "DESCRIPTION": "${modID}:Concentration. Double your Focus."
+    "DESCRIPTION": "Double your Focus. NL ${modID}:Concentration."
+  },
+  "${modID}:DemonsMight": {
+    "NAME": "Demon's Might",
+    "DESCRIPTION": "Double your Strength. NL ${modID}:Concentration."
+  },
+  "${modID}:WraithsCunning": {
+    "NAME": "Wraith's Cunning",
+    "DESCRIPTION": "Double your Dexterity. NL ${modID}:Concentration."
+  },
+  "${modID}:EnhanceAbility": {
+    "NAME": "Enhance Ability",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Double your Strength, Dexterity, or Focus. NL ${modID}:Concentration."
   }
 }

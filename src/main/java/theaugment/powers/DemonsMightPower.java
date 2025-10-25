@@ -3,27 +3,25 @@ package theaugment.powers;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static theaugment.TheAugmentMod.makeID;
 
-public class EchosGracePower extends ConcentrationPower {
-    public static final String POWER_ID = makeID(EchosGracePower.class.getSimpleName());
+public class DemonsMightPower extends ConcentrationPower {
+    public static final String POWER_ID = makeID(DemonsMightPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
-    public EchosGracePower(int amount, String cardImage) {
+    public DemonsMightPower(int amount, String cardImage) {
         super(POWER_ID, TYPE, TURN_BASED, amount, cardImage);
-        loadRegion("echoForm");
+        loadRegion("demonForm");
         this.img = null;
         this.updateDescription();
     }
 
     @Override
     public void onRemove() {
-        this.addToTop(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, -this.amount)));
+        this.addToTop(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -this.amount)));
     }
 
     @Override

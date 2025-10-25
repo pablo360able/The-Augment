@@ -187,7 +187,19 @@
   "${modID}:EchosGracePower": {
     "NAME": "Echo's Grace",
     "DESCRIPTIONS": [
-      "#yConcentration. Double your #yFocus."
+      "#yConcentration: Double your #yFocus."
+    ]
+  },
+  "${modID}:DemonsMightPower": {
+    "NAME": "Demon's Might",
+    "DESCRIPTIONS": [
+      "#yConcentration: Double your #yStrength."
+    ]
+  },
+  "${modID}:WraithsCunningPower": {
+    "NAME": "Wraith's Cunning",
+    "DESCRIPTIONS": [
+      "#yConcentration: Double your #yDexterity."
     ]
   }
 }

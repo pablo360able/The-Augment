@@ -5,21 +5,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.FocusPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
-import theaugment.character.Augment;
-import theaugment.powers.EchosGracePower;
+import theaugment.powers.DemonsMightPower;
 import theaugment.powers.EntropyPower;
-import theaugment.powers.LoseArtifactPower;
-import theaugment.powers.WardingPower;
 import theaugment.util.CardStats;
 
 import static theaugment.util.TextureLoader.getCardTextureString;
 
-public class EchosGrace extends BaseCard {
-    public static final String ID = makeID(EchosGrace.class.getSimpleName());
+public class DemonsMight extends BaseCard {
+    public static final String ID = makeID(DemonsMight.class.getSimpleName());
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,
             CardType.POWER,
@@ -28,7 +23,7 @@ public class EchosGrace extends BaseCard {
             -2
     );
 
-    public EchosGrace() {
+    public DemonsMight() {
         super(ID, info);
     }
 
@@ -45,17 +40,17 @@ public class EchosGrace extends BaseCard {
     @Override
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower("Focus") && p.getPower("Focus").amount > 0) {
-            int focus = p.getPower("Focus").amount;
-            addToBot(new ApplyPowerAction(p, p, new FocusPower(p, focus)));
+        if (p.hasPower("Strength") && p.getPower("Strength").amount > 0) {
+            int focus = p.getPower("Strength").amount;
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, focus)));
             if (!p.hasPower("Artifact") && !p.hasPower(EntropyPower.POWER_ID)) {
-                addToBot(new ApplyPowerAction(p, p, new EchosGracePower(focus, getCardTextureString(ID, info.cardType))));
+                addToBot(new ApplyPowerAction(p, p, new DemonsMightPower(focus, getCardTextureString(ID, info.cardType))));
             }
         }
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new EchosGrace();
+        return new DemonsMight();
     }
 }

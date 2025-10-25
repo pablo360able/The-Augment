@@ -19,8 +19,11 @@ import theaugment.actions.ConcentrationAction;
 import static theaugment.TheAugmentMod.makeID;
 
 public abstract class ConcentrationPower extends BasePower {
-    public ConcentrationPower(String POWER_ID, PowerType TYPE, boolean TURN_BASED, int amount) {
+    public final String cardImage;
+
+    public ConcentrationPower(String POWER_ID, PowerType TYPE, boolean TURN_BASED, int amount, String cardImage) {
         super(POWER_ID, TYPE, TURN_BASED, AbstractDungeon.player, amount);
+        this.cardImage = cardImage;
     }
 
     @Override
