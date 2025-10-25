@@ -521,5 +521,10 @@
     "NAME": "Investiture",
     "DESCRIPTION": "At the start of your turn, trigger the passive ability of your next Orb. NL ${modID}:Concentration.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, trigger the passive ability of your next Orb !M! times. NL ${modID}:Concentration."
+  },
+  "${modID}:Contingency": {
+    "NAME": "Contingency",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Lose half your max HP. NL Gain Focus equal to lost HP. NL You cannot go below 1 HP. NL ${modID}:Concentration. NL ${modID}:Fleeting.",
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL Lose half your max HP. NL Gain Focus equal to lost HP. NL You cannot go below 1 HP. NL ${modID}:Concentration. NL ${modID}:Fleeting."
   }
 }

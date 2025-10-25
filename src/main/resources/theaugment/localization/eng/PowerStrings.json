@@ -247,5 +247,12 @@
       "#yConcentration: At the start of your turn, trigger the passive ability of your next Orb #b",
       " times."
     ]
+  },
+  "${modID}:ContingencyPower": {
+    "NAME": "Contingency",
+    "DESCRIPTIONS": [
+      "#yConcentration: Gain #b",
+      " #yFocus. You cannot go below 1 HP."
+    ]
   }
 }
