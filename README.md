@@ -10,7 +10,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
   * Skills: Enhance Ability, Summon Fiend
   * Powers: Inquire, Enrage, Eye of the Storm, Force Barrage, Investiture, Abjure
 * Miscellaneous
-  * Spell Sniper, Signature Spell
+  * Fated Blow, Spell Sniper, Signature Spell
 * Energy art (gold star?)
 
 ## Implement
