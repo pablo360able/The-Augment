@@ -40,8 +40,8 @@ public class WraithsCunning extends BaseCard {
     @Override
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower("Dexterity") && p.getPower("Dexterity").amount > 0) {
-            int focus = p.getPower("Dexterity").amount;
+        if (p.hasPower("Focus") && p.getPower("Focus").amount > 0) {
+            int focus = p.getPower("Focus").amount;
             addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, focus)));
             if (!p.hasPower("Artifact") && !p.hasPower(EntropyPower.POWER_ID)) {
                 addToBot(new ApplyPowerAction(p, p, new WraithsCunningPower(focus, getCardTextureString(ID, info.cardType))));

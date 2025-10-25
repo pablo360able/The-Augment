@@ -498,6 +498,6 @@
   },
   "${modID}:EnhanceAbility": {
     "NAME": "Enhance Ability",
-    "DESCRIPTION": "${modID}:Spontaneous. NL Double your Strength, Dexterity, or Focus. NL ${modID}:Concentration."
+    "DESCRIPTION": "${modID}:Spontaneous. NL Gain Strength, Dexterity, or Focus equal to your current Focus. NL ${modID}:Concentration."
   }
 }

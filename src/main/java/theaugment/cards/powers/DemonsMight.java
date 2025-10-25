@@ -40,8 +40,8 @@ public class DemonsMight extends BaseCard {
     @Override
     public void onChoseThisOption() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower("Strength") && p.getPower("Strength").amount > 0) {
-            int focus = p.getPower("Strength").amount;
+        if (p.hasPower("Focus") && p.getPower("Focus").amount > 0) {
+            int focus = p.getPower("Focus").amount;
             addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, focus)));
             if (!p.hasPower("Artifact") && !p.hasPower(EntropyPower.POWER_ID)) {
                 addToBot(new ApplyPowerAction(p, p, new DemonsMightPower(focus, getCardTextureString(ID, info.cardType))));

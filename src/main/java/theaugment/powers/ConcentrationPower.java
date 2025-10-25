@@ -51,9 +51,4 @@ public abstract class ConcentrationPower extends BasePower {
         }
         return super.onAttacked(info, damageAmount);
     }
-
-    @Override
-    public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-    }
 }
