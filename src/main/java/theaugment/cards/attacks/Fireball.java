@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import theaugment.actions.ArcaneSmiteAction;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
@@ -44,7 +45,11 @@ public class Fireball extends BaseCard {
         for (int i = 0; i < magicNumber; i++) {
             addToBot(new ChannelAction(new Flame()));
         }
-        addToBot(new DamageAllEnemiesAction(p, damage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        for (AbstractOrb o : p.orbs) {
+            if (o instanceof Flame) {
+                addToBot(new DamageAllEnemiesAction(p, damage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+            }
+        }
     }
 
     @Override

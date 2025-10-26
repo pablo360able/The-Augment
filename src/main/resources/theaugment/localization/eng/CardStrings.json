@@ -379,7 +379,7 @@
   },
   "${modID}:Fireball": {
     "NAME": "Fireball",
-    "DESCRIPTION": "${modID}:Magic. NL Channel !M! ${modID}:Flame. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "${modID}:Magic. NL Channel !M! ${modID}:Flame. NL Deal !D! damage to ALL enemies for each *Flame Orb in your Orb slots."
   },
   "${modID}:BurningFist": {
     "NAME": "Burning Fist",
