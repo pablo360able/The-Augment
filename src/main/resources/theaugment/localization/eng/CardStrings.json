@@ -526,5 +526,9 @@
     "NAME": "Contingency",
     "DESCRIPTION": "${modID}:Spontaneous. NL Lose half your max HP. NL Gain Focus equal to lost HP. NL You cannot go below 1 HP. NL ${modID}:Concentration. NL ${modID}:Fleeting.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL Lose half your max HP. NL Gain Focus equal to lost HP. NL You cannot go below 1 HP. NL ${modID}:Concentration. NL ${modID}:Fleeting."
+  },
+  "${modID}:FatedBlow": {
+    "NAME": "Fated Blow",
+    "DESCRIPTION": "Costs 1 less [E] for each card discarded from your deck this turn. NL Deal !D! damage !M! times."
   }
 }

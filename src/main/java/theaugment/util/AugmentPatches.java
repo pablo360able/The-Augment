@@ -244,5 +244,25 @@ public class AugmentPatches {
             return SpireReturn.Continue();
         }
     }
+
+    @SpirePatch(
+            clz = AbstractPlayer.class,
+            method = "applyStartOfTurnCards"
+    )
+    public static class ResetScriedAway {
+        public static void Prefix (AbstractPlayer __instance) {
+            Helpers.SCRIED_AWAY_THIS_TURN = 0;
+        }
+    }
+
+    @SpirePatch(
+            clz = AbstractPlayer.class,
+            method = "onCardDrawOrDiscard"
+    )
+    public static class IncrementScriedAway {
+        public static void Prefix (AbstractPlayer __instance) {
+            Helpers.SCRIED_AWAY_THIS_TURN++;
+        }
+    }
 }
 

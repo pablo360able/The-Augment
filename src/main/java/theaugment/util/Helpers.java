@@ -10,6 +10,8 @@ import theaugment.orbs.Aether;
 import theaugment.powers.MagicDamagePower;
 
 public abstract class Helpers {
+    public static int SCRIED_AWAY_THIS_TURN = 0;
+
     public static float EnchantDamage(float damage, DamageInfo.DamageType type) {
         return EnchantDamage(damage, type, false);
     }
