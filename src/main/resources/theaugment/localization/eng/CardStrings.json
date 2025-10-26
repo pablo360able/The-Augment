@@ -544,5 +544,10 @@
     "NAME": "Reconsider",
     "DESCRIPTION": "Discard any number of cards. NL Scry equal to the number of cards discarded, then draw !M! cards.",
     "UPGRADE_DESCRIPTION": "Discard any number of cards. NL Scry equal to the number of cards discarded plus one, then draw !M! cards."
+  },
+  "${modID}:ImprovisedAssault": {
+    "NAME": "Improvised Assault",
+    "DESCRIPTION": "Put any number of cards from your hand on top of your draw pile in a random order. NL For each card, add 1 *Magic *Missile to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put any number of cards from your hand on top of your draw pile in a random order. NL For each card, add 1 upgraded *Magic *Missile to your hand. NL Exhaust."
   }
 }
