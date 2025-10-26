@@ -549,5 +549,21 @@
     "NAME": "Improvised Assault",
     "DESCRIPTION": "Put any number of cards from your hand on top of your draw pile in a random order. NL For each card, add 1 *Magic *Missile to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put any number of cards from your hand on top of your draw pile in a random order. NL For each card, add 1 upgraded *Magic *Missile to your hand. NL Exhaust."
+  },
+  "${modID}:Rat": {
+    "NAME": "Rat",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+  },
+  "${modID}:Badger": {
+    "NAME": "Badger",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${modID}:Dove": {
+    "NAME": "Dove",
+    "DESCRIPTION": "Gain [E] [E]."
+  },
+  "${modID}:BagOfTricks": {
+    "NAME": "Bag of Tricks",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies, gain !B! Block, or gain [E] [E] and Exhaust."
   }
 }
