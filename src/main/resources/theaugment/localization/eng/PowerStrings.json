@@ -258,7 +258,7 @@
   "${modID}:SpellSniperPower": {
     "NAME": "Spell Sniper",
     "DESCRIPTIONS": [
-      "#yMagic attacks ignore Flying, Malleable, Thorns, and Sharp Hide.\nThey are twice as effective against #yBlock, and their #yBlood effects always trigger."
+      "#yMagic attacks ignore Malleable, Thorns, and Sharp Hide, and their #yBlood effects always trigger."
     ]
   }
 }

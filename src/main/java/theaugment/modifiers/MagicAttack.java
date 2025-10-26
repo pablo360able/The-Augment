@@ -29,14 +29,6 @@ public class MagicAttack extends AbstractDamageModifier {
     }
 
     @Override
-    public float atDamageFinalGive(float damage, DamageInfo.DamageType type, AbstractCreature target, AbstractCard card) {
-        if (AbstractDungeon.player.hasPower(SpellSniperPower.POWER_ID)) {
-            damage += Math.min(damage, target.currentBlock);
-        }
-        return damage;
-    }
-
-    @Override
     public AbstractDamageModifier makeCopy() {
         return new MagicAttack(this.smart);
     }

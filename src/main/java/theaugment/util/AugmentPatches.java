@@ -268,27 +268,6 @@ public class AugmentPatches {
     }
 
     @SpirePatch(
-            clz = FlightPower.class,
-            method = "atDamageFinalReceive",
-            paramtypez = {
-                    float.class,
-                    DamageInfo.DamageType.class
-            }
-    )
-    public static class SnipeFlight {
-        public static SpireReturn<Void> Prefix (FlightPower __instance, float damage, DamageInfo.DamageType type) {
-            if (AbstractDungeon.player.hasPower(SpellSniperPower.POWER_ID) && AbstractDungeon.player.cardInUse != null) {
-                for (AbstractDamageModifier mod : DamageModifierManager.modifiers(AbstractDungeon.player.cardInUse)) {
-                    if (mod instanceof MagicAttack) {
-                        return SpireReturn.Return();
-                    }
-                }
-            }
-            return SpireReturn.Continue();
-        }
-    }
-
-    @SpirePatch(
             clz = MalleablePower.class,
             method = "onAttacked",
             paramtypez = {
