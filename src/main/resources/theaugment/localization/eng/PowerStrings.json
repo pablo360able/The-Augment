@@ -260,5 +260,14 @@
     "DESCRIPTIONS": [
       "#yMagic attacks ignore Malleable, Thorns, and Sharp Hide, and their #yBlood effects always trigger."
     ]
+  },
+  "${modID}:SignatureSpellPower": {
+    "NAME": "Signature Spell",
+    "DESCRIPTIONS": [
+      "Whenever you play ",
+      ", put it on top of it into your draw pile.",
+      ", shuffle it into your draw pile.",
+      "Whenever you play the chosen #ySkill"
+    ]
   }
 }

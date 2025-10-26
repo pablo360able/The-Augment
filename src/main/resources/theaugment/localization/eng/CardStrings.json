@@ -534,5 +534,10 @@
   "${modID}:SpellSniper": {
     "NAME": "Spell Sniper",
     "DESCRIPTION": "${modID}:Magic attacks ignore *Malleable, *Thorns, and *Sharp *Hide, and their ${modID}:Blood effects always trigger."
+  },
+  "${modID}:SignatureSpell": {
+    "NAME": "Signature Spell",
+    "DESCRIPTION": "Choose a Skill in your hand. NL Now and whenever you play it, shuffle it into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Choose a Skill in your hand. NL Now and whenever you play it, put it on top of your draw pile."
   }
 }
