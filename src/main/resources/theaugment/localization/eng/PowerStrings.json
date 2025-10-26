@@ -254,5 +254,11 @@
       "#yConcentration: Gain #b",
       " #yFocus. You cannot go below 1 HP."
     ]
+  },
+  "${modID}:SpellSniperPower": {
+    "NAME": "Spell Sniper",
+    "DESCRIPTIONS": [
+      "#yMagic attacks ignore Flying, Malleable, Thorns, and Sharp Hide.\nThey are twice as effective against #yBlock, and their #yBlood effects always trigger."
+    ]
   }
 }

@@ -1,6 +1,8 @@
 package theaugment.util;
 
 import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -11,18 +13,18 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theaugment.cards.CustomTags;
 import theaugment.cards.OnAttackedCard;
+import theaugment.modifiers.MagicAttack;
 import theaugment.powers.*;
 import theaugment.relics.DefectiveProsthetic;
 
@@ -262,6 +264,90 @@ public class AugmentPatches {
     public static class IncrementScriedAway {
         public static void Prefix (AbstractPlayer __instance) {
             Helpers.SCRIED_AWAY_THIS_TURN++;
+        }
+    }
+
+    @SpirePatch(
+            clz = FlightPower.class,
+            method = "atDamageFinalReceive",
+            paramtypez = {
+                    float.class,
+                    DamageInfo.DamageType.class
+            }
+    )
+    public static class SnipeFlight {
+        public static SpireReturn<Void> Prefix (FlightPower __instance, float damage, DamageInfo.DamageType type) {
+            if (AbstractDungeon.player.hasPower(SpellSniperPower.POWER_ID) && AbstractDungeon.player.cardInUse != null) {
+                for (AbstractDamageModifier mod : DamageModifierManager.modifiers(AbstractDungeon.player.cardInUse)) {
+                    if (mod instanceof MagicAttack) {
+                        return SpireReturn.Return();
+                    }
+                }
+            }
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = MalleablePower.class,
+            method = "onAttacked",
+            paramtypez = {
+                    DamageInfo.class,
+                    int.class
+            }
+    )
+    public static class SnipeMalleable {
+        public static SpireReturn<Integer> Prefix (MalleablePower __instance, DamageInfo info, int damageAmount) {
+            if (AbstractDungeon.player.hasPower(SpellSniperPower.POWER_ID)) {
+                for (AbstractDamageModifier mod : DamageModifierManager.getDamageMods(info)) {
+                    if (mod instanceof MagicAttack) {
+                        return SpireReturn.Return(damageAmount);
+                    }
+                }
+            }
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = ThornsPower.class,
+            method = "onAttacked",
+            paramtypez = {
+                    DamageInfo.class,
+                    int.class
+            }
+    )
+    public static class SnipeThorns {
+        public static SpireReturn<Integer> Prefix (ThornsPower __instance, DamageInfo info, int damageAmount) {
+            if (AbstractDungeon.player.hasPower(SpellSniperPower.POWER_ID)) {
+                for (AbstractDamageModifier mod : DamageModifierManager.getDamageMods(info)) {
+                    if (mod instanceof MagicAttack) {
+                        return SpireReturn.Return(damageAmount);
+                    }
+                }
+            }
+            return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(
+            clz = SharpHidePower.class,
+            method = "onUseCard",
+            paramtypez = {
+                    AbstractCard.class,
+                    UseCardAction.class
+            }
+    )
+    public static class SnipeHide {
+        public static SpireReturn<Void> Prefix (SharpHidePower __instance, AbstractCard card, UseCardAction action) {
+            if (AbstractDungeon.player.hasPower(SpellSniperPower.POWER_ID)) {
+                for (AbstractDamageModifier mod : DamageModifierManager.modifiers(card)) {
+                    if (mod instanceof MagicAttack) {
+                        return SpireReturn.Return();
+                    }
+                }
+            }
+            return SpireReturn.Continue();
         }
     }
 }

@@ -1,11 +1,14 @@
 package theaugment.actions;
 
+import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theaugment.modifiers.MagicAttack;
+import theaugment.powers.SpellSniperPower;
 
 public class BloodAction extends AbstractGameAction {
     private final AbstractGameAction[] ifBlood;
@@ -48,12 +51,22 @@ public class BloodAction extends AbstractGameAction {
         this.tickDuration();
         if (this.isDone) {
             boolean effective = false;
-            if (target != null) {
-                effective = target.lastDamageTaken > 0;
-            } else {
-                for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                    if (m.lastDamageTaken > 0) {
+            if (this.source.hasPower(SpellSniperPower.POWER_ID)) {
+                for (AbstractDamageModifier mod : DamageModifierManager.modifiers(AbstractDungeon.player.cardInUse)) {
+                    if (mod instanceof MagicAttack) {
                         effective = true;
+                        break;
+                    }
+                }
+            } else {
+                if (target != null) {
+                    effective = target.lastDamageTaken > 0;
+                } else {
+                    for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                        if (m.lastDamageTaken > 0) {
+                            effective = true;
+                            break;
+                        }
                     }
                 }
             }

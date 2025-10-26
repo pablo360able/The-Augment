@@ -530,5 +530,9 @@
   "${modID}:FatedBlow": {
     "NAME": "Fated Blow",
     "DESCRIPTION": "Costs 1 less [E] for each card discarded from your deck this turn. NL Deal !D! damage !M! times."
+  },
+  "${modID}:SpellSniper": {
+    "NAME": "Spell Sniper",
+    "DESCRIPTION": "${modID}:Magic attacks ignore *Flying, *Malleable, *Thorns, and *Sharp *Hide. NL They are twice as effective against Block, and their ${modID}:Blood effects always trigger."
   }
 }
