@@ -1,9 +1,16 @@
 package theaugment.character;
 
 import basemod.abstracts.CustomEnergyOrb;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.core.Settings;
+
 import static theaugment.TheAugmentMod.characterPath;
 
 public class AugmentOrb extends CustomEnergyOrb {
+    private static final float ORB_IMG_SCALE;
+
     private static final String[] orbTextures = {
             characterPath("energyorb/layer1.png"), //When you have energy
             characterPath("energyorb/layer2.png"),
@@ -22,14 +29,34 @@ public class AugmentOrb extends CustomEnergyOrb {
 
     //Speeds at which each layer of the energy orb texture rotates. Negative is backwards.
     private static final float[] layerSpeeds = new float[] {
-            -20.0F,
-            20.0F,
-            -40.0F,
-            40.0F,
-            360.0F
+            0.0F,
+            0.0F,
+            0.0F,
+            0.0F,
+            0.0F
     };
 
     public AugmentOrb() {
         super(orbTextures, VFXTexture, layerSpeeds);
+    }
+
+    @Override
+    public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
+        sb.setColor(Color.WHITE);
+        if (enabled) {
+            for(int i = 0; i < this.energyLayers.length; ++i) {
+                sb.draw(this.energyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0, 0, 0, 128, 128, false, false);
+            }
+        } else {
+            for(int i = 0; i < this.noEnergyLayers.length; ++i) {
+                sb.draw(this.noEnergyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0, 0, 0, 128, 128, false, false);
+            }
+        }
+
+        sb.draw(this.baseLayer, current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
+    }
+
+    static {
+        ORB_IMG_SCALE = 1.15F * Settings.scale;
     }
 }

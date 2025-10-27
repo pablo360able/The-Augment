@@ -1,7 +1,6 @@
 package theaugment.character;
 
 import basemod.BaseMod;
-import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
