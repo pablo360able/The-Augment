@@ -26,9 +26,8 @@ public class Counterspell extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        setSelfRetain(true);
+        setSelfRetain(false, true);
         setExhaust(true);
-        setCostUpgrade(2);
     }
 
     @Override
