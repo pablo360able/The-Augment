@@ -573,5 +573,9 @@
   "${modID}:Clarity": {
     "NAME": "Clarity",
     "DESCRIPTION": "${modID}:Spontaneous. NL Lose 1 Focus. NL Reduce the cost of a card in your hand by 1. NL If you have no Focus, end your turn. NL Exhaust."
+  },
+  "${modID}:ArcaneRecovery": {
+    "NAME": "Arcane Recovery",
+    "DESCRIPTION": "Non-${modID}:Spontaneous cards that Exhaust instead become ${modID}:Spontaneous."
   }
 }

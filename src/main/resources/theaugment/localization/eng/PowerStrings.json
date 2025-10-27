@@ -269,5 +269,11 @@
       ", shuffle it into your draw pile.",
       "Whenever you play the chosen #ySkill"
     ]
+  },
+  "${modID}:ArcaneRecoveryPower": {
+    "NAME": "Arcane Recovery",
+    "DESCRIPTIONS": [
+      "Non-Spontaneous cards that #yExhaust instead become #ySpontaneous."
+    ]
   }
 }
