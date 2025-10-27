@@ -569,5 +569,9 @@
   "${modID}:GreatCleave": {
     "NAME": "Great Cleave",
     "DESCRIPTION": "Discard all Attacks from your hand. NL Deal !D! damage to ALL enemies. NL Increase this damage by !M! for each Attack discarded this way."
+  },
+  "${modID}:Clarity": {
+    "NAME": "Clarity",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Lose 1 Focus. NL Reduce the cost of a card in your hand by 1. NL If you have no Focus, end your turn. NL Exhaust."
   }
 }
