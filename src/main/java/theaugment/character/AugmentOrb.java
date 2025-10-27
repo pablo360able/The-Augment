@@ -41,16 +41,22 @@ public class AugmentOrb extends CustomEnergyOrb {
     }
 
     @Override
+    public void updateOrb(int energyCount) {
+        for (int i = 0; i < this.angles.length; i++) {
+            this.angles[i] = 0.0F;
+        }
+
+
+    }
+
+    @Override
     public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
         sb.setColor(Color.WHITE);
         if (enabled) {
-            for(int i = 0; i < this.energyLayers.length; ++i) {
-                sb.draw(this.energyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0, 0, 0, 128, 128, false, false);
-            }
+            sb.draw(this.energyLayers[0], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0, 0, 0, 128, 128, false, false);
         } else {
-            for(int i = 0; i < this.noEnergyLayers.length; ++i) {
-                sb.draw(this.noEnergyLayers[i], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0, 0, 0, 128, 128, false, false);
-            }
+            sb.draw(this.noEnergyLayers[0], current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0, 0, 0, 128, 128, false, false);
+
         }
 
         sb.draw(this.baseLayer, current_x - 64.0F, current_y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, ORB_IMG_SCALE, ORB_IMG_SCALE, 0.0F, 0, 0, 128, 128, false, false);
