@@ -12,29 +12,15 @@ public class AugmentOrb extends CustomEnergyOrb {
     private static final float ORB_IMG_SCALE;
 
     private static final String[] orbTextures = {
-            characterPath("energyorb/layer1.png"), //When you have energy
-            characterPath("energyorb/layer2.png"),
-            characterPath("energyorb/layer3.png"),
-            characterPath("energyorb/layer4.png"),
-            characterPath("energyorb/layer5.png"),
+            characterPath("energyorb/layer1.png"),
             characterPath("energyorb/cover.png"), //"container"
-            characterPath("energyorb/layer1d.png"), //When you don't have energy
-            characterPath("energyorb/layer2d.png"),
-            characterPath("energyorb/layer3d.png"),
-            characterPath("energyorb/layer4d.png"),
-            characterPath("energyorb/layer5d.png")
+            characterPath("energyorb/layer1d.png")
     };
 
     private static final String VFXTexture = characterPath("energyorb/vfx.png");
 
     //Speeds at which each layer of the energy orb texture rotates. Negative is backwards.
-    private static final float[] layerSpeeds = new float[] {
-            0.0F,
-            0.0F,
-            0.0F,
-            0.0F,
-            0.0F
-    };
+    private static final float[] layerSpeeds = new float[] {0.0F};
 
     public AugmentOrb() {
         super(orbTextures, VFXTexture, layerSpeeds);
@@ -42,9 +28,6 @@ public class AugmentOrb extends CustomEnergyOrb {
 
     @Override
     public void updateOrb(int energyCount) {
-        for (int i = 0; i < this.angles.length; i++) {
-            this.angles[i] = 0.0F;
-        }
 
 
     }
