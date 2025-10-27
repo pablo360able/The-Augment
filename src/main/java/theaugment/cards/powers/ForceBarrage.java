@@ -12,6 +12,7 @@ import theaugment.character.Augment;
 import theaugment.powers.ForceBarragePower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class ForceBarrage extends BaseCard {
@@ -38,7 +39,7 @@ public class ForceBarrage extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new ForceBarragePower(magicNumber, getCardTextureString(ID, info.cardType))));
+        addToBot(new ApplyPowerAction(p, p, new ForceBarragePower(magicNumber, getCardTextureString(removePrefix(ID), info.cardType))));
     }
 
     @Override

@@ -12,6 +12,7 @@ import theaugment.character.Augment;
 import theaugment.powers.EnragePower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class Enrage extends BaseCard {
@@ -36,7 +37,7 @@ public class Enrage extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new EnragePower(magicNumber, getCardTextureString(ID, info.cardType))));
+        addToBot(new ApplyPowerAction(p, p, new EnragePower(magicNumber, getCardTextureString(removePrefix(ID), info.cardType))));
     }
 
     @Override

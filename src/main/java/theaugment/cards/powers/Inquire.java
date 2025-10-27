@@ -14,6 +14,7 @@ import theaugment.powers.InquirePower;
 import theaugment.powers.MaxHpIfRegenPower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class Inquire extends BaseCard {
@@ -38,7 +39,7 @@ public class Inquire extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new InquirePower(magicNumber, getCardTextureString(ID, info.cardType))));
+        addToBot(new ApplyPowerAction(p, p, new InquirePower(magicNumber, getCardTextureString(removePrefix(ID), info.cardType))));
     }
 
     @Override

@@ -16,6 +16,7 @@ import theaugment.powers.LoseArtifactPower;
 import theaugment.powers.WardingPower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class EchosGrace extends BaseCard {
@@ -49,7 +50,7 @@ public class EchosGrace extends BaseCard {
             int focus = p.getPower("Focus").amount;
             addToBot(new ApplyPowerAction(p, p, new FocusPower(p, focus)));
             if (!p.hasPower("Artifact") && !p.hasPower(EntropyPower.POWER_ID)) {
-                addToBot(new ApplyPowerAction(p, p, new EchosGracePower(focus, getCardTextureString(ID, info.cardType))));
+                addToBot(new ApplyPowerAction(p, p, new EchosGracePower(focus, getCardTextureString(removePrefix(ID), info.cardType))));
             }
         }
     }

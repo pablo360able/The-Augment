@@ -13,6 +13,7 @@ import theaugment.powers.EnragePower;
 import theaugment.powers.EyeOfTheStormPower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class EyeOfTheStorm extends BaseCard {
@@ -37,7 +38,7 @@ public class EyeOfTheStorm extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new EyeOfTheStormPower(magicNumber, upgraded, getCardTextureString(ID, info.cardType))));
+        addToBot(new ApplyPowerAction(p, p, new EyeOfTheStormPower(magicNumber, upgraded, getCardTextureString(removePrefix(ID), info.cardType))));
     }
 
     @Override

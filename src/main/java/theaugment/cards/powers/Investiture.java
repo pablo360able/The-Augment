@@ -9,6 +9,7 @@ import theaugment.character.Augment;
 import theaugment.powers.InvestiturePower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class Investiture extends BaseCard {
@@ -31,7 +32,7 @@ public class Investiture extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new InvestiturePower(magicNumber, getCardTextureString(ID, info.cardType))));
+        addToBot(new ApplyPowerAction(p, p, new InvestiturePower(magicNumber, getCardTextureString(removePrefix(ID), info.cardType))));
     }
 
     @Override

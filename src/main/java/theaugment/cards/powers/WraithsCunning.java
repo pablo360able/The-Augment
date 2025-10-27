@@ -11,6 +11,7 @@ import theaugment.powers.EntropyPower;
 import theaugment.powers.WraithsCunningPower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class WraithsCunning extends BaseCard {
@@ -44,7 +45,7 @@ public class WraithsCunning extends BaseCard {
             int focus = p.getPower("Focus").amount;
             addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, focus)));
             if (!p.hasPower("Artifact") && !p.hasPower(EntropyPower.POWER_ID)) {
-                addToBot(new ApplyPowerAction(p, p, new WraithsCunningPower(focus, getCardTextureString(ID, info.cardType))));
+                addToBot(new ApplyPowerAction(p, p, new WraithsCunningPower(focus, getCardTextureString(removePrefix(ID), info.cardType))));
             }
         }
     }

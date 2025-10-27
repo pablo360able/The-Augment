@@ -15,6 +15,7 @@ import theaugment.character.Augment;
 import theaugment.powers.ContingencyPower;
 import theaugment.util.CardStats;
 
+import static theaugment.util.GeneralUtils.removePrefix;
 import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class Contingency extends BaseCard {
@@ -39,7 +40,7 @@ public class Contingency extends BaseCard {
         addToBot(new RemoveDebuffsAction(p));
         addToBot(new LoseMaxHpAction(p, amount));
         addToBot(new ApplyPowerAction(p, p, new FocusPower(p, amount)));
-        addToBot(new ApplyPowerAction(p, p, new ContingencyPower(amount, getCardTextureString(ID, info.cardType))));
+        addToBot(new ApplyPowerAction(p, p, new ContingencyPower(amount, getCardTextureString(removePrefix(ID), info.cardType))));
         for (AbstractCard c : p.masterDeck.group) {
             if (c.uuid == uuid) {
                 p.masterDeck.removeCard(c);
