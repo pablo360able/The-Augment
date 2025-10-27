@@ -40,6 +40,8 @@ public class FaerieFire extends BaseCard {
 
         setExhaust(true);
         DamageModifierManager.addModifier(this, new MagicAttack());
+
+        isMultiDamage = true;
     }
 
     @Override

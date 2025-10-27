@@ -38,6 +38,8 @@ public class Fireball extends BaseCard {
         setMagic(MAGIC, UPG_MAGIC);
 
         DamageModifierManager.addModifier(this, new MagicAttack());
+
+        isMultiDamage = true;
     }
 
     @Override

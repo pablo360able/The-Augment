@@ -26,6 +26,8 @@ public class Rat extends BaseCard {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
+
+        isMultiDamage = true;
     }
 
     @Override

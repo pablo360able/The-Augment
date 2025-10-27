@@ -34,6 +34,8 @@ public class Sunbeam extends BaseCard {
         setDamage(DAMAGE, UPG_DAMAGE);
 
         DamageModifierManager.addModifier(this, new MagicAttack());
+
+        isMultiDamage = true;
     }
 
     @Override

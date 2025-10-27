@@ -24,6 +24,8 @@ public class Quadrature extends BaseCard {
         super(ID, info);
 
         DamageModifierManager.addModifier(this, new MagicAttack());
+
+        isMultiDamage = true;
     }
 
     @Override

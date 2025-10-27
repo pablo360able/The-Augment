@@ -38,6 +38,8 @@ public class ZephyrStrike extends BaseCard {
 
         tags.add(CardTags.STRIKE);
         DamageModifierManager.addModifier(this, new MagicAttack());
+
+        isMultiDamage = true;
     }
 
     @Override
