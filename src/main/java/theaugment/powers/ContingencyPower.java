@@ -15,7 +15,7 @@ public class ContingencyPower extends ConcentrationPower {
 
     public ContingencyPower(int amount, String cardImage) {
         super(POWER_ID, TYPE, TURN_BASED, amount, cardImage);
-        loadRegion("echoForm");
+        loadRegion("intangible");
         this.img = null;
         this.updateDescription();
     }
