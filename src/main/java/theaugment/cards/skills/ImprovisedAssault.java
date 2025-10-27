@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.ImprovisedAssaultAction;
 import theaugment.actions.ReconsiderAction;
 import theaugment.cards.BaseCard;
+import theaugment.cards.attacks.MagicMissile;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
@@ -24,6 +25,14 @@ public class ImprovisedAssault extends BaseCard {
         super(ID, info);
 
         setExhaust(true);
+
+        cardsToPreview = new MagicMissile();
+    }
+
+    @Override
+    public void upgrade() {
+        super.upgrade();
+        cardsToPreview.upgrade();
     }
 
     @Override

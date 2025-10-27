@@ -18,9 +18,13 @@ public class Counterspell extends BaseCard {
             CardTarget.ENEMY,
             3
     );
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 0;
 
     public Counterspell() {
         super(ID, info);
+
+        setMagic(MAGIC, UPG_MAGIC);
 
         setSelfRetain(true);
         setExhaust(true);
@@ -30,7 +34,7 @@ public class Counterspell extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.getIntentBaseDmg() < 0) {
-            addToBot(new StunMonsterAction(m, p));
+            addToBot(new StunMonsterAction(m, p, magicNumber));
         }
     }
 

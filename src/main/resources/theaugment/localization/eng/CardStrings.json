@@ -427,7 +427,7 @@
   },
   "${modID}:Counterspell": {
     "NAME": "Counterspell",
-    "DESCRIPTION": "Retain. NL If the enemy does not intend to attack, ${modID}:Stun it. NL Exhaust."
+    "DESCRIPTION": "Retain. NL If the enemy does not intend to attack, ${modID}:Stun it for !M! turns. NL Exhaust."
   },
   "${modID}:PowerWordKill": {
     "NAME": "Power Word: Kill",
