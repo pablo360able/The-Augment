@@ -1,11 +1,12 @@
-package theaugment.cards.skills;
+package theaugment.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.attacks.Rat;
+import theaugment.cards.skills.Badger;
+import theaugment.cards.skills.Dove;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;
 
@@ -15,7 +16,7 @@ public class BagOfTricks extends BaseCard {
     public static final String ID = makeID(BagOfTricks.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
-            CardType.SKILL,
+            CardType.ATTACK,
             CardRarity.UNCOMMON,
             CardTarget.SELF,
             1

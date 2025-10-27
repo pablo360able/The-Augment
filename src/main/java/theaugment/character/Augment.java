@@ -86,36 +86,12 @@ public class Augment extends CustomPlayer {
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
 
-    //Textures used for the energy orb
-    private static final String[] orbTextures = {
-            characterPath("energyorb/layer1.png"), //When you have energy
-            characterPath("energyorb/layer2.png"),
-            characterPath("energyorb/layer3.png"),
-            characterPath("energyorb/layer4.png"),
-            characterPath("energyorb/layer5.png"),
-            characterPath("energyorb/cover.png"), //"container"
-            characterPath("energyorb/layer1d.png"), //When you don't have energy
-            characterPath("energyorb/layer2d.png"),
-            characterPath("energyorb/layer3d.png"),
-            characterPath("energyorb/layer4d.png"),
-            characterPath("energyorb/layer5d.png")
-    };
-
-    //Speeds at which each layer of the energy orb texture rotates. Negative is backwards.
-    private static final float[] layerSpeeds = new float[] {
-            -20.0F,
-            20.0F,
-            -40.0F,
-            40.0F,
-            360.0F
-    };
-
 
     //Actual theaugment.character class code below this point
 
     public Augment() {
         super(getNames()[0], Meta.Augment,
-                new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
+                new AugmentOrb(), //Energy Orb
                 new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
 
         initializeClass(null,
