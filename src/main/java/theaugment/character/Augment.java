@@ -2,6 +2,7 @@ package theaugment.character;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.AbstractAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -91,9 +92,15 @@ public class Augment extends CustomPlayer {
     public Augment() {
         super(getNames()[0], Meta.Augment,
                 new AugmentOrb(), //Energy Orb
-                new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+                new AbstractAnimation() { //Change the Animation line to this
+                    @Override
+                    public Type type() {
+                        return Type.NONE; //A NONE animation results in the image given in initializeClass being used
+                    }
+                }
+        ); //Animation
 
-        initializeClass(null,
+        initializeClass(characterPath("animation/Armature.png"),
                 SHOULDER_2,
                 SHOULDER_1,
                 CORPSE,
