@@ -6,7 +6,8 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 ## Next up
 
-* Character art
+* First round of "in-house" playtesting
+* Actual character art
 
 ## Implement
 
