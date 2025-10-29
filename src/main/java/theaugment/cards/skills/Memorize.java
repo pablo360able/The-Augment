@@ -30,7 +30,7 @@ public class Memorize extends BaseCard {
         setInnate(true);
         setCustomVar("scry", 1, 0);
 
-        this.exhaust = true;
+        setExhaust(true);
     }
 
     @Override

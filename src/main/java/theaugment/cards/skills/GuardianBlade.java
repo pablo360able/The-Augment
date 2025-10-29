@@ -25,8 +25,9 @@ public class GuardianBlade extends BaseCard {
     public GuardianBlade() {
         super(ID, info);
 
-        this.retain = true;
         setBlock(BLOCK, UPG_BLOCK);
+
+        setSelfRetain(true);
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Repress extends BaseCard {
         super(ID, info);
 
         tags.add(CustomTags.SPONTANEOUS);
-        this.exhaust = true;
+        setExhaust(true);
 
         setCostUpgrade(3);
     }

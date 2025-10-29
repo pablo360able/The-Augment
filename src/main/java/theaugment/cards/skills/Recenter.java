@@ -25,8 +25,8 @@ public class Recenter extends BaseCard {
     public Recenter() {
         super(ID, info);
 
-        this.exhaust = true;
         setMagic(MAGIC, UPG_MAGIC);
+        setExhaust(true);
     }
 
     @Override

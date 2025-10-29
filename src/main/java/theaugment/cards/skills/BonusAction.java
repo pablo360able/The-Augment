@@ -22,7 +22,7 @@ public class BonusAction extends BaseCard {
     public BonusAction() {
         super(ID, info);
 
-        this.exhaust = true;
+        setExhaust(true);
         tags.add(CustomTags.SPONTANEOUS);
     }
 

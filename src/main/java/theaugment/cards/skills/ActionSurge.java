@@ -24,9 +24,10 @@ public class ActionSurge extends BaseCard {
     public ActionSurge() {
         super(ID, info);
 
-        this.exhaust = true;
-        this.retain = true;
         setMagic(MAGIC, UPG_MAGIC);
+
+        setExhaust(true);
+        setSelfRetain(true);
     }
 
     @Override

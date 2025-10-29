@@ -23,7 +23,7 @@ public abstract class Helpers {
         AbstractPlayer p = AbstractDungeon.player;
         int strength = p.hasPower("Strength") ? p.getPower("Strength").amount : 0;
         int focus = p.hasPower("Focus") ? p.getPower("Focus").amount : 0;
-        if (strength > focus) {
+        if (smart && strength > focus) {
             return damage;
         }
         float magicDamage = damage + focus - strength;

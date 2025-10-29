@@ -31,7 +31,7 @@ public class Soulrend extends BaseCard {
 
         setDamage(DAMAGE, UPG_DAMAGE);
 
-        this.exhaust = true;
+        setExhaust(true);
         DamageModifierManager.addModifier(this, new MagicAttack());
     }
 

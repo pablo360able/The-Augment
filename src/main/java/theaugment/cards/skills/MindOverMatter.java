@@ -24,7 +24,7 @@ public class MindOverMatter extends BaseCard {
     public MindOverMatter() {
         super(ID, info);
 
-        this.exhaust = true;
+        setExhaust(true);
         tags.add(CustomTags.SPONTANEOUS);
 
         setCostUpgrade(0);
