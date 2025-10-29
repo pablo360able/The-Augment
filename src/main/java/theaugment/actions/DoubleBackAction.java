@@ -14,11 +14,11 @@ public class DoubleBackAction extends AbstractGameAction {
     private AbstractPlayer player;
     private int playAmt;
 
-    public DoubleBackAction(int numberOfCards) {
+    public DoubleBackAction() {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.player = AbstractDungeon.player;
-        this.playAmt = numberOfCards;
+        this.playAmt = 2;
     }
 
     public void update() {

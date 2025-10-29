@@ -22,13 +22,9 @@ public class DoubleBack extends BaseCard {
             CardTarget.SELF,
             3
     );
-    private static final int CARDS = 1;
-    private static final int UPG_CARDS = 0;
 
     public DoubleBack() {
         super(ID, info);
-
-        setMagic(CARDS, UPG_CARDS);
 
         setExhaust(true);
         tags.add(CustomTags.SPONTANEOUS);
@@ -42,7 +38,7 @@ public class DoubleBack extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DoubleBackAction(magicNumber));
+        addToBot(new DoubleBackAction());
     }
 
     @Override
