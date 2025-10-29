@@ -8,10 +8,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -138,7 +135,26 @@ public class AugmentPatches {
     public static class OnCardDrawPreDraw {
         public static void Prefix (DrawCardAction __instance, AbstractCreature source, int amount, boolean endTurnDraw) {
             for (AbstractPower p : AbstractDungeon.player.powers) {
-                if (p instanceof PreDrawPower) {
+                if (p instanceof PreDrawPower && !(AbstractDungeon.actionManager.currentAction instanceof DrawCardAction)) {
+                    ((PreDrawPower)p).onCardDrawPreDraw(source, amount, endTurnDraw);
+                }
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = FastDrawCardAction.class,
+            method = SpirePatch.CONSTRUCTOR,
+            paramtypez = {
+                    AbstractCreature.class,
+                    int.class,
+                    boolean.class
+            }
+    )
+    public static class OnFastCardDrawPreDraw {
+        public static void Prefix (FastDrawCardAction __instance, AbstractCreature source, int amount, boolean endTurnDraw) {
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof PreDrawPower && !(AbstractDungeon.actionManager.currentAction instanceof FastDrawCardAction)) {
                     ((PreDrawPower)p).onCardDrawPreDraw(source, amount, endTurnDraw);
                 }
             }
