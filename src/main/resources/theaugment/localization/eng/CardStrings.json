@@ -23,7 +23,8 @@
   },
   "${modID}:MagicWeapon": {
     "NAME": "Magic Weapon",
-    "DESCRIPTION": "Gain !M! Focus. NL At the end of this turn, lose !M! Focus. NL Your next Attack is ${modID}:Magic."
+    "DESCRIPTION": "Gain !${modID}:foc! Focus. NL At the end of this turn, lose !${modID}:foc! Focus. NL Your next Attack this turn is ${modID}:Magic.",
+    "UPGRADE_DESCRIPTION": "Gain !${modID}:foc! Focus. NL At the end of this turn, lose !${modID}:foc! Focus. NL Your next !M! Attacks this turn are ${modID}:Magic."
   },
   "${modID}:SiphoningClaw": {
     "NAME": "Siphoning Claw",
@@ -31,7 +32,7 @@
   },
   "${modID}:FutureStrike": {
     "NAME": "Future Strike",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Scry equal to unBlocked damage."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Scry equal to unblocked damage."
   },
   "${modID}:OpportunityAttack": {
     "NAME": "Opportunity Attack",
@@ -96,7 +97,7 @@
   },
   "${modID}:SnapBack": {
     "NAME": "Snap Back",
-    "DESCRIPTION": "Deal !D! damage twice. NL Put one card from your discard pile on top of your deck."
+    "DESCRIPTION": "Deal !D! damage. NL Put one card from your discard pile on top of your deck."
   },
   "${modID}:ShockingGrasp": {
     "NAME": "Shocking Grasp",
@@ -224,7 +225,7 @@
   },
   "${modID}:Repress": {
     "NAME": "Repress",
-    "DESCRIPTION": "Spontaneous. NL Exhaust a card in your hand. NL Permanently remove it from your deck after combat. NL Exhaust."
+    "DESCRIPTION": "${modID}:Spontaneous. NL Exhaust a card in your hand. NL Permanently remove it from your deck after combat. NL Exhaust."
   },
   "${modID}:Jailbreak": {
     "NAME": "Jailbreak",
@@ -449,8 +450,8 @@
   },
   "${modID}:ReadiedAction": {
     "NAME": "Readied Action",
-    "DESCRIPTION": "Retain !M! card. NL It costs [E] less next turn but becomes ${modID}:Spontaneous.",
-    "UPGRADE_DESCRIPTION": "Retain !M! cards. NL They costs [E] less next turn but become ${modID}:Spontaneous."
+    "DESCRIPTION": "Retain !M! card. NL It costs [E] less but becomes ${modID}:Spontaneous. NL End your turn.",
+    "UPGRADE_DESCRIPTION": "Retain !M! cards. NL They costs [E] less but become ${modID}:Spontaneous. NL End your turn."
   },
   "${modID}:BackupPlan": {
     "NAME": "Backup Plan",
@@ -577,6 +578,6 @@
   },
   "${modID}:ArcaneRecovery": {
     "NAME": "Arcane Recovery",
-    "DESCRIPTION": "Non-${modID}:Spontaneous cards that Exhaust instead become ${modID}:Spontaneous."
+    "DESCRIPTION": "Non-Spontaneous cards that Exhaust instead become ${modID}:Spontaneous."
   }
 }

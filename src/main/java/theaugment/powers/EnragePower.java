@@ -26,7 +26,7 @@ public class EnragePower extends ConcentrationPower {
     public void atStartOfTurnPostDraw() {
         int skilling = 0;
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (IntentContains(m, AbstractMonster.Intent.DEBUFF) && !IntentContains(m, AbstractMonster.Intent.ATTACK) || IntentContains(m, AbstractMonster.Intent.DEFEND)) {
+            if (!m.isDeadOrEscaped() && IntentContains(m, AbstractMonster.Intent.DEBUFF) && !IntentContains(m, AbstractMonster.Intent.ATTACK) || IntentContains(m, AbstractMonster.Intent.DEFEND)) {
                 skilling++;
             }
         }

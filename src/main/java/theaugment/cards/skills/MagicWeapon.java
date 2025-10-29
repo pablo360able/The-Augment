@@ -20,13 +20,16 @@ public class MagicWeapon extends BaseCard {
             CardTarget.SELF,
             0
     );
-    private static final int FOCUS = 1;
-    private static final int UPG_FOCUS = 1;
+    private static final int ENCHANT = 1;
+    private static final int UPG_ENCHANT = 1;
+    private static final int FOCUS = 2;
+    private static final int UPG_FOCUS = 2;
 
     public MagicWeapon() {
         super(ID, info);
 
-        setMagic(FOCUS, UPG_FOCUS);
+        setMagic(ENCHANT, UPG_ENCHANT);
+        setCustomVar("foc", FOCUS, UPG_FOCUS);
     }
 
     @Override

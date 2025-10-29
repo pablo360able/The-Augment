@@ -44,7 +44,7 @@ public class UnarmedStrike extends BaseCard {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
 
         for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (m.getIntentBaseDmg() < 0) {
+            if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() < 0) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }

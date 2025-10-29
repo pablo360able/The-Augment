@@ -22,5 +22,8 @@
       "Start battles with +1 Focus. (Up to 3)",
       ""
     ]
+  },
+  "${modID}:ApplySignatureSpellAction": {
+    "TEXT": ["master"]
   }
 }

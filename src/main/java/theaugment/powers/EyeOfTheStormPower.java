@@ -26,7 +26,7 @@ public class EyeOfTheStormPower extends ConcentrationPower {
     public void atStartOfTurnPostDraw() {
         int attacking = 0;
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (IntentContains(m, AbstractMonster.Intent.ATTACK)) {
+            if (!m.isDeadOrEscaped() && IntentContains(m, AbstractMonster.Intent.ATTACK)) {
                 attacking++;
             }
         }

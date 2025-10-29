@@ -27,7 +27,7 @@ public class InquirePower extends ConcentrationPower {
     public void atStartOfTurnPostDraw() {
         int buffing = 0;
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (IntentContains(m, AbstractMonster.Intent.BUFF)) {
+            if (!m.isDeadOrEscaped() && IntentContains(m, AbstractMonster.Intent.BUFF)) {
                 buffing++;
             }
         }

@@ -14,6 +14,8 @@ import theaugment.powers.SignatureSpellPower;
 
 import java.util.ArrayList;
 
+import static theaugment.TheAugmentMod.makeID;
+
 public class ApplySignatureSpellAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
@@ -104,7 +106,7 @@ public class ApplySignatureSpellAction extends AbstractGameAction {
     }
 
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("DualWieldAction");
+        uiStrings = CardCrawlGame.languagePack.getUIString(makeID(ApplySignatureSpellAction.class.getSimpleName()));
         TEXT = uiStrings.TEXT;
     }
 }
