@@ -37,6 +37,10 @@ public class SourceCode extends BaseRelic {
     public int changeNumberOfCardsInReward(int numberOfCards) {
         boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
 
+        if (AbstractDungeon.getMonsters().monsters.isEmpty()) {
+            return numberOfCards;
+        }
+
         for(AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             if (m.type == AbstractMonster.EnemyType.BOSS) {
                 isEliteOrBoss = true;
