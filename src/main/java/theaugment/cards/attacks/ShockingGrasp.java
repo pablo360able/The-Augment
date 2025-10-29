@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theaugment.cards.BaseCard;
 import theaugment.modifiers.MagicAttack;
@@ -42,6 +43,9 @@ public class ShockingGrasp extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
         addToBot(new BloodAction(m, p, new ApplyPowerAction(m, p, new StrengthPower(m, -magicNumber))));
+        if (!m.hasPower("Artifact")) {
+            addToBot(new BloodAction(m, p, new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber))));
+        }
     }
 
     @Override
