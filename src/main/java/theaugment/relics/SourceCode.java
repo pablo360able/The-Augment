@@ -37,7 +37,7 @@ public class SourceCode extends BaseRelic {
     public int changeNumberOfCardsInReward(int numberOfCards) {
         boolean isEliteOrBoss = AbstractDungeon.getCurrRoom().eliteTrigger;
 
-        if (AbstractDungeon.getMonsters().monsters.isEmpty()) {
+        if (AbstractDungeon.getMonsters() == null) {
             return numberOfCards;
         }
 

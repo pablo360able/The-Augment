@@ -44,7 +44,7 @@ public class HackersAlmanac extends BaseRelic {
 
     @Override
     public int changeNumberOfCardsInReward(int numberOfCards) {
-        if (AbstractDungeon.getMonsters().monsters.isEmpty()) {
+        if (AbstractDungeon.getMonsters().monsters  == null) {
             return numberOfCards;
         }
 
