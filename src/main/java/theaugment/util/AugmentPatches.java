@@ -8,6 +8,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -123,6 +124,7 @@ public class AugmentPatches {
         }
     }
 
+    /*
     @SpirePatch(
             clz = DrawCardAction.class,
             method = SpirePatch.CONSTRUCTOR,
@@ -160,6 +162,7 @@ public class AugmentPatches {
             }
         }
     }
+    */
 
     @SpirePatch(
             clz = AbstractPlayer.class,
@@ -343,6 +346,47 @@ public class AugmentPatches {
                 }
             }
             return SpireReturn.Continue();
+        }
+    }
+
+
+    @SpirePatch(
+            clz = GameActionManager.class,
+            method = "addToBottom",
+            paramtypez = {
+                    AbstractGameAction.class
+            }
+    )
+    public static class OnCardDrawPreDrawBottom {
+        public static void Prefix (GameActionManager __instance, AbstractGameAction a) {
+            AbstractGameAction ca = AbstractDungeon.actionManager.currentAction;
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof PreDrawPower && !(AbstractDungeon.actionManager.currentAction instanceof DrawCardAction) && !(ca instanceof FastDrawCardAction)) {
+                    if (a instanceof DrawCardAction || a instanceof FastDrawCardAction) {
+                        ((PreDrawPower)p).onCardDrawPreDraw(a.source, a.amount, false);
+                    }
+                }
+            }
+        }
+    }
+
+    @SpirePatch(
+            clz = GameActionManager.class,
+            method = "addToTop",
+            paramtypez = {
+                    AbstractGameAction.class
+            }
+    )
+    public static class OnCardDrawPreDrawTop {
+        public static void Postfix (GameActionManager __instance, AbstractGameAction a) {
+            AbstractGameAction ca = AbstractDungeon.actionManager.currentAction;
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof PreDrawPower && !(AbstractDungeon.actionManager.currentAction instanceof DrawCardAction) && !(ca instanceof FastDrawCardAction)) {
+                    if (a instanceof DrawCardAction || a instanceof FastDrawCardAction) {
+                        ((PreDrawPower)p).onCardDrawPreDraw(a.source, a.amount, true);
+                    }
+                }
+            }
         }
     }
 }
