@@ -92,7 +92,7 @@ public class RewardCardAction extends AbstractGameAction {
 
 
                 ArrayList<AbstractCard> card = new ArrayList<>();
-                card.add(disCard);
+                card.add(chosen);
                 AbstractDungeon.getCurrRoom().rewards.add(StSLib.generateCardReward(card, false));
 
                 this.isDone = true;
@@ -133,7 +133,7 @@ public class RewardCardAction extends AbstractGameAction {
                             }
 
                             ArrayList<AbstractCard> card = new ArrayList<>();
-                            card.add(disCard);
+                            card.add(AbstractDungeon.cardRewardScreen.discoveryCard);
                             AbstractDungeon.getCurrRoom().rewards.add(StSLib.generateCardReward(card, false));
 
                             AbstractDungeon.cardRewardScreen.discoveryCard = null;
@@ -152,6 +152,7 @@ public class RewardCardAction extends AbstractGameAction {
         }
     }
 
+    // TODO: filter out healing cards when retrieveCard = true
     public static AbstractCard returnTrulyRandomCardRewardByColor(AbstractCard.CardColor color) {
         ArrayList<AbstractCard> tmpPool = new ArrayList<>();
 

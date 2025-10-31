@@ -81,11 +81,11 @@
   "${modID}:MartialAdept": {
     "NAME": "Martial Adept",
     "DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "For the rest of the turn, whenever you deal unBlocked attack damage, draw !M! cards."
+    "UPGRADE_DESCRIPTION": "For the rest of the turn, whenever you deal unblocked attack damage, draw !M! cards."
   },
   "${modID}:IronFist": {
     "NAME": "Iron Fist",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Gain Block next turn equal to unBlocked damage."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Blood: Gain Block next turn equal to unblocked damage."
   },
   "${modID}:GlancingBlow": {
     "NAME": "Glancing Blow",
@@ -118,7 +118,7 @@
   },
   "${modID}:ZephyrStrike": {
     "NAME": "Zephyr Strike",
-    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage to ALL enemies !M! times."
+    "DESCRIPTION": "${modID}:Magic. NL Deal !D! damage to ALL enemies !M! times. NL Gain 1 Dexterity. NL Exhaust."
   },
   "${modID}:Soulrend": {
     "NAME": "Soulrend",
@@ -434,7 +434,7 @@
   "${modID}:PowerWordKill": {
     "NAME": "Power Word: Kill",
     "DESCRIPTION": "${modID}:Spontaneous. NL If the enemy has !M! or less HP, set their HP to 0. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. Nl ${modID}:Compensate: Draw 1 card. NL If the enemy has !M! or less HP, set their HP to 0. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL If the enemy has !M! or less HP, set their HP to 0. NL Exhaust."
   },
   "${modID}:Shillelagh": {
     "NAME": "Shillelagh",

@@ -44,6 +44,7 @@ public class QuadratureAction extends AbstractGameAction {
 
         if (effect > 0) {
             for(int i = 0; i < effect; ++i) {
+                // TODO: check if this accidentally bypasses other damage mods (e.g. what happens if you have altered Strength)
                 this.addToBot(new DamageAllEnemiesAction(this.p, (int)Helpers.EnchantDamage(this.damage, this.damageTypeForTurn), this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             }
 

@@ -122,6 +122,6 @@ public class PhantasmalForceAction extends AbstractGameAction {
     }
 
     static {
-        TEXT = CardCrawlGame.languagePack.getUIString("DiscardPileToTopOfDeckAction").TEXT;
+        TEXT = CardCrawlGame.languagePack.getUIString("WishAction").TEXT;
     }
 }

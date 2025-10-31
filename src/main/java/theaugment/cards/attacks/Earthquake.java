@@ -14,7 +14,7 @@ public class Earthquake extends BaseCard {
             Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
             CardRarity.RARE,
-            CardTarget.ENEMY,
+            CardTarget.ALL_ENEMY,
             4
     );
     private static final int DAMAGE = 36;
