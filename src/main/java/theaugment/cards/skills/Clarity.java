@@ -1,19 +1,15 @@
 package theaugment.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import theaugment.actions.ClarityAction;
-import theaugment.actions.ReshuffleSpecificCardAction;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class Clarity extends BaseCard {
@@ -29,7 +25,7 @@ public class Clarity extends BaseCard {
     public Clarity() {
         super(ID, info);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
         setExhaust(true);
         setCostUpgrade(1);
     }

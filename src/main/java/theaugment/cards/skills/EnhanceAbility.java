@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.cards.powers.DemonsMight;
 import theaugment.cards.powers.EchosGrace;
 import theaugment.cards.powers.WraithsCunning;
 import theaugment.character.Augment;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 import java.util.ArrayList;
@@ -27,13 +27,13 @@ public class EnhanceAbility extends BaseCard {
     public EnhanceAbility() {
         super(ID, info);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override
     public void upgrade() {
         super.upgrade();
-        tags.remove(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, false);
     }
 
     @Override

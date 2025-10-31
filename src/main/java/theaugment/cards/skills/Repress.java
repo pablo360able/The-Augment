@@ -5,8 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.RepressAction;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class Repress extends BaseCard {
@@ -22,7 +22,7 @@ public class Repress extends BaseCard {
     public Repress() {
         super(ID, info);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
         setExhaust(true);
 
         setCostUpgrade(3);

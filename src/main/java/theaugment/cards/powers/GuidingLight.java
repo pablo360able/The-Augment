@@ -1,15 +1,11 @@
 package theaugment.cards.powers;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theaugment.actions.EidolonAction;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
-import theaugment.powers.EidolonFormPower;
 import theaugment.powers.GuidingLightPower;
 import theaugment.util.CardStats;
 

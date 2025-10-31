@@ -3,14 +3,10 @@ package theaugment.util;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
-import com.evacipated.cardcrawl.modthespire.lib.ByRef;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -20,15 +16,22 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import theaugment.cards.CustomTags;
 import theaugment.cards.OnAttackedCard;
 import theaugment.modifiers.MagicAttack;
 import theaugment.powers.*;
 import theaugment.relics.DefectiveProsthetic;
 
-import java.util.ArrayList;
-
 public class AugmentPatches {
+    @SpirePatch(
+            clz = AbstractCard.class,
+            method = SpirePatch.CLASS
+    )
+    public static class AugmentCardVars {
+        public static SpireField<Boolean> spontaneous = new SpireField<>(() -> false);
+
+        public static SpireField<Boolean> adventitious = new SpireField<>(() -> false);
+    }
+
     @SpirePatch(
             clz = AbstractDungeon.class,
             method = "initializeCardPools"
@@ -55,7 +58,7 @@ public class AugmentPatches {
     public static class DiscardSpontaneous {
         public static void Postfix(CardGroup instance, AbstractCard useCard) {
             for (AbstractCard c : instance.group) {
-                if (c != useCard && c.hasTag(CustomTags.SPONTANEOUS)) {
+                if (c != useCard && AugmentCardVars.spontaneous.get(c)) {
                     AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(c));
                 }
             }
@@ -78,7 +81,7 @@ public class AugmentPatches {
             CardGroup addToDiscard = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
             for (AbstractCard c : copy.group) {
-                if (c.hasTag(CustomTags.ADVENTITIOUS)) {
+                if (AugmentCardVars.adventitious.get(c)) {
                     addToDiscard.addToTop(c);
                 }
             }
@@ -96,7 +99,7 @@ public class AugmentPatches {
     public static class PutAdventitiousInDiscard {
         public static void Prefix (AbstractPlayer instance) {
             for (AbstractCard c : instance.masterDeck.group) {
-                if (c.hasTag(CustomTags.ADVENTITIOUS)) {
+                if (AugmentCardVars.adventitious.get(c)) {
                     instance.discardPile.addToTop(c);
                 }
             }

@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class Advantage extends BaseCard {
@@ -27,7 +27,7 @@ public class Advantage extends BaseCard {
 
         setMagic(DRAW, UPG_DRAW);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override

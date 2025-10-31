@@ -7,10 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
-import theaugment.cards.attacks.MagicMissile;
 import theaugment.character.Augment;
-import theaugment.powers.ArtilleryPower;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class DefensiveStance extends BaseCard {
@@ -30,7 +28,7 @@ public class DefensiveStance extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        this.tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override

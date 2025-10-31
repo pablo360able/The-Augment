@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.orbs.Aether;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class Illuminate extends BaseCard {
@@ -23,7 +23,7 @@ public class Illuminate extends BaseCard {
     public Illuminate() {
         super(ID, info);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class Illuminate extends BaseCard {
 
     @Override
     public void upgrade() {
-        tags.remove(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, false);
         super.upgrade();
     }
 

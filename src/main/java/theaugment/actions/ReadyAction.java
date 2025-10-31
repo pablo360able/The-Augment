@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import theaugment.cards.CustomTags;
+import theaugment.util.AugmentPatches;
 
 public class ReadyAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
@@ -29,8 +29,8 @@ public class ReadyAction extends AbstractGameAction {
                     if (!c.isEthereal) {
                         c.retain = true;
                         c.modifyCostForCombat(-1);
-                        if (!c.hasTag(CustomTags.SPONTANEOUS)) {
-                            c.tags.add(CustomTags.SPONTANEOUS);
+                        if (!AugmentPatches.AugmentCardVars.spontaneous.get(c)) {
+                            AugmentPatches.AugmentCardVars.spontaneous.set(c, true);
                             c.rawDescription = "Spontaneous. NL " + c.rawDescription;
                             c.initializeDescription();
                         }

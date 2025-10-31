@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.BloodAction;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class OpportunityAttack extends BaseCard {
@@ -30,7 +30,7 @@ public class OpportunityAttack extends BaseCard {
 
         setDamage(DAMAGE, UPG_DAMAGE);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override

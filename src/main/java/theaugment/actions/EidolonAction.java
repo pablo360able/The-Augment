@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import theaugment.cards.CustomTags;
-import theaugment.powers.EidolonFormPower;
+import theaugment.util.AugmentPatches;
 
 public class EidolonAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
@@ -97,8 +96,8 @@ public class EidolonAction extends AbstractGameAction {
                         this.p.hand.addToTop(c);
                     }
 
-                    if (!c.hasTag(CustomTags.SPONTANEOUS)) {
-                        c.tags.add(CustomTags.SPONTANEOUS);
+                    if (!AugmentPatches.AugmentCardVars.spontaneous.get(c)) {
+                        AugmentPatches.AugmentCardVars.spontaneous.set(c, true);
                         c.rawDescription = "Spontaneous. NL " + c.rawDescription;
                         c.initializeDescription();
                     }

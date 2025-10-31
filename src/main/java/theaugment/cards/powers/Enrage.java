@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.powers.EnragePower;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 import static theaugment.util.GeneralUtils.removePrefix;
@@ -32,7 +32,7 @@ public class Enrage extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        this.tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override

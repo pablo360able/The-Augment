@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.FlameBoostAction;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.orbs.Flame;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class DelayedBlastFireball extends BaseCard {
@@ -24,13 +24,13 @@ public class DelayedBlastFireball extends BaseCard {
     public DelayedBlastFireball() {
         super(ID, info);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override
     public void upgrade() {
         super.upgrade();
-        tags.remove(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, false);
     }
 
     @Override

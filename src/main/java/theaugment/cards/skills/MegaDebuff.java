@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class MegaDebuff extends BaseCard {
@@ -29,7 +29,7 @@ public class MegaDebuff extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        this.tags.add(CustomTags.ADVENTITIOUS);
+        AugmentPatches.AugmentCardVars.adventitious.set(this, true);
         setExhaust(true);
     }
 

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theaugment.cards.CustomTags;
+import theaugment.util.AugmentPatches;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ public class BonusActionAction extends AbstractGameAction {
         if (this.duration == this.startDuration) {
             CardGroup spontaneousDiscards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard c : this.player.discardPile.group) {
-                if (c.hasTag(CustomTags.SPONTANEOUS)) {
+                if (AugmentPatches.AugmentCardVars.spontaneous.get(c)) {
                     spontaneousDiscards.addToBottom(c);
                 }
             }

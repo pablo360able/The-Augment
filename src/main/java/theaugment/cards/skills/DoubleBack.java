@@ -1,16 +1,12 @@
 package theaugment.cards.skills;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.DoubleBackAction;
-import theaugment.actions.ReshuffleSpecificCardAction;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class DoubleBack extends BaseCard {
@@ -27,13 +23,13 @@ public class DoubleBack extends BaseCard {
         super(ID, info);
 
         setExhaust(true);
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override
     public void upgrade() {
         super.upgrade();
-        tags.remove(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, false);
     }
 
     @Override

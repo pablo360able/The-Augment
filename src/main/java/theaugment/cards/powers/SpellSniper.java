@@ -7,13 +7,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
-import theaugment.powers.EnragePower;
 import theaugment.powers.SpellSniperPower;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
-
-import static theaugment.util.TextureLoader.getCardTextureString;
 
 public class SpellSniper extends BaseCard {
     public static final String ID = makeID(SpellSniper.class.getSimpleName());
@@ -30,7 +27,7 @@ public class SpellSniper extends BaseCard {
 
         setCostUpgrade(1);
 
-        this.tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override

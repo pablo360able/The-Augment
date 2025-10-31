@@ -5,14 +5,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.RegenPower;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.powers.EntropyPower;
 import theaugment.powers.LoseArtifactPower;
-import theaugment.powers.MaxHpIfRegenPower;
 import theaugment.powers.WardingPower;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class Warding extends BaseCard {
@@ -32,7 +30,7 @@ public class Warding extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        this.tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override

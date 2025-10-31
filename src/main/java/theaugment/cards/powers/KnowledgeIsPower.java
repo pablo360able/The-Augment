@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.powers.KnowledgeIsPowerPower;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class KnowledgeIsPower extends BaseCard {
@@ -27,7 +27,7 @@ public class KnowledgeIsPower extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        tags.add(CustomTags.ADVENTITIOUS);
+        AugmentPatches.AugmentCardVars.adventitious.set(this, true);
     }
 
     @Override

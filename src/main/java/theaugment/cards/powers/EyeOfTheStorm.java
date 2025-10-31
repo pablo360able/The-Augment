@@ -1,16 +1,13 @@
 package theaugment.cards.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.FastDrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
-import theaugment.powers.EnragePower;
 import theaugment.powers.EyeOfTheStormPower;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 import static theaugment.util.GeneralUtils.removePrefix;
@@ -33,7 +30,7 @@ public class EyeOfTheStorm extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        this.tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override

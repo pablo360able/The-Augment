@@ -1,12 +1,9 @@
 package theaugment.powers;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theaugment.cards.CustomTags;
+import theaugment.util.AugmentPatches;
 
 import static theaugment.TheAugmentMod.makeID;
 
@@ -22,8 +19,8 @@ public class ArcaneRecoveryPower extends BasePower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction act) {
-        if (act.exhaustCard && !card.hasTag(CustomTags.SPONTANEOUS)) {
-            card.tags.add(CustomTags.SPONTANEOUS);
+        if (act.exhaustCard && !AugmentPatches.AugmentCardVars.spontaneous.get(card)) {
+            AugmentPatches.AugmentCardVars.spontaneous.set(card, true);
             card.rawDescription = "Spontaneous. NL " + card.rawDescription;
             card.initializeDescription();
             act.exhaustCard = false;

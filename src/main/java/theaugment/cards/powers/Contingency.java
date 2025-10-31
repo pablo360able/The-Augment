@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FocusPower;
 import theaugment.actions.LoseMaxHpAction;
 import theaugment.cards.BaseCard;
-import theaugment.cards.CustomTags;
 import theaugment.character.Augment;
 import theaugment.powers.ContingencyPower;
+import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 import static theaugment.util.GeneralUtils.removePrefix;
@@ -31,7 +31,7 @@ public class Contingency extends BaseCard {
     public Contingency() {
         super(ID, info);
 
-        tags.add(CustomTags.SPONTANEOUS);
+        AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
     }
 
     @Override
