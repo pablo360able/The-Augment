@@ -53,7 +53,7 @@
   },
   "${modID}:KnowledgeIsPower": {
     "NAME": "Knowledge is Power",
-    "DESCRIPTION": "${modID}:Adventitious. NL Whenever you draw cards, gain !M! Focus for that turn."
+    "DESCRIPTION": "stslib:Grave. NL Whenever you draw cards, gain !M! Focus for that turn."
   },
   "${modID}:Illuminate": {
     "NAME": "Illuminate",
@@ -306,7 +306,7 @@
   },
   "${modID}:MegaDebuff": {
     "NAME": "Mega Debuff",
-    "DESCRIPTION": "${modID}:Adventitious. NL Apply !M! Weak, !M! Vulnerable, and !M! Frail to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "stslib:Grave. NL Apply !M! Weak, !M! Vulnerable, and !M! Frail to ALL enemies. NL Exhaust."
   },
   "${modID}:Pillage": {
     "NAME": "Pillage",
@@ -530,7 +530,7 @@
   },
   "${modID}:Contingency": {
     "NAME": "Contingency",
-    "DESCRIPTION": "${modID}:Spontaneous. NL Lose half your max HP. NL Gain Focus equal to lost HP. NL You cannot go below 1 HP. NL ${modID}:Concentration. NL ${modID}:Fleeting.",
+    "DESCRIPTION": "${modID}:Spontaneous. NL Lose half your max HP. NL Gain Focus equal to lost HP. NL You cannot go below 1 HP. NL ${modID}:Concentration. NL stslib:Fleeting.",
     "UPGRADE_DESCRIPTION": "${modID}:Spontaneous. NL ${modID}:Compensate: Draw 1 card. NL Lose half your max HP. NL Gain Focus equal to lost HP. NL You cannot go below 1 HP. NL ${modID}:Concentration. NL ${modID}:Fleeting."
   },
   "${modID}:FatedBlow": {

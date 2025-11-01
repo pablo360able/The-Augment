@@ -16,7 +16,7 @@ public class Dove extends BaseCard {
     private static final CardStats info = new CardStats(
             CardColor.COLORLESS,
             CardType.SKILL,
-            CardRarity.BASIC,
+            CardRarity.SPECIAL,
             CardTarget.SELF,
             -2
     );

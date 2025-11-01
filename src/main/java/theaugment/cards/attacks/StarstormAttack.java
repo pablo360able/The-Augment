@@ -14,9 +14,9 @@ import theaugment.util.CardStats;
 public class StarstormAttack extends BaseCard {
     public static final String ID = makeID(StarstormAttack.class.getSimpleName());
     private static final CardStats info = new CardStats(
-            Augment.Meta.CARD_COLOR,
+            CardColor.COLORLESS,
             CardType.ATTACK,
-            CardRarity.UNCOMMON,
+            CardRarity.SPECIAL,
             CardTarget.ALL_ENEMY,
             -2
     );

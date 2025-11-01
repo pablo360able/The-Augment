@@ -28,8 +28,6 @@ public class AugmentPatches {
     )
     public static class AugmentCardVars {
         public static SpireField<Boolean> spontaneous = new SpireField<>(() -> false);
-
-        public static SpireField<Boolean> adventitious = new SpireField<>(() -> false);
     }
 
     @SpirePatch(
@@ -60,47 +58,6 @@ public class AugmentPatches {
             for (AbstractCard c : instance.group) {
                 if (c != useCard && AugmentCardVars.spontaneous.get(c)) {
                     AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(c));
-                }
-            }
-        }
-    }
-
-    @SpirePatch(
-            clz = CardGroup.class,
-            method = "initializeDeck",
-            paramtypez = {
-                    CardGroup.class
-            }
-    )
-    public static class PutAwayAdventitious {
-        @SpireInsertPatch (
-                rloc = 4,
-                localvars={"copy"}
-        )
-        public static void Insert (CardGroup __instance, CardGroup __deck, CardGroup copy) {
-            CardGroup addToDiscard = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-            for (AbstractCard c : copy.group) {
-                if (AugmentCardVars.adventitious.get(c)) {
-                    addToDiscard.addToTop(c);
-                }
-            }
-
-            for (AbstractCard c : addToDiscard.group) {
-                copy.removeCard(c);
-            }
-        }
-    }
-
-    @SpirePatch(
-            clz = AbstractPlayer.class,
-            method = "applyPreCombatLogic"
-    )
-    public static class PutAdventitiousInDiscard {
-        public static void Prefix (AbstractPlayer instance) {
-            for (AbstractCard c : instance.masterDeck.group) {
-                if (AugmentCardVars.adventitious.get(c)) {
-                    instance.discardPile.addToTop(c);
                 }
             }
         }

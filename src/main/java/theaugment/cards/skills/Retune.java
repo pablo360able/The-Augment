@@ -1,5 +1,6 @@
 package theaugment.cards.skills;
 
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.GraveField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,7 +28,15 @@ public class Retune extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
+        GraveField.grave.set(this, true);
+        setInnate(false, true);
         setExhaust(true);
+    }
+
+    @Override
+    public void upgrade() {
+        super.upgrade();
+        GraveField.grave.set(this, false);
     }
 
     @Override

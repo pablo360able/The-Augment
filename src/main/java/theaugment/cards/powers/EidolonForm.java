@@ -1,6 +1,7 @@
 package theaugment.cards.powers;
 
 import basemod.helpers.BaseModCardTags;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.GraveField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +30,7 @@ public class EidolonForm extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        AugmentPatches.AugmentCardVars.adventitious.set(this, true);
+        GraveField.grave.set(this, true);
         tags.add(BaseModCardTags.FORM);
     }
 

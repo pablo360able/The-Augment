@@ -1,5 +1,6 @@
 package theaugment.cards.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.FastDrawCardAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
@@ -23,7 +24,7 @@ public class Contingency extends BaseCard {
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.POWER,
-            CardRarity.SPECIAL,
+            CardRarity.RARE,
             CardTarget.SELF,
             0
     );
@@ -32,6 +33,7 @@ public class Contingency extends BaseCard {
         super(ID, info);
 
         AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
+        FleetingField.fleeting.set(this, true);
     }
 
     @Override
@@ -41,11 +43,6 @@ public class Contingency extends BaseCard {
         addToBot(new LoseMaxHpAction(p, amount));
         addToBot(new ApplyPowerAction(p, p, new FocusPower(p, amount)));
         addToBot(new ApplyPowerAction(p, p, new ContingencyPower(amount, getCardTextureString(removePrefix(ID), info.cardType))));
-        for (AbstractCard c : p.masterDeck.group) {
-            if (c.uuid == uuid) {
-                p.masterDeck.removeCard(c);
-            }
-        }
     }
 
     @Override

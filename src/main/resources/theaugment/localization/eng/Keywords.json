@@ -53,20 +53,12 @@
     "DESCRIPTION": "Discard this card if you play another one while this is in your hand."
   },
   {
-    "ID": "${modID}:Adventitious",
-    "PROPER_NAME": "Adventitious",
-    "NAMES": [
-      "adventitious"
-    ],
-    "DESCRIPTION": "Start each combat with this card in your discard pile."
-  },
-  {
     "ID": "${modID}:Aether",
     "PROPER_NAME": "Aether",
     "NAMES": [
       "aether"
     ],
-    "DESCRIPTION": "Orb: Gain Focus."
+    "DESCRIPTION": "Orb: Gain #yFocus."
   },
   {
     "ID": "${modID}:Blur",
@@ -74,7 +66,7 @@
     "NAMES": [
       "blur"
     ],
-    "DESCRIPTION": "Retain excess block at the start of your turn."
+    "DESCRIPTION": "Retain excess #yBlock at the start of your turn."
   },
   {
     "ID": "${modID}:Compensate",
@@ -98,7 +90,7 @@
     "NAMES": [
       "entropy"
     ],
-    "DESCRIPTION": "Negates the next buff.\nCancels out Artifact."
+    "DESCRIPTION": "Negates the next buff.\nCancels out #yArtifact."
   },
   {
     "ID": "${modID}:Stun",
@@ -114,14 +106,6 @@
     "NAMES": [
       "concentration"
     ],
-    "DESCRIPTION": "Whenever you play a #yPower with #yConcentration, end the current #yConcentration power.\nWhenever you take damage from an enemy, lose 1 #yFocus or, if you have none, end the current #yConcentration power.\nYou may also end it at the start of your turn."
-  },
-  {
-    "ID": "${modID}:Fleeting",
-    "PROPER_NAME": "Fleeting",
-    "NAMES": [
-      "fleeting"
-    ],
-    "DESCRIPTION": "This card is removed from your deck upon play."
+    "DESCRIPTION": "When you take attack damage, lose 1 #yFocus if you have any.\nIf you have none or play another #yConcentration power, drop the power.\nYou may also drop it at the start of your turn."
   }
 ]

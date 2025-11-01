@@ -1,5 +1,6 @@
 package theaugment.cards.powers;
 
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.GraveField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,7 +28,7 @@ public class KnowledgeIsPower extends BaseCard {
 
         setMagic(MAGIC, UPG_MAGIC);
 
-        AugmentPatches.AugmentCardVars.adventitious.set(this, true);
+        GraveField.grave.set(this, true);
     }
 
     @Override
