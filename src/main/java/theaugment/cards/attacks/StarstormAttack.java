@@ -1,33 +1,31 @@
 package theaugment.cards.attacks;
 
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
-import theaugment.modifiers.MagicAttack;
 import theaugment.character.Augment;
-import theaugment.orbs.Aether;
-import theaugment.powers.StarstormPower;
+import theaugment.modifiers.MagicAttack;
 import theaugment.util.CardStats;
 
-public class Starstorm extends BaseCard {
-    public static final String ID = makeID(Starstorm.class.getSimpleName());
+public class StarstormAttack extends BaseCard {
+    public static final String ID = makeID(StarstormAttack.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Augment.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.RARE,
-            CardTarget.ENEMY,
-            3
+            CardRarity.UNCOMMON,
+            CardTarget.ALL_ENEMY,
+            -2
     );
     private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 1;
     private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 1;
 
-    public Starstorm() {
+    public StarstormAttack() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
@@ -38,14 +36,13 @@ public class Starstorm extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 3; i++) {
-            addToBot(new ChannelAction(new Aether()));
+        for (int i = 0; i < magicNumber; i++) {
+            addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
-        addToBot(new ApplyPowerAction(p, p, new StarstormPower(p, this)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Starstorm();
+        return new StarstormAttack();
     }
 }

@@ -3,8 +3,11 @@ package theaugment.powers;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import theaugment.cards.attacks.Starstorm;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theaugment.cards.attacks.StarstormAttack;
 
 import static theaugment.TheAugmentMod.makeID;
 
@@ -12,21 +15,19 @@ public class StarstormPower extends BasePower {
     public static final String POWER_ID = makeID(StarstormPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    private final Starstorm attack;
+    private final StarstormAttack attack;
     private static int starstormIdOffset;
 
-    public StarstormPower(AbstractCreature owner, Starstorm source_attack) {
-        super(POWER_ID + starstormIdOffset, TYPE, TURN_BASED, owner, -1);
-        starstormIdOffset++;
+    public StarstormPower(AbstractCreature owner, StarstormAttack source_attack) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, -1);
+        this.ID += starstormIdOffset++;
         this.attack = source_attack;
         this.updateDescription();
     }
 
     @Override
     public void atStartOfTurn() {
-        for (int i = 0; i < attack.magicNumber; i++) {
-            addToBot(new AttackDamageRandomEnemyAction(attack, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        }
+        this.addToBot(new NewQueueCardAction(attack, null, false, true));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 

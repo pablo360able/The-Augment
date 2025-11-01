@@ -71,6 +71,10 @@
   },
   "${modID}:Starstorm": {
     "NAME": "Starstorm",
+    "DESCRIPTION": "${modID}:Magic. NL Channel 3 ${modID}:Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times. NL This counts as playing an Attack."
+  },
+  "${modID}:StarstormAttack": {
+    "NAME": "Starstorm",
     "DESCRIPTION": "${modID}:Magic. NL Channel 3 ${modID}:Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times."
   },
   "${modID}:EidolonForm": {

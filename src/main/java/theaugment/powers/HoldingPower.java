@@ -1,11 +1,8 @@
 package theaugment.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import theaugment.cards.attacks.Starstorm;
 
 import static theaugment.TheAugmentMod.makeID;
 
