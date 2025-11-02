@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import theaugment.util.AugmentPatches;
 
+import static theaugment.TheAugmentMod.modID;
+
 public class EidolonAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
@@ -98,7 +100,7 @@ public class EidolonAction extends AbstractGameAction {
 
                     if (!AugmentPatches.AugmentCardVars.spontaneous.get(c)) {
                         AugmentPatches.AugmentCardVars.spontaneous.set(c, true);
-                        c.rawDescription = "Spontaneous. NL " + c.rawDescription;
+                        c.rawDescription = modID + ":Spontaneous. NL " + c.rawDescription;
                         c.initializeDescription();
                     }
 

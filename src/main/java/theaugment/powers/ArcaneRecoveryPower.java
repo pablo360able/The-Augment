@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theaugment.util.AugmentPatches;
 
 import static theaugment.TheAugmentMod.makeID;
+import static theaugment.TheAugmentMod.modID;
 
 public class ArcaneRecoveryPower extends BasePower {
     public static final String POWER_ID = makeID(ArcaneRecoveryPower.class.getSimpleName());
@@ -21,7 +22,7 @@ public class ArcaneRecoveryPower extends BasePower {
     public void onUseCard(AbstractCard card, UseCardAction act) {
         if (act.exhaustCard && !AugmentPatches.AugmentCardVars.spontaneous.get(card)) {
             AugmentPatches.AugmentCardVars.spontaneous.set(card, true);
-            card.rawDescription = "Spontaneous. NL " + card.rawDescription;
+            card.rawDescription = modID + ":Spontaneous. NL " + card.rawDescription;
             card.initializeDescription();
             act.exhaustCard = false;
         }

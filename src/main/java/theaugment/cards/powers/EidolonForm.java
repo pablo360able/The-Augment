@@ -22,7 +22,7 @@ public class EidolonForm extends BaseCard {
             3
     );
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int UPG_MAGIC = 0;
 
     public EidolonForm() {
         super(ID, info);
@@ -37,7 +37,7 @@ public class EidolonForm extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new EidolonFormPower(p)));
         if (upgraded) {
-            addToBot(new EidolonAction(p, p.getPower(makeID(EidolonForm.class.getSimpleName())).amount));
+            addToBot(new EidolonAction(p, magicNumber));
         }
     }
 
