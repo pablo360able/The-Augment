@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.powers.EntropyPower;

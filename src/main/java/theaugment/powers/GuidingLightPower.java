@@ -1,12 +1,7 @@
 package theaugment.powers;
 
-
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theaugment.actions.EidolonAction;
 import theaugment.util.Helpers;
 
 import static theaugment.TheAugmentMod.makeID;

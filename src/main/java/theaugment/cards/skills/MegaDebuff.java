@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
-import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class MegaDebuff extends BaseCard {

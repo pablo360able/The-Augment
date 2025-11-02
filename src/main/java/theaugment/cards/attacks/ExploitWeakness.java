@@ -1,7 +1,7 @@
 package theaugment.cards.attacks;
 
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
-import com.megacrit.cardcrawl.actions.common.MagicMissileAction;
+import theaugment.actions.MagicMissileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

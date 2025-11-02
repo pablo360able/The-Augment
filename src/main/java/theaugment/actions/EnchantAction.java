@@ -36,11 +36,8 @@ public class EnchantAction extends AbstractGameAction {
             }
             if (!attackDiscards.isEmpty()) {
                 if (attackDiscards.size() <= this.numberOfCards) {
-                    ArrayList<AbstractCard> cardsToMove = new ArrayList();
 
-                    for(AbstractCard c : attackDiscards.group) {
-                        cardsToMove.add(c);
-                    }
+                    ArrayList<AbstractCard> cardsToMove = new ArrayList<>(attackDiscards.group);
 
                     for(AbstractCard c : cardsToMove) {
                         if (this.reduceCost) {

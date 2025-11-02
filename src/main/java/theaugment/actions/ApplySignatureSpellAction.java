@@ -2,10 +2,8 @@ package theaugment.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,8 +19,8 @@ public class ApplySignatureSpellAction extends AbstractGameAction {
     public static final String[] TEXT;
     private static final float DURATION_PER_CARD = 0.25F;
     private AbstractPlayer p;
-    private ArrayList<AbstractCard> cannotSpell = new ArrayList();
-    private boolean upgraded;
+    private final ArrayList<AbstractCard> cannotSpell = new ArrayList<>();
+    private final boolean upgraded;
 
     public ApplySignatureSpellAction(boolean upgraded) {
         this.setValues(AbstractDungeon.player, AbstractDungeon.player);

@@ -1,7 +1,6 @@
 package theaugment.character;
 
 import basemod.abstracts.CustomEnergyOrb;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;

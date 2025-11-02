@@ -1,9 +1,7 @@
 package theaugment.powers;
 
-
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import theaugment.actions.EfficiencyAction;
-import theaugment.actions.EidolonAction;
 
 import static theaugment.TheAugmentMod.makeID;
 

@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class DoubleBackAction extends AbstractGameAction {
     public static final String[] TEXT;
-    private AbstractPlayer player;
-    private int playAmt;
+    private final AbstractPlayer player;
+    private final int playAmt;
 
     public DoubleBackAction() {
         this.actionType = ActionType.CARD_MANIPULATION;

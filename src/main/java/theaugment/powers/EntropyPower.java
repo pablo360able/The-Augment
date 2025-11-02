@@ -1,6 +1,5 @@
 package theaugment.powers;
 
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 import static theaugment.TheAugmentMod.makeID;

@@ -5,12 +5,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DarkOrbEvokeAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,11 +14,8 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 import theaugment.actions.FlameOrbEvokeAction;
-import theaugment.powers.LoseFocusPower;
 import theaugment.util.GeneralUtils;
 import theaugment.util.TextureLoader;
 
@@ -37,7 +30,6 @@ public class Flame extends AbstractOrb {
     private float vfxIntervalMax = 0.4F;
     private static final float ORB_WAVY_DIST = 0.04F;
     private static final float PI_4 = 12.566371F;
-    private boolean damagedPlayerThisTurn;
 
     public Flame() {
         this.ID = ORB_ID;
@@ -49,7 +41,6 @@ public class Flame extends AbstractOrb {
         this.passiveAmount = this.basePassiveAmount;
         this.updateDescription();
         this.channelAnimTimer = 0.5F;
-        this.damagedPlayerThisTurn = false;
     }
 
     @Override
@@ -79,9 +70,8 @@ public class Flame extends AbstractOrb {
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }
-        if (!damagedPlayerThisTurn) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 1), DamageAction.AttackEffect.FIRE));
-        }
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 1), DamageAction.AttackEffect.FIRE));
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.DARK), speedTime));
         this.evokeAmount += this.passiveAmount;

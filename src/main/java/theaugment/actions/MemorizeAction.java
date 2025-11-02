@@ -9,8 +9,8 @@ import theaugment.cards.skills.Memorize;
 import java.util.UUID;
 
 public class MemorizeAction extends AbstractGameAction {
-    private int scryIncrease;
-    private UUID uuid;
+    private final int scryIncrease;
+    private final UUID uuid;
 
     public MemorizeAction(UUID targetUUID, int miscIncrease) {
         this.scryIncrease = miscIncrease;
@@ -20,13 +20,13 @@ public class MemorizeAction extends AbstractGameAction {
     public void update() {
         for(AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.uuid.equals(this.uuid)) {
-                ((Memorize)c).learn();
+                ((Memorize)c).learn(this.scryIncrease);
                 c.applyPowers();
             }
         }
 
         for(AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
-            ((Memorize)c).learn();
+            ((Memorize)c).learn(this.scryIncrease);
             c.applyPowers();
         }
 

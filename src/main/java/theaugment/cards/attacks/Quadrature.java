@@ -30,7 +30,7 @@ public class Quadrature extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new QuadratureAction(p, m, this.energyOnUse, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
+        this.addToBot(new QuadratureAction(p, this.energyOnUse, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
     }
 
     @Override

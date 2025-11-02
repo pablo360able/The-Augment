@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class BackStrikeAction extends AbstractGameAction {
-    private AbstractMonster m;
+    private final AbstractMonster m;
 
     public BackStrikeAction(AbstractMonster m) {
         this.actionType = ActionType.WAIT;

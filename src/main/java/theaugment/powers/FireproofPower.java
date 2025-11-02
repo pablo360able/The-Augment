@@ -2,8 +2,6 @@ package theaugment.powers;
 
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import theaugment.actions.EidolonAction;
 
 import static theaugment.TheAugmentMod.makeID;
 

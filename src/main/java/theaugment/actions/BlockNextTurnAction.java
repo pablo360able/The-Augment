@@ -1,21 +1,10 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package theaugment.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-
-import static java.lang.Math.min;
 
 public class BlockNextTurnAction extends AbstractGameAction {
     private static final float DURATION = 0.1F;

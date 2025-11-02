@@ -16,11 +16,9 @@ public class ImprovisedAssaultAction extends AbstractGameAction {
     public static final String[] TEXT;
     private final AbstractPlayer p;
     private final boolean upgraded;
-    private int replaced;
 
     public ImprovisedAssaultAction(boolean upgraded) {
         this.p = AbstractDungeon.player;
-        this.replaced = 0;
         this.upgraded = upgraded;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
@@ -42,7 +40,6 @@ public class ImprovisedAssaultAction extends AbstractGameAction {
             CardGroup temp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for(AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 temp.addToRandomSpot(c);
-                this.replaced++;
             }
             for (AbstractCard c : temp.group) {
                 this.p.hand.moveToDeck(c, false);

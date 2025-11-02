@@ -2,13 +2,10 @@ package theaugment.actions;
 
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
@@ -42,8 +39,7 @@ public class RewardCardAction extends AbstractGameAction {
 
         while(generatedCards.size() != this.count) {
             boolean dupe = false;
-            AbstractCard tmp = null;
-            tmp = returnTrulyRandomCardRewardByColor(this.color);
+            AbstractCard tmp = returnTrulyRandomCardRewardByColor(this.color);
 
             for(AbstractCard c : generatedCards) {
                 if (c.cardID.equals(tmp.cardID)) {
@@ -78,7 +74,6 @@ public class RewardCardAction extends AbstractGameAction {
                         AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                     }
 
-                    AbstractCard var4 = null;
                 } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                     AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
@@ -120,7 +115,6 @@ public class RewardCardAction extends AbstractGameAction {
                                     AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                                 }
 
-                                AbstractCard var4 = null;
                             } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {
                                 AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                                 AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));

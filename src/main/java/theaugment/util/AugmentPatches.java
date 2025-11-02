@@ -84,46 +84,6 @@ public class AugmentPatches {
         }
     }
 
-    /*
-    @SpirePatch(
-            clz = DrawCardAction.class,
-            method = SpirePatch.CONSTRUCTOR,
-            paramtypez = {
-                    AbstractCreature.class,
-                    int.class,
-                    boolean.class
-            }
-    )
-    public static class OnCardDrawPreDraw {
-        public static void Prefix (DrawCardAction __instance, AbstractCreature source, int amount, boolean endTurnDraw) {
-            for (AbstractPower p : AbstractDungeon.player.powers) {
-                if (p instanceof PreDrawPower && !(AbstractDungeon.actionManager.currentAction instanceof DrawCardAction)) {
-                    ((PreDrawPower)p).onCardDrawPreDraw(source, amount, endTurnDraw);
-                }
-            }
-        }
-    }
-
-    @SpirePatch(
-            clz = FastDrawCardAction.class,
-            method = SpirePatch.CONSTRUCTOR,
-            paramtypez = {
-                    AbstractCreature.class,
-                    int.class,
-                    boolean.class
-            }
-    )
-    public static class OnFastCardDrawPreDraw {
-        public static void Prefix (FastDrawCardAction __instance, AbstractCreature source, int amount, boolean endTurnDraw) {
-            for (AbstractPower p : AbstractDungeon.player.powers) {
-                if (p instanceof PreDrawPower && !(AbstractDungeon.actionManager.currentAction instanceof FastDrawCardAction)) {
-                    ((PreDrawPower)p).onCardDrawPreDraw(source, amount, endTurnDraw);
-                }
-            }
-        }
-    }
-    */
-
     @SpirePatch(
             clz = AbstractPlayer.class,
             method = "damage",

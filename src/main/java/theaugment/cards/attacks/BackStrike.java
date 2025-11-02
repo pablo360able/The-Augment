@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.actions.BackStrikeAction;
-import theaugment.actions.BlockNextTurnAction;
-import theaugment.actions.BloodAction;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.util.CardStats;

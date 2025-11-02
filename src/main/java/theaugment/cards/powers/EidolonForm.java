@@ -10,7 +10,6 @@ import theaugment.actions.EidolonAction;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.powers.EidolonFormPower;
-import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class EidolonForm extends BaseCard {

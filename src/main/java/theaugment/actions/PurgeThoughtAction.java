@@ -2,7 +2,6 @@ package theaugment.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,7 +14,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 public class PurgeThoughtAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public PurgeThoughtAction() {
         this.actionType = ActionType.CARD_MANIPULATION;

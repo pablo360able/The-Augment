@@ -8,7 +8,6 @@ import theaugment.cards.BaseCard;
 import theaugment.cards.attacks.MagicMissile;
 import theaugment.character.Augment;
 import theaugment.powers.ArtilleryPower;
-import theaugment.powers.GuidingLightPower;
 import theaugment.util.CardStats;
 
 public class Artillery extends BaseCard {

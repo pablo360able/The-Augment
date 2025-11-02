@@ -28,7 +28,6 @@ public class AetherVial extends BasePotion {
 
     @Override
     public void use(AbstractCreature abstractCreature) {
-        AbstractCreature var2 = AbstractDungeon.player;
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             this.addToBot(new AetherVialAction(this.potency));
         }

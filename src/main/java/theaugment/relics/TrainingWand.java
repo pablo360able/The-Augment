@@ -1,25 +1,17 @@
 package theaugment.relics;
 
-
-import com.evacipated.cardcrawl.mod.stslib.damagemods.AbstractDamageModifier;
-import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.FocusPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Girya;
 import com.megacrit.cardcrawl.relics.PeacePipe;
 import com.megacrit.cardcrawl.relics.Shovel;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
-import com.megacrit.cardcrawl.ui.campfire.LiftOption;
 import theaugment.character.Augment;
-import theaugment.modifiers.MagicAttack;
 import theaugment.ui.TrainOption;
-import theaugment.util.Helpers;
 
 import java.util.ArrayList;
 

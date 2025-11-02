@@ -1,13 +1,9 @@
 package theaugment.cards.skills;
 
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import theaugment.cards.BaseCard;
-import theaugment.powers.ConcentrationPower;
 import theaugment.util.CardStats;
 
 public class MaintainConcentration extends BaseCard {

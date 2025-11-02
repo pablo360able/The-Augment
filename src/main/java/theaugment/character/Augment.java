@@ -3,7 +3,6 @@ package theaugment.character;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;

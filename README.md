@@ -33,7 +33,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * See if Delayed Blast Fireball needs a buff
 * Consider buffing Evade Capture and/or Mind over Matter
 * Consider nerving Feign Disaster and/or Phantasmal Force
-* Figure out what I'm doing with Retune
+* Figure out what buff I want to give to Refocus
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 public class RepressAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public RepressAction() {
         this.actionType = ActionType.CARD_MANIPULATION;

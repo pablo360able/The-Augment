@@ -1,4 +1,4 @@
-package theaugment.ui;
+package theaugment.effects;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;

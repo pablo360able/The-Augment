@@ -5,13 +5,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.modifiers.MagicAttack;
-import theaugment.orbs.Aether;
 import theaugment.util.CardStats;
 import theaugment.util.Helpers;
 

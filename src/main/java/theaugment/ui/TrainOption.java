@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
-import theaugment.ui.CampfireTrainEffect;
+import theaugment.effects.CampfireTrainEffect;
 
 import static theaugment.TheAugmentMod.makeID;
 

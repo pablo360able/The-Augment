@@ -36,11 +36,8 @@ public class BonusActionAction extends AbstractGameAction {
             }
             if (!spontaneousDiscards.isEmpty()) {
                 if (spontaneousDiscards.size() <= this.numberOfCards) {
-                    ArrayList<AbstractCard> cardsToMove = new ArrayList();
 
-                    for(AbstractCard c : spontaneousDiscards.group) {
-                        cardsToMove.add(c);
-                    }
+                    ArrayList<AbstractCard> cardsToMove = new ArrayList<>(spontaneousDiscards.group);
 
                     for(AbstractCard c : cardsToMove) {
                         if (this.player.hand.size() < 10) {

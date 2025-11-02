@@ -1,6 +1,5 @@
 package theaugment.cards.attacks;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.AllEnemyApplyPowerAction;
 import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

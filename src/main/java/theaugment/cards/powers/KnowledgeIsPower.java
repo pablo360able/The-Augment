@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
 import theaugment.powers.KnowledgeIsPowerPower;
-import theaugment.util.AugmentPatches;
 import theaugment.util.CardStats;
 
 public class KnowledgeIsPower extends BaseCard {

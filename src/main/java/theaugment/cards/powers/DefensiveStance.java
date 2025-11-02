@@ -20,8 +20,8 @@ public class DefensiveStance extends BaseCard {
             CardTarget.SELF,
             0
     );
-    private static int MAGIC = 2;
-    private static int UPG_MAGIC = 1;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC = 1;
 
     public DefensiveStance() {
         super(ID, info);

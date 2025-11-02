@@ -1,13 +1,9 @@
 package theaugment.cards.skills;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.defect.SeekAction;
-import com.megacrit.cardcrawl.actions.unique.IncreaseMaxHpAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.trials.LoseMaxHpTrial;
 import theaugment.actions.LoseMaxHpAction;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;

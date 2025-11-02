@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theaugment.cards.BaseCard;
 import theaugment.character.Augment;
-import theaugment.powers.BurningClarityPower;
 import theaugment.powers.DivinePower;
 import theaugment.util.CardStats;
 

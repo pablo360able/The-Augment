@@ -40,8 +40,8 @@ public class Memorize extends BaseCard {
         addToBot(new DrawCardAction(p, magicNumber));
     }
 
-    public void learn() {
-        setCustomVar("scry", customVar("scry") + 1, 0);
+    public void learn(int scryIncrease) {
+        setCustomVar("scry", customVar("scry") + scryIncrease, 0);
     }
 
     @Override
