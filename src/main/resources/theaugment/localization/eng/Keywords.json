@@ -1,13 +1,5 @@
 [
   {
-    "PROPER_NAME": "Pink",
-    "NAMES": [
-      "pink"
-    ],
-    "DESCRIPTION": "Using the COLOR field, this keyword is colored pink instead of the normal keyword color.",
-    "COLOR": "fc83da"
-  },
-  {
   "ID": "${modID}:Numinous",
   "PROPER_NAME": "Numinous",
   "NAMES": [
