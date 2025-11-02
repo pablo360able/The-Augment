@@ -210,8 +210,8 @@
   },
   "${modID}:Enchant": {
     "NAME": "Enchant",
-    "DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Make it ${modID}:Magic. NL If it was already *Magic, gain [E].",
-    "UPGRADE_DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Reduce its cost by 1 this combat. NL Make it ${modID}:Magic. NL If it was already *Magic, gain [E]."
+    "DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Make it ${modID}:Magic. NL If it was already ${modID}:Magic, gain [E].",
+    "UPGRADE_DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Reduce its cost by 1 this combat. NL Make it ${modID}:Magic. NL If it was already ${modID}:Magic, gain [E]."
   },
   "${modID}:Memorize": {
     "NAME": "Memorize",

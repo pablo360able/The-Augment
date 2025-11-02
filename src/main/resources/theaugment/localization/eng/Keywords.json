@@ -9,11 +9,11 @@
   },
   {
   "ID": "${modID}:Magic",
-  "PROPER_NAME": "Magic",
+  "PROPER_NAME": "Numinous",
   "NAMES": [
     "magic"
   ],
-  "DESCRIPTION": "Attacks that are Magic use Focus instead of Strength."
+  "DESCRIPTION": "Attacks that are Numinous use Focus instead of Strength."
   },
   {
     "ID": "${modID}:Blood",
