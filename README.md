@@ -12,6 +12,7 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 ## Implement
 
 * Enemy behavior changes on block/remove buffs
+* Flashback, probably First Aid, and maybe Overvolt
 
 ## Technical
 
