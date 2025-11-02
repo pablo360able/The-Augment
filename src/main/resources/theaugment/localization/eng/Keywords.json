@@ -58,7 +58,7 @@
     "NAMES": [
       "aether"
     ],
-    "DESCRIPTION": "Orb: Gain #yFocus."
+    "DESCRIPTION": "Orb: Gain Focus."
   },
   {
     "ID": "${modID}:Blur",
@@ -66,7 +66,7 @@
     "NAMES": [
       "blur"
     ],
-    "DESCRIPTION": "Retain excess #yBlock at the start of your turn."
+    "DESCRIPTION": "Retain excess Block at the start of your turn."
   },
   {
     "ID": "${modID}:Compensate",
@@ -82,7 +82,7 @@
     "NAMES": [
       "flame"
     ],
-    "DESCRIPTION": "Orb: Increases damage but damages you every turn. When #yEvoked, deals damage to ALL enemies."
+    "DESCRIPTION": "Orb: Increases damage but damages you every turn. When Evoked, deals damage to ALL enemies."
   },
   {
     "ID": "${modID}:Entropy",
@@ -90,7 +90,7 @@
     "NAMES": [
       "entropy"
     ],
-    "DESCRIPTION": "Negates the next buff.\nCancels out #yArtifact."
+    "DESCRIPTION": "Negates the next buff.\nCancels out Artifact."
   },
   {
     "ID": "${modID}:Stun",
@@ -106,6 +106,6 @@
     "NAMES": [
       "concentration"
     ],
-    "DESCRIPTION": "When you take attack damage, lose 1 #yFocus if you have any.\nIf you have none or play another #yConcentration power, drop the power.\nYou may also drop it at the start of your turn."
+    "DESCRIPTION": "When you take attack damage, lose 1 Focus if you have any.\nIf you have none or play another Concentration power, drop the power.\nYou may also drop it at the start of your turn."
   }
 ]

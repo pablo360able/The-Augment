@@ -13,16 +13,19 @@ import theaugment.modifiers.MagicAttack;
 
 import java.util.ArrayList;
 
+import static theaugment.TheAugmentMod.modID;
+
 public class EnchantAction extends AbstractGameAction {
     public static final String[] TEXT;
     private final AbstractPlayer player = AbstractDungeon.player;
-    private final int numberOfCards = 1;
+    private final int numberOfCards;
     private final boolean reduceCost;
 
     public EnchantAction(boolean reduction) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.reduceCost = reduction;
+        this.numberOfCards = 1;
     }
 
     @Override
@@ -56,7 +59,7 @@ public class EnchantAction extends AbstractGameAction {
                             this.player.gainEnergy(1);
                         } else {
                             DamageModifierManager.addModifier(c, new MagicAttack());
-                            c.rawDescription = "Magic. NL " + c.rawDescription;
+                            c.rawDescription = modID + ":Magic. NL " + c.rawDescription;
                             c.initializeDescription();
                         }
 
@@ -95,7 +98,7 @@ public class EnchantAction extends AbstractGameAction {
                         this.player.gainEnergy(1);
                     } else {
                         DamageModifierManager.addModifier(c, new MagicAttack());
-                        c.rawDescription = "Magic. NL " + c.rawDescription;
+                        c.rawDescription = modID + ":Magic. NL " + c.rawDescription;
                         c.initializeDescription();
                     }
 
