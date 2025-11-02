@@ -1,11 +1,11 @@
 [
   {
-  "ID": "${modID}:Numinous",
-  "PROPER_NAME": "Numinous",
+  "ID": "${modID}:Arcane",
+  "PROPER_NAME": "Arcane",
   "NAMES": [
-    "numinous"
+    "arcane"
   ],
-  "DESCRIPTION": "Attacks that are Numinous use Focus instead of Strength."
+  "DESCRIPTION": "Attacks that are Arcane use Focus instead of Strength."
   },
   {
     "ID": "${modID}:Blood",

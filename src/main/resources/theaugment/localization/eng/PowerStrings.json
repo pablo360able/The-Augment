@@ -3,7 +3,7 @@
     "NAME": "Magic Weapon",
     "DESCRIPTIONS": [
       "Your next #b",
-      " attack(s) is/are #yNuminous."
+      " attack(s) is/are #yArcane."
     ]
   },
   "${modID}:LoseFocusPower": {
@@ -30,7 +30,7 @@
     "NAME": "Starstorm",
     "DESCRIPTIONS": [
       "At the start of your turn, deal #b",
-      " #yNuminous damage to a random enemy #b",
+      " #yArcane damage to a random enemy #b",
       " times."
     ]
   },
@@ -122,9 +122,9 @@
   "${modID}:PotentMagicPower": {
     "NAME": "Potent Magic",
     "DESCRIPTIONS": [
-      "Each turn, your first #yNuminous Attack benefits from #yFocus twice.",
+      "Each turn, your first #yArcane Attack benefits from #yFocus twice.",
       "Each turn, your first #b",
-      " #yNuminous Attack benefit from #yFocus twice."
+      " #yArcane Attack benefit from #yFocus twice."
     ]
   },
   "${modID}:BurningClarityPower": {
@@ -230,7 +230,7 @@
   "${modID}:ForceBarragePower": {
     "NAME": "Force Barrage",
     "DESCRIPTIONS": [
-      "#yConcentration: Whenever you play #yNuminous #yMissile, gain #b",
+      "#yConcentration: Whenever you play #yArcane #yMissile, gain #b",
       " #yFocus. Lose that #yFocus at the end of your turn."
     ]
   },
@@ -252,7 +252,7 @@
   "${modID}:SpellSniperPower": {
     "NAME": "Spell Sniper",
     "DESCRIPTIONS": [
-      "#yNuminous attacks ignore Malleable, Thorns, and Sharp Hide, and their #yBlood effects always trigger."
+      "#yArcane attacks ignore Malleable, Thorns, and Sharp Hide, and their #yBlood effects always trigger."
     ]
   },
   "${modID}:SignatureSpellPower": {

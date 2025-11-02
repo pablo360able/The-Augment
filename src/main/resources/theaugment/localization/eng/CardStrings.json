@@ -9,12 +9,12 @@
   },
   "${modID}:StunningStrike": {
     "NAME": "Stunning Strike",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage twice. NL ${modID}:Blood: Gain !M! Dexterity this turn."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage twice. NL ${modID}:Blood: Gain !M! Dexterity this turn."
   },
   "${modID}:MagicWeapon": {
     "NAME": "Magic Weapon",
-    "DESCRIPTION": "Gain !${modID}:foc! Focus. NL At the end of this turn, lose !${modID}:foc! Focus. NL Your next Attack this turn is ${modID}:Numinous.",
-    "UPGRADE_DESCRIPTION": "Gain !${modID}:foc! Focus. NL At the end of this turn, lose !${modID}:foc! Focus. NL Your next !M! Attacks this turn are ${modID}:Numinous."
+    "DESCRIPTION": "Gain !${modID}:foc! Focus. NL At the end of this turn, lose !${modID}:foc! Focus. NL Your next Attack this turn is ${modID}:Arcane.",
+    "UPGRADE_DESCRIPTION": "Gain !${modID}:foc! Focus. NL At the end of this turn, lose !${modID}:foc! Focus. NL Your next !M! Attacks this turn are ${modID}:Arcane."
   },
   "${modID}:SiphoningClaw": {
     "NAME": "Siphoning Claw",
@@ -30,7 +30,7 @@
   },
   "${modID}:MagicMissile": {
     "NAME": "Magic Missile",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage. Twice as effective against Block."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage. Twice as effective against Block."
   },
   "${modID}:Bolt": {
     "NAME": "Bolt",
@@ -61,11 +61,11 @@
   },
   "${modID}:Starstorm": {
     "NAME": "Starstorm",
-    "DESCRIPTION": "${modID}:Numinous. NL Channel 3 ${modID}:Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times. NL This counts as playing an Attack."
+    "DESCRIPTION": "${modID}:Arcane. NL Channel 3 ${modID}:Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times. NL This counts as playing an Attack."
   },
   "${modID}:StarstormAttack": {
     "NAME": "Starstorm",
-    "DESCRIPTION": "${modID}:Numinous. NL Channel 3 ${modID}:Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "${modID}:Arcane. NL Channel 3 ${modID}:Aether. NL At the start of your next turn, deal !D! damage to a random enemy !M! times."
   },
   "${modID}:EidolonForm": {
     "NAME": "Eidolon Form",
@@ -99,24 +99,24 @@
   },
   "${modID}:Spellstrike": {
     "NAME": "Spellstrike",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage for each Aether channeled this combat.",
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage for each Aether channeled this combat.",
     "EXTENDED_DESCRIPTION": [" NL (Channeled !M! ${modID}:Aether.)"]
   },
   "${modID}:WitchBolt": {
     "NAME": "Witch Bolt",
-    "DESCRIPTION": "${modID}:Numinous. NL Take 1 damage. NL Deal !D! damage. NL ${modID}:Blood: Put a copy of this card on top of your draw pile."
+    "DESCRIPTION": "${modID}:Arcane. NL Take 1 damage. NL Deal !D! damage. NL ${modID}:Blood: Put a copy of this card on top of your draw pile."
   },
   "${modID}:Sunbeam": {
     "NAME": "Sunbeam",
-    "DESCRIPTION": "${modID}:Numinous. NL Channel 1 ${modID}:Aether. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "${modID}:Arcane. NL Channel 1 ${modID}:Aether. NL Deal !D! damage to ALL enemies."
   },
   "${modID}:ZephyrStrike": {
     "NAME": "Zephyr Strike",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage to ALL enemies !M! times. NL Gain 1 Dexterity. NL Exhaust."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage to ALL enemies !M! times. NL Gain 1 Dexterity. NL Exhaust."
   },
   "${modID}:Soulrend": {
     "NAME": "Soulrend",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage. NL ${modID}:Blood: Gain 1 extra orb slot."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage. NL ${modID}:Blood: Gain 1 extra orb slot."
   },
   "${modID}:Earthquake": {
     "NAME": "Earthquake",
@@ -124,7 +124,7 @@
   },
   "${modID}:Quadrature": {
     "NAME": "Quadrature",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal X damage to ALL enemies X times. Deal damage an additional time based on your Focus."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal X damage to ALL enemies X times. Deal damage an additional time based on your Focus."
   },
   "${modID}:MissileSpray": {
     "NAME": "Missile Spray",
@@ -161,7 +161,7 @@
   },
   "${modID}:GuardianBlade": {
     "NAME": "Guardian Blade",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Your next Attack this turn is ${modID}:Numinous."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Your next Attack this turn is ${modID}:Arcane."
   },
   "${modID}:Evade": {
     "NAME": "Evade",
@@ -210,8 +210,8 @@
   },
   "${modID}:Enchant": {
     "NAME": "Enchant",
-    "DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Make it ${modID}:Numinous. NL If it was already ${modID}:Numinous, gain [E].",
-    "UPGRADE_DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Reduce its cost by 1 this combat. NL Make it ${modID}:Numinous. NL If it was already ${modID}:Numinous, gain [E]."
+    "DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Make it ${modID}:Arcane. NL If it was already ${modID}:Arcane, gain [E].",
+    "UPGRADE_DESCRIPTION": "Put an Attack from your discard pile onto the top of your draw pile. NL Reduce its cost by 1 this combat. NL Make it ${modID}:Arcane. NL If it was already ${modID}:Arcane, gain [E]."
   },
   "${modID}:Memorize": {
     "NAME": "Memorize",
@@ -288,11 +288,11 @@
   },
   "${modID}:FaerieFire": {
     "NAME": "Faerie Fire",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage to ALL enemies. NL ${modID}:Blood: Apply !M! Vulnerable and !M! Frail. NL Exhaust."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage to ALL enemies. NL ${modID}:Blood: Apply !M! Vulnerable and !M! Frail. NL Exhaust."
   },
   "${modID}:NecroticBeam": {
     "NAME": "Necrotic Beam",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage. NL Double this damage if the enemy is Frail. NL Exhaust."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage. NL Double this damage if the enemy is Frail. NL Exhaust."
   },
   "${modID}:MegaDebuff": {
     "NAME": "Mega Debuff",
@@ -304,8 +304,8 @@
   },
   "${modID}:PhantasmalForce": {
     "NAME": "Phantasmal Force",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile for free and exhaust it.",
-    "UPGRADE_DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile twice for free and exhaust it."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile for free and exhaust it.",
+    "UPGRADE_DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage. NL ${modID}:Blood: Play an Attack from your discard pile twice for free and exhaust it."
   },
   "${modID}:BioRepair": {
     "NAME": "Bio-Repair",
@@ -323,11 +323,11 @@
   },
   "${modID}:ArcaneSmite": {
     "NAME": "Arcane Smite",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage X times. NL Lose 1 Orb slot. NL If you have no Orb slot to remove, Exhaust."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage X times. NL Lose 1 Orb slot. NL If you have no Orb slot to remove, Exhaust."
   },
   "${modID}:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage. NL Channel !M! Dark."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage. NL Channel !M! Dark."
   },
   "${modID}:Stoneskin": {
     "NAME": "Stoneskin",
@@ -344,8 +344,8 @@
   },
   "${modID}:PotentMagic": {
     "NAME": "Potent Magic",
-    "DESCRIPTION": "Each turn, your first ${modID}:Numinous Attack benefits from Focus twice.",
-    "UPGRADE_DESCRIPTION": "Each turn, your first !M! ${modID}:Numinous Attacks benefits from Focus twice."
+    "DESCRIPTION": "Each turn, your first ${modID}:Arcane Attack benefits from Focus twice.",
+    "UPGRADE_DESCRIPTION": "Each turn, your first !M! ${modID}:Arcane Attacks benefits from Focus twice."
   },
   "${modID}:BurningClarity": {
     "NAME": "Burning Clarity",
@@ -374,11 +374,11 @@
   },
   "${modID}:Fireball": {
     "NAME": "Fireball",
-    "DESCRIPTION": "${modID}:Numinous. NL Channel !M! ${modID}:Flame. NL Deal !D! damage to ALL enemies for each *Flame Orb in your Orb slots."
+    "DESCRIPTION": "${modID}:Arcane. NL Channel !M! ${modID}:Flame. NL Deal !D! damage to ALL enemies for each *Flame Orb in your Orb slots."
   },
   "${modID}:BurningFist": {
     "NAME": "Burning Fist",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage. NL Channel !M! ${modID}:Flame."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage. NL Channel !M! ${modID}:Flame."
   },
   "${modID}:Firewall": {
     "NAME": "Firewall",
@@ -432,7 +432,7 @@
   },
   "${modID}:Shillelagh": {
     "NAME": "Shillelagh",
-    "DESCRIPTION": "Deal !D! damage. NL This Attack is ${modID}:Numinous unless your Strength is greater than your Focus."
+    "DESCRIPTION": "Deal !D! damage. NL This Attack is ${modID}:Arcane unless your Strength is greater than your Focus."
   },
   "${modID}:FocusedStrike": {
     "NAME": "Focused Strike",
@@ -458,7 +458,7 @@
   },
   "${modID}:Timewinder": {
     "NAME": "Timewinder",
-    "DESCRIPTION": "${modID}:Numinous. NL Deal !D! damage twice. NL If this kills an enemy, take an extra turn after this one."
+    "DESCRIPTION": "${modID}:Arcane. NL Deal !D! damage twice. NL If this kills an enemy, take an extra turn after this one."
   },
   "${modID}:HoldPriority": {
     "NAME": "Hold Priority",
@@ -529,7 +529,7 @@
   },
   "${modID}:SpellSniper": {
     "NAME": "Spell Sniper",
-    "DESCRIPTION": "${modID}:Numinous attacks ignore *Malleable, *Thorns, and *Sharp *Hide, and their ${modID}:Blood effects always trigger."
+    "DESCRIPTION": "${modID}:Arcane attacks ignore *Malleable, *Thorns, and *Sharp *Hide, and their ${modID}:Blood effects always trigger."
   },
   "${modID}:SignatureSpell": {
     "NAME": "Signature Spell",
