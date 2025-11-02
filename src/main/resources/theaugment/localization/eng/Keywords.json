@@ -8,10 +8,10 @@
     "COLOR": "fc83da"
   },
   {
-  "ID": "${modID}:Magic",
+  "ID": "${modID}:Numinous",
   "PROPER_NAME": "Numinous",
   "NAMES": [
-    "magic"
+    "numinous"
   ],
   "DESCRIPTION": "Attacks that are Numinous use Focus instead of Strength."
   },
