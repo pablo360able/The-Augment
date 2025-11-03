@@ -39,7 +39,7 @@ public class RewardCardAction extends AbstractGameAction {
 
         while(generatedCards.size() != this.count) {
             boolean dupe = false;
-            AbstractCard tmp = returnTrulyRandomCardRewardByColor(this.color);
+            AbstractCard tmp = this.returnTrulyRandomCardRewardByColor();
 
             for(AbstractCard c : generatedCards) {
                 if (c.cardID.equals(tmp.cardID)) {
@@ -146,13 +146,12 @@ public class RewardCardAction extends AbstractGameAction {
         }
     }
 
-    // TODO: filter out healing cards when retrieveCard = true
-    public static AbstractCard returnTrulyRandomCardRewardByColor(AbstractCard.CardColor color) {
+    public AbstractCard returnTrulyRandomCardRewardByColor() {
         ArrayList<AbstractCard> tmpPool = new ArrayList<>();
 
         for(Map.Entry<String, AbstractCard> c : CardLibrary.cards.entrySet()) {
             AbstractCard card = c.getValue();
-            if ((color == null || card.color == color) && card.rarity != AbstractCard.CardRarity.BASIC && (!UnlockTracker.isCardLocked(c.getKey()) || Settings.treatEverythingAsUnlocked())) {
+            if ((this.color == null || card.color == this.color) && card.rarity != AbstractCard.CardRarity.BASIC && card.rarity != AbstractCard.CardRarity.SPECIAL && card.rarity != AbstractCard.CardRarity.CURSE && (!UnlockTracker.isCardLocked(c.getKey()) || Settings.treatEverythingAsUnlocked()) && (!this.retrieveCard || !card.hasTag(AbstractCard.CardTags.HEALING))) {
                 tmpPool.add(card);
             }
         }

@@ -34,6 +34,8 @@ public class Pillage extends BaseCard {
         setMagic(MAGIC, UPG_MAGIC);
 
         setExhaust(true);
+
+        tags.add(CardTags.HEALING);
     }
 
     @Override

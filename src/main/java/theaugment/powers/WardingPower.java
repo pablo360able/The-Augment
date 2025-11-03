@@ -18,8 +18,12 @@ public class WardingPower extends BasePower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        if (!this.owner.hasPower(EntropyPower.POWER_ID)) {
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new LoseArtifactPower(this.owner, this.amount)));
+        int artifactDown = this.amount;
+        if (this.owner.hasPower(EntropyPower.POWER_ID)) {
+            artifactDown -= this.owner.getPower(EntropyPower.POWER_ID).amount;
+        }
+        if (artifactDown > 0) {
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new LoseArtifactPower(this.owner, artifactDown)));
         }
         addToBot(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, this.amount)));
     }

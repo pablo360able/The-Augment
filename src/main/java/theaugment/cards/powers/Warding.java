@@ -37,8 +37,12 @@ public class Warding extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new WardingPower(p, magicNumber)));
         if (upgraded) {
-            if (!p.hasPower(EntropyPower.POWER_ID)) {
-                addToBot(new ApplyPowerAction(p, p, new LoseArtifactPower(p, magicNumber)));
+            int artifactDown = magicNumber;
+            if (p.hasPower(EntropyPower.POWER_ID)) {
+                artifactDown -= p.getPower(EntropyPower.POWER_ID).amount;
+            }
+            if (artifactDown > 0) {
+                addToBot(new ApplyPowerAction(p, p, new LoseArtifactPower(p, artifactDown)));
             }
             addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber)));
         }

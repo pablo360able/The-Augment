@@ -18,7 +18,6 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 
 * See if Siphoning Claw can be made to work with Claw Pack from Packmaster
 * Migrate SpirePatches to use Locators
-* Check how Entropy interacts with Mirror Image and temporary Artifact
 
 ## Balance
 * Nerf Stunning Strike (and possibly buff Magic Weapon)
@@ -33,14 +32,13 @@ A Slay the Spire mod that adds a new character -- The Augment, a veteran wizard 
 * Possibly swap the rarities on some common card and Stunning Strike
 * See if Delayed Blast Fireball needs a buff
 * Consider buffing Evade Capture and/or Mind over Matter
-* Consider nerving Feign Disaster and/or Phantasmal Force
+* Consider nerving Feign Disaster and/or Phantasmal Force (for latter: possibly turn attack into status)
 * Figure out what buff I want to give to Refocus
 
 ## Other considerations
 * Consider changing timing of passive effect of Aether orbs
 * Replace generic names, including D&D spells and Magic keyword
-* Potentially relocate added description text for Enchant and Eidolon actions, and see if they get annihilated by cards whose descriptions update
-
+* 
 ## Bugs
 
 * Necrotic Beam's damage is not doubled on display

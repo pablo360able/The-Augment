@@ -1,14 +1,13 @@
 package theaugment.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import theaugment.powers.SignatureSpellPower;
+import theaugment.modifiers.SignatureSpellModifier;
 
 import java.util.ArrayList;
 
@@ -18,7 +17,7 @@ public class ApplySignatureSpellAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private static final float DURATION_PER_CARD = 0.25F;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private final ArrayList<AbstractCard> cannotSpell = new ArrayList<>();
     private final boolean upgraded;
 
@@ -97,9 +96,7 @@ public class ApplySignatureSpellAction extends AbstractGameAction {
     }
 
     private void signSpell(AbstractCard card) {
-        this.addToTop(new ApplyPowerAction(this.target, this.source, new SignatureSpellPower(card, this.upgraded)));
-        card.rawDescription += upgraded ? "NL Put on top of your deck when played." : " NL Shuffle into your deck when played.";
-        card.initializeDescription();
+        SignatureSpellModifier.apply(card, upgraded);
         this.p.hand.moveToDeck(card, !upgraded);
     }
 

@@ -29,6 +29,7 @@ public class BioRepair extends BaseCard {
         setMagic(MAGIC, UPG_MAGIC);
 
         AugmentPatches.AugmentCardVars.spontaneous.set(this, true);
+        tags.add(CardTags.HEALING);
     }
 
     @Override

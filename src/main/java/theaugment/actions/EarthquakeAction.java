@@ -5,8 +5,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
@@ -32,13 +34,16 @@ public class EarthquakeAction extends AbstractGameAction {
         boolean playedMusic = false;
         int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
 
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.XLONG, false);
+
         for(int i = 0; i < temp; ++i) {
-            if (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDying && AbstractDungeon.getCurrRoom().monsters.monsters.get(i).currentHealth > 0 && !AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isEscaping) {
+            AbstractMonster m = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+            if (!m.isDying && m.currentHealth > 0 && !m.isEscaping) {
                 if (playedMusic) {
-                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX, AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect, true));
+                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, this.attackEffect, true));
                 } else {
                     playedMusic = true;
-                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cX, AbstractDungeon.getCurrRoom().monsters.monsters.get(i).hb.cY, this.attackEffect));
+                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, this.attackEffect));
                 }
             }
         }
@@ -55,16 +60,8 @@ public class EarthquakeAction extends AbstractGameAction {
         int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
 
         for(int i = 0; i < temp; ++i) {
-            if (!AbstractDungeon.getCurrRoom().monsters.monsters.get(i).isDeadOrEscaped()) {
-                if (this.attackEffect == AttackEffect.POISON) {
-                    AbstractDungeon.getCurrRoom().monsters.monsters.get(i).tint.color.set(Color.CHARTREUSE);
-                    AbstractDungeon.getCurrRoom().monsters.monsters.get(i).tint.changeColor(Color.WHITE.cpy());
-                } else if (this.attackEffect == AttackEffect.FIRE) {
-                    AbstractDungeon.getCurrRoom().monsters.monsters.get(i).tint.color.set(Color.RED);
-                    AbstractDungeon.getCurrRoom().monsters.monsters.get(i).tint.changeColor(Color.WHITE.cpy());
-                }
-
-                AbstractMonster m = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+            AbstractMonster m = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+            if (!m.isDeadOrEscaped()) {
                 this.damage[i] += Math.min(this.damage[i], m.currentBlock);
                 m.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
             }

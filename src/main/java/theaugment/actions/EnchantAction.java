@@ -14,6 +14,7 @@ import theaugment.modifiers.MagicAttack;
 import java.util.ArrayList;
 
 import static theaugment.TheAugmentMod.modID;
+import static theaugment.modifiers.AlterDescription.redescribe;
 
 public class EnchantAction extends AbstractGameAction {
     public static final String[] TEXT;
@@ -59,8 +60,7 @@ public class EnchantAction extends AbstractGameAction {
                             this.player.gainEnergy(1);
                         } else {
                             DamageModifierManager.addModifier(c, new MagicAttack());
-                            c.rawDescription = modID + ":Magic. NL " + c.rawDescription;
-                            c.initializeDescription();
+                            redescribe(c, modID + ":Arcane.");
                         }
 
                         this.player.discardPile.removeCard(c);
@@ -98,8 +98,7 @@ public class EnchantAction extends AbstractGameAction {
                         this.player.gainEnergy(1);
                     } else {
                         DamageModifierManager.addModifier(c, new MagicAttack());
-                        c.rawDescription = modID + ":Magic. NL " + c.rawDescription;
-                        c.initializeDescription();
+                        redescribe(c, modID + ":Arcane.");
                     }
 
                     this.player.discardPile.removeCard(c);

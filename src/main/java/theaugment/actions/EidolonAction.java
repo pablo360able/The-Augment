@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import theaugment.util.AugmentPatches;
 
 import static theaugment.TheAugmentMod.modID;
+import static theaugment.modifiers.AlterDescription.redescribe;
 
 public class EidolonAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
@@ -100,8 +101,7 @@ public class EidolonAction extends AbstractGameAction {
 
                     if (!AugmentPatches.AugmentCardVars.spontaneous.get(c)) {
                         AugmentPatches.AugmentCardVars.spontaneous.set(c, true);
-                        c.rawDescription = modID + ":Spontaneous. NL " + c.rawDescription;
-                        c.initializeDescription();
+                        redescribe(c, modID + ":Spontaneous.");
                     }
 
                     this.p.hand.refreshHandLayout();

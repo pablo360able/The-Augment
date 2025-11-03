@@ -391,7 +391,7 @@
   },
   "${modID}:GreenFlameBlade": {
     "NAME": "Green Flame Blade",
-    "DESCRIPTION": "If you have an empty orb slot, Channel 1 ${modID}:Flame. NL Your next Attack this turn has \"${modID}:Blood: Deal !M! damage to ALL enemies.\""
+    "DESCRIPTION": "If you have an empty orb slot, Channel 1 ${modID}:Flame. NL Your next Attack this turn has ${modID}:Blood: Deal !M! damage to ALL enemies."
   },
   "${modID}:Riposte": {
     "NAME": "Riposte",
